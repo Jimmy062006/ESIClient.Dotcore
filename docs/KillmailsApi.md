@@ -1,0 +1,230 @@
+# IO.Swagger.Api.KillmailsApi
+
+All URIs are relative to *https://esi.tech.ccp.is*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**GetCharactersCharacterIdKillmailsRecent**](KillmailsApi.md#getcharacterscharacteridkillmailsrecent) | **GET** /v1/characters/{character_id}/killmails/recent/ | Get character kills and losses
+[**GetCorporationsCorporationIdKillmailsRecent**](KillmailsApi.md#getcorporationscorporationidkillmailsrecent) | **GET** /v1/corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
+[**GetKillmailsKillmailIdKillmailHash**](KillmailsApi.md#getkillmailskillmailidkillmailhash) | **GET** /v1/killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
+
+
+<a name="getcharacterscharacteridkillmailsrecent"></a>
+# **GetCharactersCharacterIdKillmailsRecent**
+> List<GetCharactersCharacterIdKillmailsRecent200Ok> GetCharactersCharacterIdKillmailsRecent (int? characterId, string datasource = null, int? maxCount = null, int? maxKillId = null, string token = null, string userAgent = null, string xUserAgent = null)
+
+Get character kills and losses
+
+Return a list of character's recent kills and losses  - --  This route is cached for up to 120 seconds
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetCharactersCharacterIdKillmailsRecentExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: evesso
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new KillmailsApi();
+            var characterId = 56;  // int? | An EVE character ID
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var maxCount = 56;  // int? | How many killmails to return at maximum (optional)  (default to 50)
+            var maxKillId = 56;  // int? | Only return killmails with ID smaller than this.  (optional) 
+            var token = token_example;  // string | Access token to use if unable to set a header (optional) 
+            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
+            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+
+            try
+            {
+                // Get character kills and losses
+                List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; result = apiInstance.GetCharactersCharacterIdKillmailsRecent(characterId, datasource, maxCount, maxKillId, token, userAgent, xUserAgent);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KillmailsApi.GetCharactersCharacterIdKillmailsRecent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **characterId** | **int?**| An EVE character ID | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **maxCount** | **int?**| How many killmails to return at maximum | [optional] [default to 50]
+ **maxKillId** | **int?**| Only return killmails with ID smaller than this.  | [optional] 
+ **token** | **string**| Access token to use if unable to set a header | [optional] 
+ **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
+ **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+
+### Return type
+
+[**List<GetCharactersCharacterIdKillmailsRecent200Ok>**](GetCharactersCharacterIdKillmailsRecent200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcorporationscorporationidkillmailsrecent"></a>
+# **GetCorporationsCorporationIdKillmailsRecent**
+> List<GetCorporationsCorporationIdKillmailsRecent200Ok> GetCorporationsCorporationIdKillmailsRecent (int? corporationId, string datasource = null, int? maxKillId = null, string token = null, string userAgent = null, string xUserAgent = null)
+
+Get corporation kills and losses
+
+Get a list of corporation's recent kills and losses  - --  This route is cached for up to 300 seconds  - -- Requires one of the following EVE corporation role(s): Director
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetCorporationsCorporationIdKillmailsRecentExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: evesso
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new KillmailsApi();
+            var corporationId = 56;  // int? | An EVE corporation ID
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var maxKillId = 56;  // int? | Only return killmails with ID smaller than this (optional) 
+            var token = token_example;  // string | Access token to use if unable to set a header (optional) 
+            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
+            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+
+            try
+            {
+                // Get corporation kills and losses
+                List&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; result = apiInstance.GetCorporationsCorporationIdKillmailsRecent(corporationId, datasource, maxKillId, token, userAgent, xUserAgent);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KillmailsApi.GetCorporationsCorporationIdKillmailsRecent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **int?**| An EVE corporation ID | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **maxKillId** | **int?**| Only return killmails with ID smaller than this | [optional] 
+ **token** | **string**| Access token to use if unable to set a header | [optional] 
+ **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
+ **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+
+### Return type
+
+[**List<GetCorporationsCorporationIdKillmailsRecent200Ok>**](GetCorporationsCorporationIdKillmailsRecent200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getkillmailskillmailidkillmailhash"></a>
+# **GetKillmailsKillmailIdKillmailHash**
+> GetKillmailsKillmailIdKillmailHashOk GetKillmailsKillmailIdKillmailHash (string killmailHash, int? killmailId, string datasource = null, string userAgent = null, string xUserAgent = null)
+
+Get a single killmail
+
+Return a single killmail from its ID and hash  - --  This route is cached for up to 1209600 seconds
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class GetKillmailsKillmailIdKillmailHashExample
+    {
+        public void main()
+        {
+            var apiInstance = new KillmailsApi();
+            var killmailHash = killmailHash_example;  // string | The killmail hash for verification
+            var killmailId = 56;  // int? | The killmail ID to be queried
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
+            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+
+            try
+            {
+                // Get a single killmail
+                GetKillmailsKillmailIdKillmailHashOk result = apiInstance.GetKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, userAgent, xUserAgent);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KillmailsApi.GetKillmailsKillmailIdKillmailHash: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **killmailHash** | **string**| The killmail hash for verification | 
+ **killmailId** | **int?**| The killmail ID to be queried | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
+ **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+
+### Return type
+
+[**GetKillmailsKillmailIdKillmailHashOk**](GetKillmailsKillmailIdKillmailHashOk.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
