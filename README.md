@@ -1,4 +1,4 @@
-# ESIClient.Dotcore - the NET Starder 2.0 library for the EVE Swagger Interface
+# ESIClient.Dotcore - the .NETStandard 2.0 library for the EVE Swagger Interface
 
 An OpenAPI for EVE Online
 
