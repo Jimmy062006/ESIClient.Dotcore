@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetMarketsGroupsMarketGroupIdNotFound
+# ESIClient.Dotcore.Model.GetMarketsGroupsMarketGroupIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

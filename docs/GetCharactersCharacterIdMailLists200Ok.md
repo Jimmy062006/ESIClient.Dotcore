@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdMailLists200Ok
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdMailLists200Ok
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostFleetsFleetIdWingsWingIdSquadsNotFound
+# ESIClient.Dotcore.Model.PostFleetsFleetIdWingsWingIdSquadsNotFound
 ## Properties
 
 Name | Type | Description | Notes

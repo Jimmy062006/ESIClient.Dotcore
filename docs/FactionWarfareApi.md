@@ -1,6 +1,6 @@
-# IO.Swagger.Api.FactionWarfareApi
+# ESIClient.Dotcore.Api.FactionWarfareApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridfwstats"></a>
 # **GetCharactersCharacterIdFwStats**
-> GetCharactersCharacterIdFwStatsOk GetCharactersCharacterIdFwStats (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdFwStatsOk GetCharactersCharacterIdFwStats (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Overview of a character involved in faction warfare
 
@@ -26,9 +26,9 @@ Statistical overview of a character involved in faction warfare  - --  This rout
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -42,14 +42,13 @@ namespace Example
             var apiInstance = new FactionWarfareApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Overview of a character involved in faction warfare
-                GetCharactersCharacterIdFwStatsOk result = apiInstance.GetCharactersCharacterIdFwStats(characterId, datasource, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdFwStatsOk result = apiInstance.GetCharactersCharacterIdFwStats(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,9 +66,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -81,14 +79,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationscorporationidfwstats"></a>
 # **GetCorporationsCorporationIdFwStats**
-> GetCorporationsCorporationIdFwStatsOk GetCorporationsCorporationIdFwStats (int? corporationId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCorporationsCorporationIdFwStatsOk GetCorporationsCorporationIdFwStats (int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Overview of a corporation involved in faction warfare
 
@@ -98,9 +96,9 @@ Statistics about a corporation involved in faction warfare  - --  This route exp
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -114,14 +112,13 @@ namespace Example
             var apiInstance = new FactionWarfareApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Overview of a corporation involved in faction warfare
-                GetCorporationsCorporationIdFwStatsOk result = apiInstance.GetCorporationsCorporationIdFwStats(corporationId, datasource, token, userAgent, xUserAgent);
+                GetCorporationsCorporationIdFwStatsOk result = apiInstance.GetCorporationsCorporationIdFwStats(corporationId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -139,9 +136,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -153,14 +149,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfwleaderboards"></a>
 # **GetFwLeaderboards**
-> GetFwLeaderboardsOk GetFwLeaderboards (string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetFwLeaderboardsOk GetFwLeaderboards (string datasource = null, string ifNoneMatch = null)
 
 List of the top factions in faction warfare
 
@@ -170,9 +166,9 @@ Top 4 leaderboard of factions for kills and victory points separated by total, l
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -182,13 +178,12 @@ namespace Example
         {
             var apiInstance = new FactionWarfareApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List of the top factions in faction warfare
-                GetFwLeaderboardsOk result = apiInstance.GetFwLeaderboards(datasource, userAgent, xUserAgent);
+                GetFwLeaderboardsOk result = apiInstance.GetFwLeaderboards(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -205,8 +200,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -218,14 +212,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfwleaderboardscharacters"></a>
 # **GetFwLeaderboardsCharacters**
-> GetFwLeaderboardsCharactersOk GetFwLeaderboardsCharacters (string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetFwLeaderboardsCharactersOk GetFwLeaderboardsCharacters (string datasource = null, string ifNoneMatch = null)
 
 List of the top pilots in faction warfare
 
@@ -235,9 +229,9 @@ Top 100 leaderboard of pilots for kills and victory points separated by total, l
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -247,13 +241,12 @@ namespace Example
         {
             var apiInstance = new FactionWarfareApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List of the top pilots in faction warfare
-                GetFwLeaderboardsCharactersOk result = apiInstance.GetFwLeaderboardsCharacters(datasource, userAgent, xUserAgent);
+                GetFwLeaderboardsCharactersOk result = apiInstance.GetFwLeaderboardsCharacters(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -270,8 +263,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -283,14 +275,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfwleaderboardscorporations"></a>
 # **GetFwLeaderboardsCorporations**
-> GetFwLeaderboardsCorporationsOk GetFwLeaderboardsCorporations (string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetFwLeaderboardsCorporationsOk GetFwLeaderboardsCorporations (string datasource = null, string ifNoneMatch = null)
 
 List of the top corporations in faction warfare
 
@@ -300,9 +292,9 @@ Top 10 leaderboard of corporations for kills and victory points separated by tot
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -312,13 +304,12 @@ namespace Example
         {
             var apiInstance = new FactionWarfareApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List of the top corporations in faction warfare
-                GetFwLeaderboardsCorporationsOk result = apiInstance.GetFwLeaderboardsCorporations(datasource, userAgent, xUserAgent);
+                GetFwLeaderboardsCorporationsOk result = apiInstance.GetFwLeaderboardsCorporations(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -335,8 +326,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -348,14 +338,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfwstats"></a>
 # **GetFwStats**
-> List<GetFwStats200Ok> GetFwStats (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetFwStats200Ok> GetFwStats (string datasource = null, string ifNoneMatch = null)
 
 An overview of statistics about factions involved in faction warfare
 
@@ -365,9 +355,9 @@ Statistical overviews of factions involved in faction warfare  - --  This route 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -377,13 +367,12 @@ namespace Example
         {
             var apiInstance = new FactionWarfareApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // An overview of statistics about factions involved in faction warfare
-                List&lt;GetFwStats200Ok&gt; result = apiInstance.GetFwStats(datasource, userAgent, xUserAgent);
+                List&lt;GetFwStats200Ok&gt; result = apiInstance.GetFwStats(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -400,8 +389,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -413,26 +401,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfwsystems"></a>
 # **GetFwSystems**
-> List<GetFwSystems200Ok> GetFwSystems (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetFwSystems200Ok> GetFwSystems (string datasource = null, string ifNoneMatch = null)
 
 Ownership of faction warfare systems
 
-An overview of the current ownership of faction warfare solar systems  - --  This route is cached for up to 1800 seconds
+An overview of the current ownership of faction warfare solar systems  - --  This route is cached for up to 1800 seconds  - -- Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -442,13 +430,12 @@ namespace Example
         {
             var apiInstance = new FactionWarfareApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Ownership of faction warfare systems
-                List&lt;GetFwSystems200Ok&gt; result = apiInstance.GetFwSystems(datasource, userAgent, xUserAgent);
+                List&lt;GetFwSystems200Ok&gt; result = apiInstance.GetFwSystems(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -465,8 +452,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -478,14 +464,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfwwars"></a>
 # **GetFwWars**
-> List<GetFwWars200Ok> GetFwWars (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetFwWars200Ok> GetFwWars (string datasource = null, string ifNoneMatch = null)
 
 Data about which NPC factions are at war
 
@@ -495,9 +481,9 @@ Data about which NPC factions are at war  - --  This route expires daily at 11:0
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -507,13 +493,12 @@ namespace Example
         {
             var apiInstance = new FactionWarfareApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Data about which NPC factions are at war
-                List&lt;GetFwWars200Ok&gt; result = apiInstance.GetFwWars(datasource, userAgent, xUserAgent);
+                List&lt;GetFwWars200Ok&gt; result = apiInstance.GetFwWars(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -530,8 +515,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -543,7 +527,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

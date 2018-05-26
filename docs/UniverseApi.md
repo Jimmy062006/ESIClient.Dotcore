@@ -1,10 +1,11 @@
-# IO.Swagger.Api.UniverseApi
+# ESIClient.Dotcore.Api.UniverseApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetUniverseAncestries**](UniverseApi.md#getuniverseancestries) | **GET** /v1/universe/ancestries/ | Get ancestries
+[**GetUniverseAsteroidBeltsAsteroidBeltId**](UniverseApi.md#getuniverseasteroidbeltsasteroidbeltid) | **GET** /v1/universe/asteroid_belts/{asteroid_belt_id}/ | Get asteroid belt information
 [**GetUniverseBloodlines**](UniverseApi.md#getuniversebloodlines) | **GET** /v1/universe/bloodlines/ | Get bloodlines
 [**GetUniverseCategories**](UniverseApi.md#getuniversecategories) | **GET** /v1/universe/categories/ | Get item categories
 [**GetUniverseCategoriesCategoryId**](UniverseApi.md#getuniversecategoriescategoryid) | **GET** /v1/universe/categories/{category_id}/ | Get item category information
@@ -37,7 +38,7 @@ Method | HTTP request | Description
 
 <a name="getuniverseancestries"></a>
 # **GetUniverseAncestries**
-> List<GetUniverseAncestries200Ok> GetUniverseAncestries (string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> List<GetUniverseAncestries200Ok> GetUniverseAncestries (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get ancestries
 
@@ -47,9 +48,9 @@ Get all character ancestries  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -58,15 +59,15 @@ namespace Example
         public void main()
         {
             var apiInstance = new UniverseApi();
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get ancestries
-                List&lt;GetUniverseAncestries200Ok&gt; result = apiInstance.GetUniverseAncestries(datasource, language, userAgent, xUserAgent);
+                List&lt;GetUniverseAncestries200Ok&gt; result = apiInstance.GetUniverseAncestries(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -82,10 +83,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -97,14 +98,79 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getuniverseasteroidbeltsasteroidbeltid"></a>
+# **GetUniverseAsteroidBeltsAsteroidBeltId**
+> GetUniverseAsteroidBeltsAsteroidBeltIdOk GetUniverseAsteroidBeltsAsteroidBeltId (int? asteroidBeltId, string datasource = null, string ifNoneMatch = null)
+
+Get asteroid belt information
+
+Get information on an asteroid belt  - --  This route expires daily at 11:05
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
+
+namespace Example
+{
+    public class GetUniverseAsteroidBeltsAsteroidBeltIdExample
+    {
+        public void main()
+        {
+            var apiInstance = new UniverseApi();
+            var asteroidBeltId = 56;  // int? | asteroid_belt_id integer
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+
+            try
+            {
+                // Get asteroid belt information
+                GetUniverseAsteroidBeltsAsteroidBeltIdOk result = apiInstance.GetUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, ifNoneMatch);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UniverseApi.GetUniverseAsteroidBeltsAsteroidBeltId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asteroidBeltId** | **int?**| asteroid_belt_id integer | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+
+### Return type
+
+[**GetUniverseAsteroidBeltsAsteroidBeltIdOk**](GetUniverseAsteroidBeltsAsteroidBeltIdOk.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversebloodlines"></a>
 # **GetUniverseBloodlines**
-> List<GetUniverseBloodlines200Ok> GetUniverseBloodlines (string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> List<GetUniverseBloodlines200Ok> GetUniverseBloodlines (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get bloodlines
 
@@ -114,9 +180,9 @@ Get a list of bloodlines  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -125,15 +191,15 @@ namespace Example
         public void main()
         {
             var apiInstance = new UniverseApi();
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get bloodlines
-                List&lt;GetUniverseBloodlines200Ok&gt; result = apiInstance.GetUniverseBloodlines(datasource, language, userAgent, xUserAgent);
+                List&lt;GetUniverseBloodlines200Ok&gt; result = apiInstance.GetUniverseBloodlines(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -149,10 +215,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -164,14 +230,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversecategories"></a>
 # **GetUniverseCategories**
-> List<int?> GetUniverseCategories (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseCategories (string datasource = null, string ifNoneMatch = null)
 
 Get item categories
 
@@ -181,9 +247,9 @@ Get a list of item categories  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -193,13 +259,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get item categories
-                List&lt;int?&gt; result = apiInstance.GetUniverseCategories(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseCategories(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -216,8 +281,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -229,14 +293,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversecategoriescategoryid"></a>
 # **GetUniverseCategoriesCategoryId**
-> GetUniverseCategoriesCategoryIdOk GetUniverseCategoriesCategoryId (int? categoryId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseCategoriesCategoryIdOk GetUniverseCategoriesCategoryId (int? categoryId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get item category information
 
@@ -246,9 +310,9 @@ Get information of an item category  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -258,15 +322,15 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var categoryId = 56;  // int? | An Eve item category ID
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get item category information
-                GetUniverseCategoriesCategoryIdOk result = apiInstance.GetUniverseCategoriesCategoryId(categoryId, datasource, language, userAgent, xUserAgent);
+                GetUniverseCategoriesCategoryIdOk result = apiInstance.GetUniverseCategoriesCategoryId(categoryId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -283,10 +347,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categoryId** | **int?**| An Eve item category ID | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -298,14 +362,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseconstellations"></a>
 # **GetUniverseConstellations**
-> List<int?> GetUniverseConstellations (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseConstellations (string datasource = null, string ifNoneMatch = null)
 
 Get constellations
 
@@ -315,9 +379,9 @@ Get a list of constellations  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -327,13 +391,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get constellations
-                List&lt;int?&gt; result = apiInstance.GetUniverseConstellations(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseConstellations(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -350,8 +413,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -363,14 +425,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseconstellationsconstellationid"></a>
 # **GetUniverseConstellationsConstellationId**
-> GetUniverseConstellationsConstellationIdOk GetUniverseConstellationsConstellationId (int? constellationId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseConstellationsConstellationIdOk GetUniverseConstellationsConstellationId (int? constellationId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get constellation information
 
@@ -380,9 +442,9 @@ Get information on a constellation  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -392,15 +454,15 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var constellationId = 56;  // int? | constellation_id integer
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get constellation information
-                GetUniverseConstellationsConstellationIdOk result = apiInstance.GetUniverseConstellationsConstellationId(constellationId, datasource, language, userAgent, xUserAgent);
+                GetUniverseConstellationsConstellationIdOk result = apiInstance.GetUniverseConstellationsConstellationId(constellationId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -417,10 +479,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **constellationId** | **int?**| constellation_id integer | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -432,14 +494,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversefactions"></a>
 # **GetUniverseFactions**
-> List<GetUniverseFactions200Ok> GetUniverseFactions (string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> List<GetUniverseFactions200Ok> GetUniverseFactions (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get factions
 
@@ -449,9 +511,9 @@ Get a list of factions  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -460,15 +522,15 @@ namespace Example
         public void main()
         {
             var apiInstance = new UniverseApi();
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get factions
-                List&lt;GetUniverseFactions200Ok&gt; result = apiInstance.GetUniverseFactions(datasource, language, userAgent, xUserAgent);
+                List&lt;GetUniverseFactions200Ok&gt; result = apiInstance.GetUniverseFactions(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -484,10 +546,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -499,14 +561,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversegraphics"></a>
 # **GetUniverseGraphics**
-> List<int?> GetUniverseGraphics (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseGraphics (string datasource = null, string ifNoneMatch = null)
 
 Get graphics
 
@@ -516,9 +578,9 @@ Get a list of graphics  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -528,13 +590,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get graphics
-                List&lt;int?&gt; result = apiInstance.GetUniverseGraphics(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseGraphics(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -551,8 +612,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -564,14 +624,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversegraphicsgraphicid"></a>
 # **GetUniverseGraphicsGraphicId**
-> GetUniverseGraphicsGraphicIdOk GetUniverseGraphicsGraphicId (int? graphicId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseGraphicsGraphicIdOk GetUniverseGraphicsGraphicId (int? graphicId, string datasource = null, string ifNoneMatch = null)
 
 Get graphic information
 
@@ -581,9 +641,9 @@ Get information on a graphic  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -594,13 +654,12 @@ namespace Example
             var apiInstance = new UniverseApi();
             var graphicId = 56;  // int? | graphic_id integer
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get graphic information
-                GetUniverseGraphicsGraphicIdOk result = apiInstance.GetUniverseGraphicsGraphicId(graphicId, datasource, userAgent, xUserAgent);
+                GetUniverseGraphicsGraphicIdOk result = apiInstance.GetUniverseGraphicsGraphicId(graphicId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -618,8 +677,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **graphicId** | **int?**| graphic_id integer | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -631,14 +689,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversegroups"></a>
 # **GetUniverseGroups**
-> List<int?> GetUniverseGroups (string datasource = null, int? page = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseGroups (string datasource = null, string ifNoneMatch = null, int? page = null)
 
 Get item groups
 
@@ -648,9 +706,9 @@ Get a list of item groups  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -660,14 +718,13 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get item groups
-                List&lt;int?&gt; result = apiInstance.GetUniverseGroups(datasource, page, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseGroups(datasource, ifNoneMatch, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -684,9 +741,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -698,14 +754,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversegroupsgroupid"></a>
 # **GetUniverseGroupsGroupId**
-> GetUniverseGroupsGroupIdOk GetUniverseGroupsGroupId (int? groupId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseGroupsGroupIdOk GetUniverseGroupsGroupId (int? groupId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get item group information
 
@@ -715,9 +771,9 @@ Get information on an item group  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -727,15 +783,15 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var groupId = 56;  // int? | An Eve item group ID
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get item group information
-                GetUniverseGroupsGroupIdOk result = apiInstance.GetUniverseGroupsGroupId(groupId, datasource, language, userAgent, xUserAgent);
+                GetUniverseGroupsGroupIdOk result = apiInstance.GetUniverseGroupsGroupId(groupId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -752,10 +808,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int?**| An Eve item group ID | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -767,14 +823,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversemoonsmoonid"></a>
 # **GetUniverseMoonsMoonId**
-> GetUniverseMoonsMoonIdOk GetUniverseMoonsMoonId (int? moonId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseMoonsMoonIdOk GetUniverseMoonsMoonId (int? moonId, string datasource = null, string ifNoneMatch = null)
 
 Get moon information
 
@@ -784,9 +840,9 @@ Get information on a moon  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -797,13 +853,12 @@ namespace Example
             var apiInstance = new UniverseApi();
             var moonId = 56;  // int? | moon_id integer
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get moon information
-                GetUniverseMoonsMoonIdOk result = apiInstance.GetUniverseMoonsMoonId(moonId, datasource, userAgent, xUserAgent);
+                GetUniverseMoonsMoonIdOk result = apiInstance.GetUniverseMoonsMoonId(moonId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -821,8 +876,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **moonId** | **int?**| moon_id integer | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -834,14 +888,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseplanetsplanetid"></a>
 # **GetUniversePlanetsPlanetId**
-> GetUniversePlanetsPlanetIdOk GetUniversePlanetsPlanetId (int? planetId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniversePlanetsPlanetIdOk GetUniversePlanetsPlanetId (int? planetId, string datasource = null, string ifNoneMatch = null)
 
 Get planet information
 
@@ -851,9 +905,9 @@ Get information on a planet  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -864,13 +918,12 @@ namespace Example
             var apiInstance = new UniverseApi();
             var planetId = 56;  // int? | planet_id integer
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get planet information
-                GetUniversePlanetsPlanetIdOk result = apiInstance.GetUniversePlanetsPlanetId(planetId, datasource, userAgent, xUserAgent);
+                GetUniversePlanetsPlanetIdOk result = apiInstance.GetUniversePlanetsPlanetId(planetId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -888,8 +941,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **planetId** | **int?**| planet_id integer | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -901,14 +953,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseraces"></a>
 # **GetUniverseRaces**
-> List<GetUniverseRaces200Ok> GetUniverseRaces (string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> List<GetUniverseRaces200Ok> GetUniverseRaces (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get character races
 
@@ -918,9 +970,9 @@ Get a list of character races  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -929,15 +981,15 @@ namespace Example
         public void main()
         {
             var apiInstance = new UniverseApi();
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get character races
-                List&lt;GetUniverseRaces200Ok&gt; result = apiInstance.GetUniverseRaces(datasource, language, userAgent, xUserAgent);
+                List&lt;GetUniverseRaces200Ok&gt; result = apiInstance.GetUniverseRaces(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -953,10 +1005,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -968,14 +1020,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseregions"></a>
 # **GetUniverseRegions**
-> List<int?> GetUniverseRegions (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseRegions (string datasource = null, string ifNoneMatch = null)
 
 Get regions
 
@@ -985,9 +1037,9 @@ Get a list of regions  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -997,13 +1049,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get regions
-                List&lt;int?&gt; result = apiInstance.GetUniverseRegions(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseRegions(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1020,8 +1071,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1033,14 +1083,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseregionsregionid"></a>
 # **GetUniverseRegionsRegionId**
-> GetUniverseRegionsRegionIdOk GetUniverseRegionsRegionId (int? regionId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseRegionsRegionIdOk GetUniverseRegionsRegionId (int? regionId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get region information
 
@@ -1050,9 +1100,9 @@ Get information on a region  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1062,15 +1112,15 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var regionId = 56;  // int? | region_id integer
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get region information
-                GetUniverseRegionsRegionIdOk result = apiInstance.GetUniverseRegionsRegionId(regionId, datasource, language, userAgent, xUserAgent);
+                GetUniverseRegionsRegionIdOk result = apiInstance.GetUniverseRegionsRegionId(regionId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1087,10 +1137,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **regionId** | **int?**| region_id integer | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -1102,14 +1152,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversestargatesstargateid"></a>
 # **GetUniverseStargatesStargateId**
-> GetUniverseStargatesStargateIdOk GetUniverseStargatesStargateId (int? stargateId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseStargatesStargateIdOk GetUniverseStargatesStargateId (int? stargateId, string datasource = null, string ifNoneMatch = null)
 
 Get stargate information
 
@@ -1119,9 +1169,9 @@ Get information on a stargate  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1132,13 +1182,12 @@ namespace Example
             var apiInstance = new UniverseApi();
             var stargateId = 56;  // int? | stargate_id integer
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get stargate information
-                GetUniverseStargatesStargateIdOk result = apiInstance.GetUniverseStargatesStargateId(stargateId, datasource, userAgent, xUserAgent);
+                GetUniverseStargatesStargateIdOk result = apiInstance.GetUniverseStargatesStargateId(stargateId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1156,8 +1205,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stargateId** | **int?**| stargate_id integer | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1169,14 +1217,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversestarsstarid"></a>
 # **GetUniverseStarsStarId**
-> GetUniverseStarsStarIdOk GetUniverseStarsStarId (int? starId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseStarsStarIdOk GetUniverseStarsStarId (int? starId, string datasource = null, string ifNoneMatch = null)
 
 Get star information
 
@@ -1186,9 +1234,9 @@ Get information on a star  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1199,13 +1247,12 @@ namespace Example
             var apiInstance = new UniverseApi();
             var starId = 56;  // int? | star_id integer
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get star information
-                GetUniverseStarsStarIdOk result = apiInstance.GetUniverseStarsStarId(starId, datasource, userAgent, xUserAgent);
+                GetUniverseStarsStarIdOk result = apiInstance.GetUniverseStarsStarId(starId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1223,8 +1270,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starId** | **int?**| star_id integer | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1236,26 +1282,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversestationsstationid"></a>
 # **GetUniverseStationsStationId**
-> GetUniverseStationsStationIdOk GetUniverseStationsStationId (int? stationId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseStationsStationIdOk GetUniverseStationsStationId (int? stationId, string datasource = null, string ifNoneMatch = null)
 
 Get station information
 
-Get information on a station  - --  This route is cached for up to 300 seconds
+Get information on a station  - --  This route expires daily at 11:05
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1266,13 +1312,12 @@ namespace Example
             var apiInstance = new UniverseApi();
             var stationId = 56;  // int? | station_id integer
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get station information
-                GetUniverseStationsStationIdOk result = apiInstance.GetUniverseStationsStationId(stationId, datasource, userAgent, xUserAgent);
+                GetUniverseStationsStationIdOk result = apiInstance.GetUniverseStationsStationId(stationId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1290,8 +1335,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stationId** | **int?**| station_id integer | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1303,14 +1347,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversestructures"></a>
 # **GetUniverseStructures**
-> List<long?> GetUniverseStructures (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<long?> GetUniverseStructures (string datasource = null, string ifNoneMatch = null)
 
 List all public structures
 
@@ -1320,9 +1364,9 @@ List all public structures  - --  This route is cached for up to 3600 seconds
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1332,13 +1376,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List all public structures
-                List&lt;long?&gt; result = apiInstance.GetUniverseStructures(datasource, userAgent, xUserAgent);
+                List&lt;long?&gt; result = apiInstance.GetUniverseStructures(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1355,8 +1398,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1368,14 +1410,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversestructuresstructureid"></a>
 # **GetUniverseStructuresStructureId**
-> GetUniverseStructuresStructureIdOk GetUniverseStructuresStructureId (long? structureId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseStructuresStructureIdOk GetUniverseStructuresStructureId (long? structureId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get structure information
 
@@ -1385,9 +1427,9 @@ Returns information on requested structure, if you are on the ACL. Otherwise, re
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1401,14 +1443,13 @@ namespace Example
             var apiInstance = new UniverseApi();
             var structureId = 789;  // long? | An Eve structure ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get structure information
-                GetUniverseStructuresStructureIdOk result = apiInstance.GetUniverseStructuresStructureId(structureId, datasource, token, userAgent, xUserAgent);
+                GetUniverseStructuresStructureIdOk result = apiInstance.GetUniverseStructuresStructureId(structureId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1426,9 +1467,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **structureId** | **long?**| An Eve structure ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -1440,14 +1480,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversesystemjumps"></a>
 # **GetUniverseSystemJumps**
-> List<GetUniverseSystemJumps200Ok> GetUniverseSystemJumps (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetUniverseSystemJumps200Ok> GetUniverseSystemJumps (string datasource = null, string ifNoneMatch = null)
 
 Get system jumps
 
@@ -1457,9 +1497,9 @@ Get the number of jumps in solar systems within the last hour ending at the time
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1469,13 +1509,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get system jumps
-                List&lt;GetUniverseSystemJumps200Ok&gt; result = apiInstance.GetUniverseSystemJumps(datasource, userAgent, xUserAgent);
+                List&lt;GetUniverseSystemJumps200Ok&gt; result = apiInstance.GetUniverseSystemJumps(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1492,8 +1531,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1505,14 +1543,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversesystemkills"></a>
 # **GetUniverseSystemKills**
-> List<GetUniverseSystemKills200Ok> GetUniverseSystemKills (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetUniverseSystemKills200Ok> GetUniverseSystemKills (string datasource = null, string ifNoneMatch = null)
 
 Get system kills
 
@@ -1522,9 +1560,9 @@ Get the number of ship, pod and NPC kills per solar system within the last hour 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1534,13 +1572,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get system kills
-                List&lt;GetUniverseSystemKills200Ok&gt; result = apiInstance.GetUniverseSystemKills(datasource, userAgent, xUserAgent);
+                List&lt;GetUniverseSystemKills200Ok&gt; result = apiInstance.GetUniverseSystemKills(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1557,8 +1594,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1570,14 +1606,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversesystems"></a>
 # **GetUniverseSystems**
-> List<int?> GetUniverseSystems (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseSystems (string datasource = null, string ifNoneMatch = null)
 
 Get solar systems
 
@@ -1587,9 +1623,9 @@ Get a list of solar systems  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1599,13 +1635,12 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get solar systems
-                List&lt;int?&gt; result = apiInstance.GetUniverseSystems(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseSystems(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1622,8 +1657,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -1635,14 +1669,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversesystemssystemid"></a>
 # **GetUniverseSystemsSystemId**
-> GetUniverseSystemsSystemIdOk GetUniverseSystemsSystemId (int? systemId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseSystemsSystemIdOk GetUniverseSystemsSystemId (int? systemId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get solar system information
 
@@ -1652,9 +1686,9 @@ Get information on a solar system  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1664,15 +1698,15 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var systemId = 56;  // int? | system_id integer
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get solar system information
-                GetUniverseSystemsSystemIdOk result = apiInstance.GetUniverseSystemsSystemId(systemId, datasource, language, userAgent, xUserAgent);
+                GetUniverseSystemsSystemIdOk result = apiInstance.GetUniverseSystemsSystemId(systemId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1689,10 +1723,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **systemId** | **int?**| system_id integer | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -1704,14 +1738,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversetypes"></a>
 # **GetUniverseTypes**
-> List<int?> GetUniverseTypes (string datasource = null, int? page = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetUniverseTypes (string datasource = null, string ifNoneMatch = null, int? page = null)
 
 Get types
 
@@ -1721,9 +1755,9 @@ Get a list of type ids  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1733,14 +1767,13 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get types
-                List&lt;int?&gt; result = apiInstance.GetUniverseTypes(datasource, page, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetUniverseTypes(datasource, ifNoneMatch, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1757,9 +1790,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -1771,14 +1803,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniversetypestypeid"></a>
 # **GetUniverseTypesTypeId**
-> GetUniverseTypesTypeIdOk GetUniverseTypesTypeId (int? typeId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseTypesTypeIdOk GetUniverseTypesTypeId (int? typeId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get type information
 
@@ -1788,9 +1820,9 @@ Get information on a type  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1800,15 +1832,15 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var typeId = 56;  // int? | An Eve item type ID
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get type information
-                GetUniverseTypesTypeIdOk result = apiInstance.GetUniverseTypesTypeId(typeId, datasource, language, userAgent, xUserAgent);
+                GetUniverseTypesTypeIdOk result = apiInstance.GetUniverseTypesTypeId(typeId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1825,10 +1857,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **typeId** | **int?**| An Eve item type ID | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -1840,14 +1872,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postuniverseids"></a>
 # **PostUniverseIds**
-> PostUniverseIdsOk PostUniverseIds (List<string> names, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> PostUniverseIdsOk PostUniverseIds (List<string> names, string acceptLanguage = null, string datasource = null, string language = null)
 
 Bulk names to IDs
 
@@ -1857,9 +1889,9 @@ Resolve a set of names to IDs in the following categories: agents, alliances, ch
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1869,15 +1901,14 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var names = ;  // List<string> | The names to resolve
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Bulk names to IDs
-                PostUniverseIdsOk result = apiInstance.PostUniverseIds(names, datasource, language, userAgent, xUserAgent);
+                PostUniverseIdsOk result = apiInstance.PostUniverseIds(names, acceptLanguage, datasource, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1894,10 +1925,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **names** | **List&lt;string&gt;**| The names to resolve | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -1909,14 +1939,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postuniversenames"></a>
 # **PostUniverseNames**
-> List<PostUniverseNames200Ok> PostUniverseNames (List<int?> ids, string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<PostUniverseNames200Ok> PostUniverseNames (List<int?> ids, string datasource = null)
 
 Get names and categories for a set of ID's
 
@@ -1926,9 +1956,9 @@ Resolve a set of IDs to names and categories. Supported ID's for resolving are: 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1939,13 +1969,11 @@ namespace Example
             var apiInstance = new UniverseApi();
             var ids = ;  // List<int?> | The ids to resolve
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get names and categories for a set of ID's
-                List&lt;PostUniverseNames200Ok&gt; result = apiInstance.PostUniverseNames(ids, datasource, userAgent, xUserAgent);
+                List&lt;PostUniverseNames200Ok&gt; result = apiInstance.PostUniverseNames(ids, datasource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1963,8 +1991,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ids** | **List&lt;int?&gt;**| The ids to resolve | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -1976,7 +2002,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

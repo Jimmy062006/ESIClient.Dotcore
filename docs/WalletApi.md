@@ -1,20 +1,20 @@
-# IO.Swagger.Api.WalletApi
+# ESIClient.Dotcore.Api.WalletApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetCharactersCharacterIdWallet**](WalletApi.md#getcharacterscharacteridwallet) | **GET** /v1/characters/{character_id}/wallet/ | Get a character&#39;s wallet balance
-[**GetCharactersCharacterIdWalletJournal**](WalletApi.md#getcharacterscharacteridwalletjournal) | **GET** /v3/characters/{character_id}/wallet/journal/ | Get character wallet journal
+[**GetCharactersCharacterIdWalletJournal**](WalletApi.md#getcharacterscharacteridwalletjournal) | **GET** /v4/characters/{character_id}/wallet/journal/ | Get character wallet journal
 [**GetCharactersCharacterIdWalletTransactions**](WalletApi.md#getcharacterscharacteridwallettransactions) | **GET** /v1/characters/{character_id}/wallet/transactions/ | Get wallet transactions
 [**GetCorporationsCorporationIdWallets**](WalletApi.md#getcorporationscorporationidwallets) | **GET** /v1/corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
-[**GetCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getcorporationscorporationidwalletsdivisionjournal) | **GET** /v2/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+[**GetCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getcorporationscorporationidwalletsdivisionjournal) | **GET** /v3/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
 [**GetCorporationsCorporationIdWalletsDivisionTransactions**](WalletApi.md#getcorporationscorporationidwalletsdivisiontransactions) | **GET** /v1/corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
 
 
 <a name="getcharacterscharacteridwallet"></a>
 # **GetCharactersCharacterIdWallet**
-> double? GetCharactersCharacterIdWallet (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> double? GetCharactersCharacterIdWallet (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get a character's wallet balance
 
@@ -24,9 +24,9 @@ Returns a character's wallet balance  - --  This route is cached for up to 120 s
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -40,14 +40,13 @@ namespace Example
             var apiInstance = new WalletApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get a character's wallet balance
-                double? result = apiInstance.GetCharactersCharacterIdWallet(characterId, datasource, token, userAgent, xUserAgent);
+                double? result = apiInstance.GetCharactersCharacterIdWallet(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,9 +64,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -79,26 +77,26 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridwalletjournal"></a>
 # **GetCharactersCharacterIdWalletJournal**
-> List<GetCharactersCharacterIdWalletJournal200Ok> GetCharactersCharacterIdWalletJournal (int? characterId, string datasource = null, long? fromId = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdWalletJournal200Ok> GetCharactersCharacterIdWalletJournal (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get character wallet journal
 
-Retrieve character wallet journal  - --  This route is cached for up to 3600 seconds
+Retrieve the given character's wallet journal going 30 days back  - --  This route is cached for up to 3600 seconds
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -112,15 +110,14 @@ namespace Example
             var apiInstance = new WalletApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var fromId = 789;  // long? | Only show journal entries happened before the transaction referenced by this id (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get character wallet journal
-                List&lt;GetCharactersCharacterIdWalletJournal200Ok&gt; result = apiInstance.GetCharactersCharacterIdWalletJournal(characterId, datasource, fromId, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdWalletJournal200Ok&gt; result = apiInstance.GetCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -138,10 +135,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **fromId** | **long?**| Only show journal entries happened before the transaction referenced by this id | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -153,14 +149,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridwallettransactions"></a>
 # **GetCharactersCharacterIdWalletTransactions**
-> List<GetCharactersCharacterIdWalletTransactions200Ok> GetCharactersCharacterIdWalletTransactions (int? characterId, string datasource = null, long? fromId = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdWalletTransactions200Ok> GetCharactersCharacterIdWalletTransactions (int? characterId, string datasource = null, long? fromId = null, string ifNoneMatch = null, string token = null)
 
 Get wallet transactions
 
@@ -170,9 +166,9 @@ Get wallet transactions of a character  - --  This route is cached for up to 360
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -187,14 +183,13 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var fromId = 789;  // long? | Only show transactions happened before the one referenced by this id (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get wallet transactions
-                List&lt;GetCharactersCharacterIdWalletTransactions200Ok&gt; result = apiInstance.GetCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdWalletTransactions200Ok&gt; result = apiInstance.GetCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,9 +208,8 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **fromId** | **long?**| Only show transactions happened before the one referenced by this id | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -227,14 +221,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationscorporationidwallets"></a>
 # **GetCorporationsCorporationIdWallets**
-> List<GetCorporationsCorporationIdWallets200Ok> GetCorporationsCorporationIdWallets (int? corporationId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationsCorporationIdWallets200Ok> GetCorporationsCorporationIdWallets (int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Returns a corporation's wallet balance
 
@@ -244,9 +238,9 @@ Get a corporation's wallets  - --  This route is cached for up to 300 seconds  -
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -260,14 +254,13 @@ namespace Example
             var apiInstance = new WalletApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Returns a corporation's wallet balance
-                List&lt;GetCorporationsCorporationIdWallets200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWallets(corporationId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCorporationsCorporationIdWallets200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -285,9 +278,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -299,26 +291,26 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationscorporationidwalletsdivisionjournal"></a>
 # **GetCorporationsCorporationIdWalletsDivisionJournal**
-> List<GetCorporationsCorporationIdWalletsDivisionJournal200Ok> GetCorporationsCorporationIdWalletsDivisionJournal (int? corporationId, int? division, string datasource = null, long? fromId = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationsCorporationIdWalletsDivisionJournal200Ok> GetCorporationsCorporationIdWalletsDivisionJournal (int? corporationId, int? division, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get corporation wallet journal
 
-Retrieve corporation wallet journal  - --  This route is cached for up to 3600 seconds  - -- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Retrieve the given corporation's wallet journal for the given division going 30 days back  - --  This route is cached for up to 3600 seconds  - -- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
 
 ### Example
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -333,15 +325,14 @@ namespace Example
             var corporationId = 56;  // int? | An EVE corporation ID
             var division = 56;  // int? | Wallet key of the division to fetch journals from
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var fromId = 789;  // long? | Only show journal entries happened before the transaction referenced by this id (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get corporation wallet journal
-                List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, fromId, token, userAgent, xUserAgent);
+                List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -360,10 +351,9 @@ Name | Type | Description  | Notes
  **corporationId** | **int?**| An EVE corporation ID | 
  **division** | **int?**| Wallet key of the division to fetch journals from | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **fromId** | **long?**| Only show journal entries happened before the transaction referenced by this id | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -375,14 +365,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationscorporationidwalletsdivisiontransactions"></a>
 # **GetCorporationsCorporationIdWalletsDivisionTransactions**
-> List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok> GetCorporationsCorporationIdWalletsDivisionTransactions (int? corporationId, int? division, string datasource = null, long? fromId = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok> GetCorporationsCorporationIdWalletsDivisionTransactions (int? corporationId, int? division, string datasource = null, long? fromId = null, string ifNoneMatch = null, string token = null)
 
 Get corporation wallet transactions
 
@@ -392,9 +382,9 @@ Get wallet transactions of a corporation  - --  This route is cached for up to 3
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -410,14 +400,13 @@ namespace Example
             var division = 56;  // int? | Wallet key of the division to fetch journals from
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var fromId = 789;  // long? | Only show journal entries happened before the transaction referenced by this id (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get corporation wallet transactions
-                List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, token, userAgent, xUserAgent);
+                List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -437,9 +426,8 @@ Name | Type | Description  | Notes
  **division** | **int?**| Wallet key of the division to fetch journals from | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **fromId** | **long?**| Only show journal entries happened before the transaction referenced by this id | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -451,7 +439,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseConstellationsConstellationIdOk
+# ESIClient.Dotcore.Model.GetUniverseConstellationsConstellationIdOk
 ## Properties
 
 Name | Type | Description | Notes

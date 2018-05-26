@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostCharactersCharacterIdAssetsNames200Ok
+# ESIClient.Dotcore.Model.PostCharactersCharacterIdAssetsNames200Ok
 ## Properties
 
 Name | Type | Description | Notes

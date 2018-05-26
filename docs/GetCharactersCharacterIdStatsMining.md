@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdStatsMining
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdStatsMining
 ## Properties
 
 Name | Type | Description | Notes

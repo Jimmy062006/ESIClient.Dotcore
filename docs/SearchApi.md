@@ -1,6 +1,6 @@
-# IO.Swagger.Api.SearchApi
+# ESIClient.Dotcore.Api.SearchApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridsearch"></a>
 # **GetCharactersCharacterIdSearch**
-> GetCharactersCharacterIdSearchOk GetCharactersCharacterIdSearch (List<string> categories, int? characterId, string search, string datasource = null, string language = null, bool? strict = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdSearchOk GetCharactersCharacterIdSearch (List<string> categories, int? characterId, string search, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, bool? strict = null, string token = null)
 
 Search on a string
 
@@ -20,9 +20,9 @@ Search for entities that match a given sub-string.  - --  This route is cached f
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -37,17 +37,17 @@ namespace Example
             var categories = categories_example;  // List<string> | Type of entities to search for
             var characterId = 56;  // int? | An EVE character ID
             var search = search_example;  // string | The string to search on
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
             var strict = true;  // bool? | Whether the search should be a strict match (optional)  (default to false)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Search on a string
-                GetCharactersCharacterIdSearchOk result = apiInstance.GetCharactersCharacterIdSearch(categories, characterId, search, datasource, language, strict, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdSearchOk result = apiInstance.GetCharactersCharacterIdSearch(categories, characterId, search, acceptLanguage, datasource, ifNoneMatch, language, strict, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -66,12 +66,12 @@ Name | Type | Description  | Notes
  **categories** | **List&lt;string&gt;**| Type of entities to search for | 
  **characterId** | **int?**| An EVE character ID | 
  **search** | **string**| The string to search on | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
  **strict** | **bool?**| Whether the search should be a strict match | [optional] [default to false]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -83,14 +83,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsearch"></a>
 # **GetSearch**
-> GetSearchOk GetSearch (List<string> categories, string search, string datasource = null, string language = null, bool? strict = null, string userAgent = null, string xUserAgent = null)
+> GetSearchOk GetSearch (List<string> categories, string search, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, bool? strict = null)
 
 Search on a string
 
@@ -100,9 +100,9 @@ Search for entities that match a given sub-string.  - --  This route is cached f
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -113,16 +113,16 @@ namespace Example
             var apiInstance = new SearchApi();
             var categories = categories_example;  // List<string> | Type of entities to search for
             var search = search_example;  // string | The string to search on
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
             var strict = true;  // bool? | Whether the search should be a strict match (optional)  (default to false)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Search on a string
-                GetSearchOk result = apiInstance.GetSearch(categories, search, datasource, language, strict, userAgent, xUserAgent);
+                GetSearchOk result = apiInstance.GetSearch(categories, search, acceptLanguage, datasource, ifNoneMatch, language, strict);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -140,11 +140,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categories** | **List&lt;string&gt;**| Type of entities to search for | 
  **search** | **string**| The string to search on | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
  **strict** | **bool?**| Whether the search should be a strict match | [optional] [default to false]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -156,7 +156,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

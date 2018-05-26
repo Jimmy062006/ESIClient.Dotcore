@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetDogmaAttributesAttributeIdNotFound
+# ESIClient.Dotcore.Model.GetDogmaAttributesAttributeIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
-# IO.Swagger.Api.InsuranceApi
+# ESIClient.Dotcore.Api.InsuranceApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getinsuranceprices"></a>
 # **GetInsurancePrices**
-> List<GetInsurancePrices200Ok> GetInsurancePrices (string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> List<GetInsurancePrices200Ok> GetInsurancePrices (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 List insurance levels
 
@@ -19,9 +19,9 @@ Return available insurance levels for all ship types  - --  This route is cached
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -30,15 +30,15 @@ namespace Example
         public void main()
         {
             var apiInstance = new InsuranceApi();
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // List insurance levels
-                List&lt;GetInsurancePrices200Ok&gt; result = apiInstance.GetInsurancePrices(datasource, language, userAgent, xUserAgent);
+                List&lt;GetInsurancePrices200Ok&gt; result = apiInstance.GetInsurancePrices(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,10 +54,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -69,7 +69,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

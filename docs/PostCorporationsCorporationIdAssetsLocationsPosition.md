@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostCorporationsCorporationIdAssetsLocationsPosition
+# ESIClient.Dotcore.Model.PostCorporationsCorporationIdAssetsLocationsPosition
 ## Properties
 
 Name | Type | Description | Notes

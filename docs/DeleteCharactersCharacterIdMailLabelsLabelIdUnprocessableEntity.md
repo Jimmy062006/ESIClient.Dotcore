@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity
+# ESIClient.Dotcore.Model.DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity
 ## Properties
 
 Name | Type | Description | Notes

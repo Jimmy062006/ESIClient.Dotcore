@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetFleetsFleetIdMembersNotFound
+# ESIClient.Dotcore.Model.GetFleetsFleetIdMembersNotFound
 ## Properties
 
 Name | Type | Description | Notes

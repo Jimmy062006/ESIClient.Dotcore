@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetWarsWarIdKillmailsUnprocessableEntity
+# ESIClient.Dotcore.Model.GetWarsWarIdKillmailsUnprocessableEntity
 ## Properties
 
 Name | Type | Description | Notes

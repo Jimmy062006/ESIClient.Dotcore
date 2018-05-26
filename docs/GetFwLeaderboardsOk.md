@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetFwLeaderboardsOk
+# ESIClient.Dotcore.Model.GetFwLeaderboardsOk
 ## Properties
 
 Name | Type | Description | Notes

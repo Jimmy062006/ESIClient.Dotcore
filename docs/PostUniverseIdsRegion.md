@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostUniverseIdsRegion
+# ESIClient.Dotcore.Model.PostUniverseIdsRegion
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
-# IO.Swagger.Api.AllianceApi
+# ESIClient.Dotcore.Api.AllianceApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getalliances"></a>
 # **GetAlliances**
-> List<int?> GetAlliances (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetAlliances (string datasource = null, string ifNoneMatch = null)
 
 List all alliances
 
@@ -23,9 +23,9 @@ List all active player alliances  - --  This route is cached for up to 3600 seco
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -35,13 +35,12 @@ namespace Example
         {
             var apiInstance = new AllianceApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List all alliances
-                List&lt;int?&gt; result = apiInstance.GetAlliances(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetAlliances(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -58,8 +57,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -71,14 +69,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getalliancesallianceid"></a>
 # **GetAlliancesAllianceId**
-> GetAlliancesAllianceIdOk GetAlliancesAllianceId (int? allianceId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetAlliancesAllianceIdOk GetAlliancesAllianceId (int? allianceId, string datasource = null, string ifNoneMatch = null)
 
 Get alliance information
 
@@ -88,9 +86,9 @@ Public information about an alliance  - --  This route is cached for up to 3600 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -101,13 +99,12 @@ namespace Example
             var apiInstance = new AllianceApi();
             var allianceId = 56;  // int? | An EVE alliance ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get alliance information
-                GetAlliancesAllianceIdOk result = apiInstance.GetAlliancesAllianceId(allianceId, datasource, userAgent, xUserAgent);
+                GetAlliancesAllianceIdOk result = apiInstance.GetAlliancesAllianceId(allianceId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,8 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **int?**| An EVE alliance ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -138,14 +134,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getalliancesallianceidcorporations"></a>
 # **GetAlliancesAllianceIdCorporations**
-> List<int?> GetAlliancesAllianceIdCorporations (int? allianceId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetAlliancesAllianceIdCorporations (int? allianceId, string datasource = null, string ifNoneMatch = null)
 
 List alliance's corporations
 
@@ -155,9 +151,9 @@ List all current member corporations of an alliance  - --  This route is cached 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -168,13 +164,12 @@ namespace Example
             var apiInstance = new AllianceApi();
             var allianceId = 56;  // int? | An EVE alliance ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List alliance's corporations
-                List&lt;int?&gt; result = apiInstance.GetAlliancesAllianceIdCorporations(allianceId, datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetAlliancesAllianceIdCorporations(allianceId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -192,8 +187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **int?**| An EVE alliance ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -205,14 +199,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getalliancesallianceidicons"></a>
 # **GetAlliancesAllianceIdIcons**
-> GetAlliancesAllianceIdIconsOk GetAlliancesAllianceIdIcons (int? allianceId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetAlliancesAllianceIdIconsOk GetAlliancesAllianceIdIcons (int? allianceId, string datasource = null, string ifNoneMatch = null)
 
 Get alliance icon
 
@@ -222,9 +216,9 @@ Get the icon urls for a alliance  - --  This route is cached for up to 3600 seco
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -235,13 +229,12 @@ namespace Example
             var apiInstance = new AllianceApi();
             var allianceId = 56;  // int? | An EVE alliance ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get alliance icon
-                GetAlliancesAllianceIdIconsOk result = apiInstance.GetAlliancesAllianceIdIcons(allianceId, datasource, userAgent, xUserAgent);
+                GetAlliancesAllianceIdIconsOk result = apiInstance.GetAlliancesAllianceIdIcons(allianceId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,8 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **int?**| An EVE alliance ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -272,14 +264,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getalliancesnames"></a>
 # **GetAlliancesNames**
-> List<GetAlliancesNames200Ok> GetAlliancesNames (List<int?> allianceIds, string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetAlliancesNames200Ok> GetAlliancesNames (List<int?> allianceIds, string datasource = null, string ifNoneMatch = null)
 
 Get alliance names
 
@@ -289,9 +281,9 @@ Resolve a set of alliance IDs to alliance names  - --  This route is cached for 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -302,13 +294,12 @@ namespace Example
             var apiInstance = new AllianceApi();
             var allianceIds = new List<int?>(); // List<int?> | A comma separated list of alliance IDs
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get alliance names
-                List&lt;GetAlliancesNames200Ok&gt; result = apiInstance.GetAlliancesNames(allianceIds, datasource, userAgent, xUserAgent);
+                List&lt;GetAlliancesNames200Ok&gt; result = apiInstance.GetAlliancesNames(allianceIds, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -326,8 +317,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceIds** | [**List&lt;int?&gt;**](int?.md)| A comma separated list of alliance IDs | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -339,7 +329,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

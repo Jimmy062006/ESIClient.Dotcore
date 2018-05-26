@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdSkillsOk
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdSkillsOk
 ## Properties
 
 Name | Type | Description | Notes

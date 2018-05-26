@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetRouteOriginDestinationNotFound
+# ESIClient.Dotcore.Model.GetRouteOriginDestinationNotFound
 ## Properties
 
 Name | Type | Description | Notes

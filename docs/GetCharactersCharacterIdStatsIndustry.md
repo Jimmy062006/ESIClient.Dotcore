@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdStatsIndustry
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdStatsIndustry
 ## Properties
 
 Name | Type | Description | Notes

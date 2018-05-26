@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdContactsLabels200Ok
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdContactsLabels200Ok
 ## Properties
 
 Name | Type | Description | Notes

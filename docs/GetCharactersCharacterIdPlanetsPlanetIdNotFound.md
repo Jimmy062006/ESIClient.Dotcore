@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdPlanetsPlanetIdNotFound
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdPlanetsPlanetIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

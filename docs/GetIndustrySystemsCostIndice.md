@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetIndustrySystemsCostIndice
+# ESIClient.Dotcore.Model.GetIndustrySystemsCostIndice
 ## Properties
 
 Name | Type | Description | Notes

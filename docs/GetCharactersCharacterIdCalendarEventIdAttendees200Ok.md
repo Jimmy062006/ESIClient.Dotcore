@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdCalendarEventIdAttendees200Ok
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdCalendarEventIdAttendees200Ok
 ## Properties
 
 Name | Type | Description | Notes

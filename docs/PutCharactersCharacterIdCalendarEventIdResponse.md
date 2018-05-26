@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PutCharactersCharacterIdCalendarEventIdResponse
+# ESIClient.Dotcore.Model.PutCharactersCharacterIdCalendarEventIdResponse
 ## Properties
 
 Name | Type | Description | Notes

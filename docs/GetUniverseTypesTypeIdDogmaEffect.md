@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseTypesTypeIdDogmaEffect
+# ESIClient.Dotcore.Model.GetUniverseTypesTypeIdDogmaEffect
 ## Properties
 
 Name | Type | Description | Notes

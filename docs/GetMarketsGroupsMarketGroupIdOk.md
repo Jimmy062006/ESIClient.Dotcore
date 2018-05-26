@@ -1,13 +1,13 @@
-# IO.Swagger.Model.GetMarketsGroupsMarketGroupIdOk
+# ESIClient.Dotcore.Model.GetMarketsGroupsMarketGroupIdOk
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Description** | **string** | description string | 
 **MarketGroupId** | **int?** | market_group_id integer | 
 **Name** | **string** | name string | 
-**Description** | **string** | description string | 
-**Types** | **List&lt;int?&gt;** | types array | 
 **ParentGroupId** | **int?** | parent_group_id integer | [optional] 
+**Types** | **List&lt;int?&gt;** | types array | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

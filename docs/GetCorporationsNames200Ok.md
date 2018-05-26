@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCorporationsNames200Ok
+# ESIClient.Dotcore.Model.GetCorporationsNames200Ok
 ## Properties
 
 Name | Type | Description | Notes

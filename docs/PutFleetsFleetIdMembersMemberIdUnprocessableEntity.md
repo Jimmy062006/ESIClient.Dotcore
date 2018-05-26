@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PutFleetsFleetIdMembersMemberIdUnprocessableEntity
+# ESIClient.Dotcore.Model.PutFleetsFleetIdMembersMemberIdUnprocessableEntity
 ## Properties
 
 Name | Type | Description | Notes

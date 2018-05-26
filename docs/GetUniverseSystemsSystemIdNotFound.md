@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseSystemsSystemIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseSystemsSystemIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

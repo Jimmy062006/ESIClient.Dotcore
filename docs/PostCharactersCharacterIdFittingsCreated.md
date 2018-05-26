@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostCharactersCharacterIdFittingsCreated
+# ESIClient.Dotcore.Model.PostCharactersCharacterIdFittingsCreated
 ## Properties
 
 Name | Type | Description | Notes

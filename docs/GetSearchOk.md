@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetSearchOk
+# ESIClient.Dotcore.Model.GetSearchOk
 ## Properties
 
 Name | Type | Description | Notes

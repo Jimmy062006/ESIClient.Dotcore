@@ -1,6 +1,6 @@
-# IO.Swagger.Api.IndustryApi
+# ESIClient.Dotcore.Api.IndustryApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridindustryjobs"></a>
 # **GetCharactersCharacterIdIndustryJobs**
-> List<GetCharactersCharacterIdIndustryJobs200Ok> GetCharactersCharacterIdIndustryJobs (int? characterId, string datasource = null, bool? includeCompleted = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdIndustryJobs200Ok> GetCharactersCharacterIdIndustryJobs (int? characterId, string datasource = null, string ifNoneMatch = null, bool? includeCompleted = null, string token = null)
 
 List character industry jobs
 
@@ -26,9 +26,9 @@ List industry jobs placed by a character  - --  This route is cached for up to 3
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -42,15 +42,14 @@ namespace Example
             var apiInstance = new IndustryApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var includeCompleted = true;  // bool? | Whether retrieve completed character industry jobs as well (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // List character industry jobs
-                List&lt;GetCharactersCharacterIdIndustryJobs200Ok&gt; result = apiInstance.GetCharactersCharacterIdIndustryJobs(characterId, datasource, includeCompleted, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdIndustryJobs200Ok&gt; result = apiInstance.GetCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,10 +67,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **includeCompleted** | **bool?**| Whether retrieve completed character industry jobs as well | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -83,14 +81,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridmining"></a>
 # **GetCharactersCharacterIdMining**
-> List<GetCharactersCharacterIdMining200Ok> GetCharactersCharacterIdMining (int? characterId, string datasource = null, int? page = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdMining200Ok> GetCharactersCharacterIdMining (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Character mining ledger
 
@@ -100,9 +98,9 @@ Paginated record of all mining done by a character for the past 30 days  - --  T
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -116,15 +114,14 @@ namespace Example
             var apiInstance = new IndustryApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Character mining ledger
-                List&lt;GetCharactersCharacterIdMining200Ok&gt; result = apiInstance.GetCharactersCharacterIdMining(characterId, datasource, page, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdMining200Ok&gt; result = apiInstance.GetCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -142,10 +139,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -157,14 +153,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationcorporationidminingextractions"></a>
 # **GetCorporationCorporationIdMiningExtractions**
-> List<GetCorporationCorporationIdMiningExtractions200Ok> GetCorporationCorporationIdMiningExtractions (int? corporationId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationCorporationIdMiningExtractions200Ok> GetCorporationCorporationIdMiningExtractions (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Moon extraction timers
 
@@ -174,9 +170,9 @@ Extraction timers for all moon chunks being extracted by refineries belonging to
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -190,14 +186,14 @@ namespace Example
             var apiInstance = new IndustryApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Moon extraction timers
-                List&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningExtractions(corporationId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -215,9 +211,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -229,14 +225,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationcorporationidminingobservers"></a>
 # **GetCorporationCorporationIdMiningObservers**
-> List<GetCorporationCorporationIdMiningObservers200Ok> GetCorporationCorporationIdMiningObservers (int? corporationId, string datasource = null, int? page = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationCorporationIdMiningObservers200Ok> GetCorporationCorporationIdMiningObservers (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Corporation mining observers
 
@@ -246,9 +242,9 @@ Paginated list of all entities capable of observing and recording mining for a c
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -262,15 +258,14 @@ namespace Example
             var apiInstance = new IndustryApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Corporation mining observers
-                List&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningObservers(corporationId, datasource, page, token, userAgent, xUserAgent);
+                List&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -288,10 +283,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -303,14 +297,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationcorporationidminingobserversobserverid"></a>
 # **GetCorporationCorporationIdMiningObserversObserverId**
-> List<GetCorporationCorporationIdMiningObserversObserverId200Ok> GetCorporationCorporationIdMiningObserversObserverId (int? corporationId, long? observerId, string datasource = null, int? page = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationCorporationIdMiningObserversObserverId200Ok> GetCorporationCorporationIdMiningObserversObserverId (int? corporationId, long? observerId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Observed corporation mining
 
@@ -320,9 +314,9 @@ Paginated record of all mining seen by an observer  - --  This route is cached f
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -337,15 +331,14 @@ namespace Example
             var corporationId = 56;  // int? | An EVE corporation ID
             var observerId = 789;  // long? | A mining observer id
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Observed corporation mining
-                List&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, page, token, userAgent, xUserAgent);
+                List&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -364,10 +357,9 @@ Name | Type | Description  | Notes
  **corporationId** | **int?**| An EVE corporation ID | 
  **observerId** | **long?**| A mining observer id | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -379,14 +371,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationscorporationidindustryjobs"></a>
 # **GetCorporationsCorporationIdIndustryJobs**
-> List<GetCorporationsCorporationIdIndustryJobs200Ok> GetCorporationsCorporationIdIndustryJobs (int? corporationId, string datasource = null, bool? includeCompleted = null, int? page = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationsCorporationIdIndustryJobs200Ok> GetCorporationsCorporationIdIndustryJobs (int? corporationId, string datasource = null, string ifNoneMatch = null, bool? includeCompleted = null, int? page = null, string token = null)
 
 List corporation industry jobs
 
@@ -396,9 +388,9 @@ List industry jobs run by a corporation  - --  This route is cached for up to 30
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -412,16 +404,15 @@ namespace Example
             var apiInstance = new IndustryApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var includeCompleted = true;  // bool? | Whether retrieve completed industry jobs as well (optional)  (default to false)
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // List corporation industry jobs
-                List&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; result = apiInstance.GetCorporationsCorporationIdIndustryJobs(corporationId, datasource, includeCompleted, page, token, userAgent, xUserAgent);
+                List&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; result = apiInstance.GetCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -439,11 +430,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **includeCompleted** | **bool?**| Whether retrieve completed industry jobs as well | [optional] [default to false]
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -455,14 +445,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getindustryfacilities"></a>
 # **GetIndustryFacilities**
-> List<GetIndustryFacilities200Ok> GetIndustryFacilities (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetIndustryFacilities200Ok> GetIndustryFacilities (string datasource = null, string ifNoneMatch = null)
 
 List industry facilities
 
@@ -472,9 +462,9 @@ Return a list of industry facilities  - --  This route is cached for up to 3600 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -484,13 +474,12 @@ namespace Example
         {
             var apiInstance = new IndustryApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List industry facilities
-                List&lt;GetIndustryFacilities200Ok&gt; result = apiInstance.GetIndustryFacilities(datasource, userAgent, xUserAgent);
+                List&lt;GetIndustryFacilities200Ok&gt; result = apiInstance.GetIndustryFacilities(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -507,8 +496,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -520,14 +508,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getindustrysystems"></a>
 # **GetIndustrySystems**
-> List<GetIndustrySystems200Ok> GetIndustrySystems (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetIndustrySystems200Ok> GetIndustrySystems (string datasource = null, string ifNoneMatch = null)
 
 List solar system cost indices
 
@@ -537,9 +525,9 @@ Return cost indices for solar systems  - --  This route is cached for up to 3600
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -549,13 +537,12 @@ namespace Example
         {
             var apiInstance = new IndustryApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List solar system cost indices
-                List&lt;GetIndustrySystems200Ok&gt; result = apiInstance.GetIndustrySystems(datasource, userAgent, xUserAgent);
+                List&lt;GetIndustrySystems200Ok&gt; result = apiInstance.GetIndustrySystems(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -572,8 +559,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -585,7 +571,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

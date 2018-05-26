@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdBookmarksFolders200Ok
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdBookmarksFolders200Ok
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdPortraitNotFound
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdPortraitNotFound
 ## Properties
 
 Name | Type | Description | Notes

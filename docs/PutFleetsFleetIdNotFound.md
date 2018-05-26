@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PutFleetsFleetIdNotFound
+# ESIClient.Dotcore.Model.PutFleetsFleetIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCorporationsCorporationIdStructuresService
+# ESIClient.Dotcore.Model.GetCorporationsCorporationIdStructuresService
 ## Properties
 
 Name | Type | Description | Notes

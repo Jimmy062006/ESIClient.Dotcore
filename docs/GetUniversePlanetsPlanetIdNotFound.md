@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniversePlanetsPlanetIdNotFound
+# ESIClient.Dotcore.Model.GetUniversePlanetsPlanetIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

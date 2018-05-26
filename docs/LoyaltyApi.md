@@ -1,6 +1,6 @@
-# IO.Swagger.Api.LoyaltyApi
+# ESIClient.Dotcore.Api.LoyaltyApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridloyaltypoints"></a>
 # **GetCharactersCharacterIdLoyaltyPoints**
-> List<GetCharactersCharacterIdLoyaltyPoints200Ok> GetCharactersCharacterIdLoyaltyPoints (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdLoyaltyPoints200Ok> GetCharactersCharacterIdLoyaltyPoints (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get loyalty points
 
@@ -20,9 +20,9 @@ Return a list of loyalty points for all corporations the character has worked fo
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -36,14 +36,13 @@ namespace Example
             var apiInstance = new LoyaltyApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get loyalty points
-                List&lt;GetCharactersCharacterIdLoyaltyPoints200Ok&gt; result = apiInstance.GetCharactersCharacterIdLoyaltyPoints(characterId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdLoyaltyPoints200Ok&gt; result = apiInstance.GetCharactersCharacterIdLoyaltyPoints(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,9 +60,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -75,14 +73,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getloyaltystorescorporationidoffers"></a>
 # **GetLoyaltyStoresCorporationIdOffers**
-> List<GetLoyaltyStoresCorporationIdOffers200Ok> GetLoyaltyStoresCorporationIdOffers (int? corporationId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetLoyaltyStoresCorporationIdOffers200Ok> GetLoyaltyStoresCorporationIdOffers (int? corporationId, string datasource = null, string ifNoneMatch = null)
 
 List loyalty store offers
 
@@ -92,9 +90,9 @@ Return a list of offers from a specific corporation's loyalty store  - --  This 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -105,13 +103,12 @@ namespace Example
             var apiInstance = new LoyaltyApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List loyalty store offers
-                List&lt;GetLoyaltyStoresCorporationIdOffers200Ok&gt; result = apiInstance.GetLoyaltyStoresCorporationIdOffers(corporationId, datasource, userAgent, xUserAgent);
+                List&lt;GetLoyaltyStoresCorporationIdOffers200Ok&gt; result = apiInstance.GetLoyaltyStoresCorporationIdOffers(corporationId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,8 +126,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -142,7 +138,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

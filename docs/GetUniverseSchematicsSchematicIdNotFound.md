@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseSchematicsSchematicIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseSchematicsSchematicIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdClonesHomeLocation
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdClonesHomeLocation
 ## Properties
 
 Name | Type | Description | Notes

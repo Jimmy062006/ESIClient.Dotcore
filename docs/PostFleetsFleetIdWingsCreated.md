@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostFleetsFleetIdWingsCreated
+# ESIClient.Dotcore.Model.PostFleetsFleetIdWingsCreated
 ## Properties
 
 Name | Type | Description | Notes

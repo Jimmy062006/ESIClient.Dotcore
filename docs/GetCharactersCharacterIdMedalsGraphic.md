@@ -1,12 +1,12 @@
-# IO.Swagger.Model.GetCharactersCharacterIdMedalsGraphic
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdMedalsGraphic
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Part** | **int?** | part integer | 
-**Layer** | **int?** | layer integer | 
-**Graphic** | **string** | graphic string | 
 **Color** | **int?** | color integer | [optional] 
+**Graphic** | **string** | graphic string | 
+**Layer** | **int?** | layer integer | 
+**Part** | **int?** | part integer | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

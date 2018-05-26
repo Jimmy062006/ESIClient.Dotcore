@@ -1,9 +1,8 @@
-# IO.Swagger.Model.GetCharactersCharacterIdStats200Ok
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdStats200Ok
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Year** | **int?** | Gregorian year for this set of aggregates | 
 **Character** | [**GetCharactersCharacterIdStatsCharacter**](GetCharactersCharacterIdStatsCharacter.md) |  | [optional] 
 **Combat** | [**GetCharactersCharacterIdStatsCombat**](GetCharactersCharacterIdStatsCombat.md) |  | [optional] 
 **Industry** | [**GetCharactersCharacterIdStatsIndustry**](GetCharactersCharacterIdStatsIndustry.md) |  | [optional] 
@@ -16,6 +15,7 @@ Name | Type | Description | Notes
 **Pve** | [**GetCharactersCharacterIdStatsPve**](GetCharactersCharacterIdStatsPve.md) |  | [optional] 
 **Social** | [**GetCharactersCharacterIdStatsSocial**](GetCharactersCharacterIdStatsSocial.md) |  | [optional] 
 **Travel** | [**GetCharactersCharacterIdStatsTravel**](GetCharactersCharacterIdStatsTravel.md) |  | [optional] 
+**Year** | **int?** | Gregorian year for this set of aggregates | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

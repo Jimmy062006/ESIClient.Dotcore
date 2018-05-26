@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetAlliancesNames200Ok
+# ESIClient.Dotcore.Model.GetAlliancesNames200Ok
 ## Properties
 
 Name | Type | Description | Notes

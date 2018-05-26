@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseGraphicsGraphicIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseGraphicsGraphicIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

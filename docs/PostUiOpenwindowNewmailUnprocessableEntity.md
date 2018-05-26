@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostUiOpenwindowNewmailUnprocessableEntity
+# ESIClient.Dotcore.Model.PostUiOpenwindowNewmailUnprocessableEntity
 ## Properties
 
 Name | Type | Description | Notes

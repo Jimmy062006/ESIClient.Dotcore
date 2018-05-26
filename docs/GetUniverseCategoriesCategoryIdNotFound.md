@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseCategoriesCategoryIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseCategoriesCategoryIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

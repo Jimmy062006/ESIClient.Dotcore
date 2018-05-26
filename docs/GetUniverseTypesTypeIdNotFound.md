@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseTypesTypeIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseTypesTypeIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

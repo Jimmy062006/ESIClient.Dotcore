@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Forbidden
+# ESIClient.Dotcore.Model.Forbidden
 ## Properties
 
 Name | Type | Description | Notes

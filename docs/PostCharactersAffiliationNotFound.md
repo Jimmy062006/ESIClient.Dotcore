@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostCharactersAffiliationNotFound
+# ESIClient.Dotcore.Model.PostCharactersAffiliationNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetKillmailsKillmailIdKillmailHashPosition
+# ESIClient.Dotcore.Model.GetKillmailsKillmailIdKillmailHashPosition
 ## Properties
 
 Name | Type | Description | Notes

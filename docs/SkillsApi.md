@@ -1,6 +1,6 @@
-# IO.Swagger.Api.SkillsApi
+# ESIClient.Dotcore.Api.SkillsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridattributes"></a>
 # **GetCharactersCharacterIdAttributes**
-> GetCharactersCharacterIdAttributesOk GetCharactersCharacterIdAttributes (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdAttributesOk GetCharactersCharacterIdAttributes (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get character attributes
 
@@ -21,9 +21,9 @@ Return attributes of a character  - --  This route is cached for up to 3600 seco
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -37,14 +37,13 @@ namespace Example
             var apiInstance = new SkillsApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get character attributes
-                GetCharactersCharacterIdAttributesOk result = apiInstance.GetCharactersCharacterIdAttributes(characterId, datasource, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdAttributesOk result = apiInstance.GetCharactersCharacterIdAttributes(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,9 +61,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -76,14 +74,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridskillqueue"></a>
 # **GetCharactersCharacterIdSkillqueue**
-> List<GetCharactersCharacterIdSkillqueue200Ok> GetCharactersCharacterIdSkillqueue (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdSkillqueue200Ok> GetCharactersCharacterIdSkillqueue (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get character's skill queue
 
@@ -93,9 +91,9 @@ List the configured skill queue for the given character  - --  This route is cac
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -109,14 +107,13 @@ namespace Example
             var apiInstance = new SkillsApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get character's skill queue
-                List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; result = apiInstance.GetCharactersCharacterIdSkillqueue(characterId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; result = apiInstance.GetCharactersCharacterIdSkillqueue(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -134,9 +131,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -148,14 +144,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridskills"></a>
 # **GetCharactersCharacterIdSkills**
-> GetCharactersCharacterIdSkillsOk GetCharactersCharacterIdSkills (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdSkillsOk GetCharactersCharacterIdSkills (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get character skills
 
@@ -165,9 +161,9 @@ List all trained skills for the given character  - --  This route is cached for 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -181,14 +177,13 @@ namespace Example
             var apiInstance = new SkillsApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get character skills
-                GetCharactersCharacterIdSkillsOk result = apiInstance.GetCharactersCharacterIdSkills(characterId, datasource, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdSkillsOk result = apiInstance.GetCharactersCharacterIdSkills(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -206,9 +201,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -220,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

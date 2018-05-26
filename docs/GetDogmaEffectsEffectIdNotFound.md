@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetDogmaEffectsEffectIdNotFound
+# ESIClient.Dotcore.Model.GetDogmaEffectsEffectIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

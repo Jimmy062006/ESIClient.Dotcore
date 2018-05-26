@@ -1,6 +1,6 @@
-# IO.Swagger.Api.CalendarApi
+# ESIClient.Dotcore.Api.CalendarApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridcalendar"></a>
 # **GetCharactersCharacterIdCalendar**
-> List<GetCharactersCharacterIdCalendar200Ok> GetCharactersCharacterIdCalendar (int? characterId, string datasource = null, int? fromEvent = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdCalendar200Ok> GetCharactersCharacterIdCalendar (int? characterId, string datasource = null, int? fromEvent = null, string ifNoneMatch = null, string token = null)
 
 List calendar event summaries
 
@@ -22,9 +22,9 @@ Get 50 event summaries from the calendar. If no from_event ID is given, the reso
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -39,14 +39,13 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var fromEvent = 56;  // int? | The event ID to retrieve events from (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // List calendar event summaries
-                List&lt;GetCharactersCharacterIdCalendar200Ok&gt; result = apiInstance.GetCharactersCharacterIdCalendar(characterId, datasource, fromEvent, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdCalendar200Ok&gt; result = apiInstance.GetCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,9 +64,8 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **fromEvent** | **int?**| The event ID to retrieve events from | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -79,14 +77,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridcalendareventid"></a>
 # **GetCharactersCharacterIdCalendarEventId**
-> GetCharactersCharacterIdCalendarEventIdOk GetCharactersCharacterIdCalendarEventId (int? characterId, int? eventId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdCalendarEventIdOk GetCharactersCharacterIdCalendarEventId (int? characterId, int? eventId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get an event
 
@@ -96,9 +94,9 @@ Get all the information for a specific event  - --  This route is cached for up 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -113,14 +111,13 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var eventId = 56;  // int? | The id of the event requested
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get an event
-                GetCharactersCharacterIdCalendarEventIdOk result = apiInstance.GetCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdCalendarEventIdOk result = apiInstance.GetCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -139,9 +136,8 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **eventId** | **int?**| The id of the event requested | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -153,14 +149,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridcalendareventidattendees"></a>
 # **GetCharactersCharacterIdCalendarEventIdAttendees**
-> List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok> GetCharactersCharacterIdCalendarEventIdAttendees (int? characterId, int? eventId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok> GetCharactersCharacterIdCalendarEventIdAttendees (int? characterId, int? eventId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get attendees
 
@@ -170,9 +166,9 @@ Get all invited attendees for a given event  - --  This route is cached for up t
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -187,14 +183,13 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var eventId = 56;  // int? | The id of the event requested
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get attendees
-                List&lt;GetCharactersCharacterIdCalendarEventIdAttendees200Ok&gt; result = apiInstance.GetCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdCalendarEventIdAttendees200Ok&gt; result = apiInstance.GetCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,9 +208,8 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **eventId** | **int?**| The id of the event requested | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -227,14 +221,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="putcharacterscharacteridcalendareventid"></a>
 # **PutCharactersCharacterIdCalendarEventId**
-> void PutCharactersCharacterIdCalendarEventId (int? characterId, int? eventId, PutCharactersCharacterIdCalendarEventIdResponse response, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PutCharactersCharacterIdCalendarEventId (int? characterId, int? eventId, PutCharactersCharacterIdCalendarEventIdResponse response, string datasource = null, string token = null)
 
 Respond to an event
 
@@ -244,9 +238,9 @@ Set your response status to an event  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -263,13 +257,11 @@ namespace Example
             var response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Respond to an event
-                apiInstance.PutCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token, userAgent, xUserAgent);
+                apiInstance.PutCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token);
             }
             catch (Exception e)
             {
@@ -289,8 +281,6 @@ Name | Type | Description  | Notes
  **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -302,7 +292,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

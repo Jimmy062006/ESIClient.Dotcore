@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails
 ## Properties
 
 Name | Type | Description | Notes

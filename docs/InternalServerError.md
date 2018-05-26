@@ -1,4 +1,4 @@
-# IO.Swagger.Model.InternalServerError
+# ESIClient.Dotcore.Model.InternalServerError
 ## Properties
 
 Name | Type | Description | Notes

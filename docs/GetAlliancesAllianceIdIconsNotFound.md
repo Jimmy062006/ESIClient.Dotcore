@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetAlliancesAllianceIdIconsNotFound
+# ESIClient.Dotcore.Model.GetAlliancesAllianceIdIconsNotFound
 ## Properties
 
 Name | Type | Description | Notes

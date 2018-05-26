@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdStatsSocial
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdStatsSocial
 ## Properties
 
 Name | Type | Description | Notes

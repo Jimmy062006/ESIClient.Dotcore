@@ -1,6 +1,6 @@
-# IO.Swagger.Api.WarsApi
+# ESIClient.Dotcore.Api.WarsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getwars"></a>
 # **GetWars**
-> List<int?> GetWars (string datasource = null, int? maxWarId = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetWars (string datasource = null, string ifNoneMatch = null, int? maxWarId = null)
 
 List wars
 
@@ -21,9 +21,9 @@ Return a list of wars  - --  This route is cached for up to 3600 seconds
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -33,14 +33,13 @@ namespace Example
         {
             var apiInstance = new WarsApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var maxWarId = 56;  // int? | Only return wars with ID smaller than this. (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // List wars
-                List&lt;int?&gt; result = apiInstance.GetWars(datasource, maxWarId, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetWars(datasource, ifNoneMatch, maxWarId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,9 +56,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **maxWarId** | **int?**| Only return wars with ID smaller than this. | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -71,14 +69,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getwarswarid"></a>
 # **GetWarsWarId**
-> GetWarsWarIdOk GetWarsWarId (int? warId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetWarsWarIdOk GetWarsWarId (int? warId, string datasource = null, string ifNoneMatch = null)
 
 Get war information
 
@@ -88,9 +86,9 @@ Return details about a war  - --  This route is cached for up to 3600 seconds
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -101,13 +99,12 @@ namespace Example
             var apiInstance = new WarsApi();
             var warId = 56;  // int? | ID for a war
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get war information
-                GetWarsWarIdOk result = apiInstance.GetWarsWarId(warId, datasource, userAgent, xUserAgent);
+                GetWarsWarIdOk result = apiInstance.GetWarsWarId(warId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,8 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **warId** | **int?**| ID for a war | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -138,14 +134,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getwarswaridkillmails"></a>
 # **GetWarsWarIdKillmails**
-> List<GetWarsWarIdKillmails200Ok> GetWarsWarIdKillmails (int? warId, string datasource = null, int? page = null, string userAgent = null, string xUserAgent = null)
+> List<GetWarsWarIdKillmails200Ok> GetWarsWarIdKillmails (int? warId, string datasource = null, string ifNoneMatch = null, int? page = null)
 
 List kills for a war
 
@@ -155,9 +151,9 @@ Return a list of kills related to a war  - --  This route is cached for up to 36
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -168,14 +164,13 @@ namespace Example
             var apiInstance = new WarsApi();
             var warId = 56;  // int? | A valid war ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // List kills for a war
-                List&lt;GetWarsWarIdKillmails200Ok&gt; result = apiInstance.GetWarsWarIdKillmails(warId, datasource, page, userAgent, xUserAgent);
+                List&lt;GetWarsWarIdKillmails200Ok&gt; result = apiInstance.GetWarsWarIdKillmails(warId, datasource, ifNoneMatch, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -193,9 +188,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **warId** | **int?**| A valid war ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -207,7 +201,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

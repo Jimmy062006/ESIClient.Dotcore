@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostUniverseNamesNotFound
+# ESIClient.Dotcore.Model.PostUniverseNamesNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseSystemsSystemIdPosition
+# ESIClient.Dotcore.Model.GetUniverseSystemsSystemIdPosition
 ## Properties
 
 Name | Type | Description | Notes

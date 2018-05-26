@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseGroupsGroupIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseGroupsGroupIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

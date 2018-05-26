@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseTypesTypeIdDogmaAttribute
+# ESIClient.Dotcore.Model.GetUniverseTypesTypeIdDogmaAttribute
 ## Properties
 
 Name | Type | Description | Notes

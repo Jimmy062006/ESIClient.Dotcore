@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseStructuresStructureIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseStructuresStructureIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdLoyaltyPoints200Ok
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdLoyaltyPoints200Ok
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetLoyaltyStoresCorporationIdOffersNotFound
+# ESIClient.Dotcore.Model.GetLoyaltyStoresCorporationIdOffersNotFound
 ## Properties
 
 Name | Type | Description | Notes

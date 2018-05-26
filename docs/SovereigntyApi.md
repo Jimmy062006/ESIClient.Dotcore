@@ -1,6 +1,6 @@
-# IO.Swagger.Api.SovereigntyApi
+# ESIClient.Dotcore.Api.SovereigntyApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getsovereigntycampaigns"></a>
 # **GetSovereigntyCampaigns**
-> List<GetSovereigntyCampaigns200Ok> GetSovereigntyCampaigns (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetSovereigntyCampaigns200Ok> GetSovereigntyCampaigns (string datasource = null, string ifNoneMatch = null)
 
 List sovereignty campaigns
 
@@ -21,9 +21,9 @@ Shows sovereignty data for campaigns.  - --  This route is cached for up to 5 se
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -33,13 +33,12 @@ namespace Example
         {
             var apiInstance = new SovereigntyApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List sovereignty campaigns
-                List&lt;GetSovereigntyCampaigns200Ok&gt; result = apiInstance.GetSovereigntyCampaigns(datasource, userAgent, xUserAgent);
+                List&lt;GetSovereigntyCampaigns200Ok&gt; result = apiInstance.GetSovereigntyCampaigns(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,8 +55,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -69,14 +67,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsovereigntymap"></a>
 # **GetSovereigntyMap**
-> List<GetSovereigntyMap200Ok> GetSovereigntyMap (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetSovereigntyMap200Ok> GetSovereigntyMap (string datasource = null, string ifNoneMatch = null)
 
 List sovereignty of systems
 
@@ -86,9 +84,9 @@ Shows sovereignty information for solar systems  - --  This route is cached for 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -98,13 +96,12 @@ namespace Example
         {
             var apiInstance = new SovereigntyApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List sovereignty of systems
-                List&lt;GetSovereigntyMap200Ok&gt; result = apiInstance.GetSovereigntyMap(datasource, userAgent, xUserAgent);
+                List&lt;GetSovereigntyMap200Ok&gt; result = apiInstance.GetSovereigntyMap(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -121,8 +118,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -134,14 +130,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsovereigntystructures"></a>
 # **GetSovereigntyStructures**
-> List<GetSovereigntyStructures200Ok> GetSovereigntyStructures (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<GetSovereigntyStructures200Ok> GetSovereigntyStructures (string datasource = null, string ifNoneMatch = null)
 
 List sovereignty structures
 
@@ -151,9 +147,9 @@ Shows sovereignty data for structures.  - --  This route is cached for up to 120
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -163,13 +159,12 @@ namespace Example
         {
             var apiInstance = new SovereigntyApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List sovereignty structures
-                List&lt;GetSovereigntyStructures200Ok&gt; result = apiInstance.GetSovereigntyStructures(datasource, userAgent, xUserAgent);
+                List&lt;GetSovereigntyStructures200Ok&gt; result = apiInstance.GetSovereigntyStructures(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -186,8 +181,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -199,7 +193,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

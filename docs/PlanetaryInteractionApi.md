@@ -1,6 +1,6 @@
-# IO.Swagger.Api.PlanetaryInteractionApi
+# ESIClient.Dotcore.Api.PlanetaryInteractionApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridplanets"></a>
 # **GetCharactersCharacterIdPlanets**
-> List<GetCharactersCharacterIdPlanets200Ok> GetCharactersCharacterIdPlanets (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdPlanets200Ok> GetCharactersCharacterIdPlanets (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get colonies
 
@@ -22,9 +22,9 @@ Returns a list of all planetary colonies owned by a character.  - --  This route
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -38,14 +38,13 @@ namespace Example
             var apiInstance = new PlanetaryInteractionApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get colonies
-                List&lt;GetCharactersCharacterIdPlanets200Ok&gt; result = apiInstance.GetCharactersCharacterIdPlanets(characterId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdPlanets200Ok&gt; result = apiInstance.GetCharactersCharacterIdPlanets(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -63,9 +62,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -77,14 +75,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridplanetsplanetid"></a>
 # **GetCharactersCharacterIdPlanetsPlanetId**
-> GetCharactersCharacterIdPlanetsPlanetIdOk GetCharactersCharacterIdPlanetsPlanetId (int? characterId, int? planetId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdPlanetsPlanetIdOk GetCharactersCharacterIdPlanetsPlanetId (int? characterId, int? planetId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get colony layout
 
@@ -94,9 +92,9 @@ Returns full details on the layout of a single planetary colony, including links
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -111,14 +109,13 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var planetId = 56;  // int? | Planet id of the target planet
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get colony layout
-                GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.GetCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.GetCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -137,9 +134,8 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **planetId** | **int?**| Planet id of the target planet | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -151,14 +147,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcorporationscorporationidcustomsoffices"></a>
 # **GetCorporationsCorporationIdCustomsOffices**
-> List<GetCorporationsCorporationIdCustomsOffices200Ok> GetCorporationsCorporationIdCustomsOffices (int? corporationId, string datasource = null, int? page = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCorporationsCorporationIdCustomsOffices200Ok> GetCorporationsCorporationIdCustomsOffices (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List corporation customs offices
 
@@ -168,9 +164,9 @@ List customs offices owned by a corporation  - --  This route is cached for up t
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -184,15 +180,14 @@ namespace Example
             var apiInstance = new PlanetaryInteractionApi();
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // List corporation customs offices
-                List&lt;GetCorporationsCorporationIdCustomsOffices200Ok&gt; result = apiInstance.GetCorporationsCorporationIdCustomsOffices(corporationId, datasource, page, token, userAgent, xUserAgent);
+                List&lt;GetCorporationsCorporationIdCustomsOffices200Ok&gt; result = apiInstance.GetCorporationsCorporationIdCustomsOffices(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -210,10 +205,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -225,14 +219,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getuniverseschematicsschematicid"></a>
 # **GetUniverseSchematicsSchematicId**
-> GetUniverseSchematicsSchematicIdOk GetUniverseSchematicsSchematicId (int? schematicId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetUniverseSchematicsSchematicIdOk GetUniverseSchematicsSchematicId (int? schematicId, string datasource = null, string ifNoneMatch = null)
 
 Get schematic information
 
@@ -242,9 +236,9 @@ Get information on a planetary factory schematic  - --  This route is cached for
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -255,13 +249,12 @@ namespace Example
             var apiInstance = new PlanetaryInteractionApi();
             var schematicId = 56;  // int? | A PI schematic ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get schematic information
-                GetUniverseSchematicsSchematicIdOk result = apiInstance.GetUniverseSchematicsSchematicId(schematicId, datasource, userAgent, xUserAgent);
+                GetUniverseSchematicsSchematicIdOk result = apiInstance.GetUniverseSchematicsSchematicId(schematicId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -279,8 +272,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schematicId** | **int?**| A PI schematic ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -292,7 +284,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

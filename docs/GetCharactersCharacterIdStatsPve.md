@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdStatsPve
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdStatsPve
 ## Properties
 
 Name | Type | Description | Notes

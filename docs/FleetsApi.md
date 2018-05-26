@@ -1,6 +1,6 @@
-# IO.Swagger.Api.FleetsApi
+# ESIClient.Dotcore.Api.FleetsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 <a name="deletefleetsfleetidmembersmemberid"></a>
 # **DeleteFleetsFleetIdMembersMemberId**
-> void DeleteFleetsFleetIdMembersMemberId (long? fleetId, int? memberId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void DeleteFleetsFleetIdMembersMemberId (long? fleetId, int? memberId, string datasource = null, string token = null)
 
 Kick fleet member
 
@@ -32,9 +32,9 @@ Kick a fleet member  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -50,13 +50,11 @@ namespace Example
             var memberId = 56;  // int? | The character ID of a member in this fleet
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Kick fleet member
-                apiInstance.DeleteFleetsFleetIdMembersMemberId(fleetId, memberId, datasource, token, userAgent, xUserAgent);
+                apiInstance.DeleteFleetsFleetIdMembersMemberId(fleetId, memberId, datasource, token);
             }
             catch (Exception e)
             {
@@ -75,8 +73,6 @@ Name | Type | Description  | Notes
  **memberId** | **int?**| The character ID of a member in this fleet | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -88,14 +84,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="deletefleetsfleetidsquadssquadid"></a>
 # **DeleteFleetsFleetIdSquadsSquadId**
-> void DeleteFleetsFleetIdSquadsSquadId (long? fleetId, long? squadId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void DeleteFleetsFleetIdSquadsSquadId (long? fleetId, long? squadId, string datasource = null, string token = null)
 
 Delete fleet squad
 
@@ -105,9 +101,9 @@ Delete a fleet squad, only empty squads can be deleted  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -123,13 +119,11 @@ namespace Example
             var squadId = 789;  // long? | The squad to delete
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Delete fleet squad
-                apiInstance.DeleteFleetsFleetIdSquadsSquadId(fleetId, squadId, datasource, token, userAgent, xUserAgent);
+                apiInstance.DeleteFleetsFleetIdSquadsSquadId(fleetId, squadId, datasource, token);
             }
             catch (Exception e)
             {
@@ -148,8 +142,6 @@ Name | Type | Description  | Notes
  **squadId** | **long?**| The squad to delete | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -161,14 +153,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="deletefleetsfleetidwingswingid"></a>
 # **DeleteFleetsFleetIdWingsWingId**
-> void DeleteFleetsFleetIdWingsWingId (long? fleetId, long? wingId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void DeleteFleetsFleetIdWingsWingId (long? fleetId, long? wingId, string datasource = null, string token = null)
 
 Delete fleet wing
 
@@ -178,9 +170,9 @@ Delete a fleet wing, only empty wings can be deleted. The wing may contain squad
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -196,13 +188,11 @@ namespace Example
             var wingId = 789;  // long? | The wing to delete
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Delete fleet wing
-                apiInstance.DeleteFleetsFleetIdWingsWingId(fleetId, wingId, datasource, token, userAgent, xUserAgent);
+                apiInstance.DeleteFleetsFleetIdWingsWingId(fleetId, wingId, datasource, token);
             }
             catch (Exception e)
             {
@@ -221,8 +211,6 @@ Name | Type | Description  | Notes
  **wingId** | **long?**| The wing to delete | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -234,14 +222,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getcharacterscharacteridfleet"></a>
 # **GetCharactersCharacterIdFleet**
-> GetCharactersCharacterIdFleetOk GetCharactersCharacterIdFleet (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetCharactersCharacterIdFleetOk GetCharactersCharacterIdFleet (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get character fleet info
 
@@ -251,9 +239,9 @@ Return the fleet ID the character is in, if any.  - --  This route is cached for
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -267,14 +255,13 @@ namespace Example
             var apiInstance = new FleetsApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get character fleet info
-                GetCharactersCharacterIdFleetOk result = apiInstance.GetCharactersCharacterIdFleet(characterId, datasource, token, userAgent, xUserAgent);
+                GetCharactersCharacterIdFleetOk result = apiInstance.GetCharactersCharacterIdFleet(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -292,9 +279,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -306,14 +292,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfleetsfleetid"></a>
 # **GetFleetsFleetId**
-> GetFleetsFleetIdOk GetFleetsFleetId (long? fleetId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> GetFleetsFleetIdOk GetFleetsFleetId (long? fleetId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get fleet information
 
@@ -323,9 +309,9 @@ Return details about a fleet  - --  This route is cached for up to 5 seconds
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -339,14 +325,13 @@ namespace Example
             var apiInstance = new FleetsApi();
             var fleetId = 789;  // long? | ID for a fleet
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get fleet information
-                GetFleetsFleetIdOk result = apiInstance.GetFleetsFleetId(fleetId, datasource, token, userAgent, xUserAgent);
+                GetFleetsFleetIdOk result = apiInstance.GetFleetsFleetId(fleetId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -364,9 +349,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **long?**| ID for a fleet | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -378,14 +362,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfleetsfleetidmembers"></a>
 # **GetFleetsFleetIdMembers**
-> List<GetFleetsFleetIdMembers200Ok> GetFleetsFleetIdMembers (long? fleetId, string datasource = null, string language = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetFleetsFleetIdMembers200Ok> GetFleetsFleetIdMembers (long? fleetId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, string token = null)
 
 Get fleet members
 
@@ -395,9 +379,9 @@ Return information about fleet members  - --  This route is cached for up to 5 s
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -410,16 +394,16 @@ namespace Example
 
             var apiInstance = new FleetsApi();
             var fleetId = 789;  // long? | ID for a fleet
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get fleet members
-                List&lt;GetFleetsFleetIdMembers200Ok&gt; result = apiInstance.GetFleetsFleetIdMembers(fleetId, datasource, language, token, userAgent, xUserAgent);
+                List&lt;GetFleetsFleetIdMembers200Ok&gt; result = apiInstance.GetFleetsFleetIdMembers(fleetId, acceptLanguage, datasource, ifNoneMatch, language, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -436,11 +420,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **long?**| ID for a fleet | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -452,14 +436,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getfleetsfleetidwings"></a>
 # **GetFleetsFleetIdWings**
-> List<GetFleetsFleetIdWings200Ok> GetFleetsFleetIdWings (long? fleetId, string datasource = null, string language = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetFleetsFleetIdWings200Ok> GetFleetsFleetIdWings (long? fleetId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, string token = null)
 
 Get fleet wings
 
@@ -469,9 +453,9 @@ Return information about wings in a fleet  - --  This route is cached for up to 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -484,16 +468,16 @@ namespace Example
 
             var apiInstance = new FleetsApi();
             var fleetId = 789;  // long? | ID for a fleet
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get fleet wings
-                List&lt;GetFleetsFleetIdWings200Ok&gt; result = apiInstance.GetFleetsFleetIdWings(fleetId, datasource, language, token, userAgent, xUserAgent);
+                List&lt;GetFleetsFleetIdWings200Ok&gt; result = apiInstance.GetFleetsFleetIdWings(fleetId, acceptLanguage, datasource, ifNoneMatch, language, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -510,11 +494,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **long?**| ID for a fleet | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -526,14 +510,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postfleetsfleetidmembers"></a>
 # **PostFleetsFleetIdMembers**
-> void PostFleetsFleetIdMembers (long? fleetId, PostFleetsFleetIdMembersInvitation invitation, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PostFleetsFleetIdMembers (long? fleetId, PostFleetsFleetIdMembersInvitation invitation, string datasource = null, string token = null)
 
 Create fleet invitation
 
@@ -543,9 +527,9 @@ Invite a character into the fleet. If a character has a CSPA charge set it is no
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -561,13 +545,11 @@ namespace Example
             var invitation = new PostFleetsFleetIdMembersInvitation(); // PostFleetsFleetIdMembersInvitation | Details of the invitation
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Create fleet invitation
-                apiInstance.PostFleetsFleetIdMembers(fleetId, invitation, datasource, token, userAgent, xUserAgent);
+                apiInstance.PostFleetsFleetIdMembers(fleetId, invitation, datasource, token);
             }
             catch (Exception e)
             {
@@ -586,8 +568,6 @@ Name | Type | Description  | Notes
  **invitation** | [**PostFleetsFleetIdMembersInvitation**](PostFleetsFleetIdMembersInvitation.md)| Details of the invitation | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -599,14 +579,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postfleetsfleetidwings"></a>
 # **PostFleetsFleetIdWings**
-> PostFleetsFleetIdWingsCreated PostFleetsFleetIdWings (long? fleetId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> PostFleetsFleetIdWingsCreated PostFleetsFleetIdWings (long? fleetId, string datasource = null, string token = null)
 
 Create fleet wing
 
@@ -616,9 +596,9 @@ Create a new wing in a fleet  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -633,13 +613,11 @@ namespace Example
             var fleetId = 789;  // long? | ID for a fleet
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Create fleet wing
-                PostFleetsFleetIdWingsCreated result = apiInstance.PostFleetsFleetIdWings(fleetId, datasource, token, userAgent, xUserAgent);
+                PostFleetsFleetIdWingsCreated result = apiInstance.PostFleetsFleetIdWings(fleetId, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -658,8 +636,6 @@ Name | Type | Description  | Notes
  **fleetId** | **long?**| ID for a fleet | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -671,14 +647,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postfleetsfleetidwingswingidsquads"></a>
 # **PostFleetsFleetIdWingsWingIdSquads**
-> PostFleetsFleetIdWingsWingIdSquadsCreated PostFleetsFleetIdWingsWingIdSquads (long? fleetId, long? wingId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> PostFleetsFleetIdWingsWingIdSquadsCreated PostFleetsFleetIdWingsWingIdSquads (long? fleetId, long? wingId, string datasource = null, string token = null)
 
 Create fleet squad
 
@@ -688,9 +664,9 @@ Create a new squad in a fleet  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -706,13 +682,11 @@ namespace Example
             var wingId = 789;  // long? | The wing_id to create squad in
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Create fleet squad
-                PostFleetsFleetIdWingsWingIdSquadsCreated result = apiInstance.PostFleetsFleetIdWingsWingIdSquads(fleetId, wingId, datasource, token, userAgent, xUserAgent);
+                PostFleetsFleetIdWingsWingIdSquadsCreated result = apiInstance.PostFleetsFleetIdWingsWingIdSquads(fleetId, wingId, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -732,8 +706,6 @@ Name | Type | Description  | Notes
  **wingId** | **long?**| The wing_id to create squad in | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -745,14 +717,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="putfleetsfleetid"></a>
 # **PutFleetsFleetId**
-> void PutFleetsFleetId (long? fleetId, PutFleetsFleetIdNewSettings newSettings, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PutFleetsFleetId (long? fleetId, PutFleetsFleetIdNewSettings newSettings, string datasource = null, string token = null)
 
 Update fleet
 
@@ -762,9 +734,9 @@ Update settings about a fleet  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -780,13 +752,11 @@ namespace Example
             var newSettings = new PutFleetsFleetIdNewSettings(); // PutFleetsFleetIdNewSettings | What to update for this fleet
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Update fleet
-                apiInstance.PutFleetsFleetId(fleetId, newSettings, datasource, token, userAgent, xUserAgent);
+                apiInstance.PutFleetsFleetId(fleetId, newSettings, datasource, token);
             }
             catch (Exception e)
             {
@@ -805,8 +775,6 @@ Name | Type | Description  | Notes
  **newSettings** | [**PutFleetsFleetIdNewSettings**](PutFleetsFleetIdNewSettings.md)| What to update for this fleet | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -818,14 +786,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="putfleetsfleetidmembersmemberid"></a>
 # **PutFleetsFleetIdMembersMemberId**
-> void PutFleetsFleetIdMembersMemberId (long? fleetId, int? memberId, PutFleetsFleetIdMembersMemberIdMovement movement, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PutFleetsFleetIdMembersMemberId (long? fleetId, int? memberId, PutFleetsFleetIdMembersMemberIdMovement movement, string datasource = null, string token = null)
 
 Move fleet member
 
@@ -835,9 +803,9 @@ Move a fleet member around  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -854,13 +822,11 @@ namespace Example
             var movement = new PutFleetsFleetIdMembersMemberIdMovement(); // PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Move fleet member
-                apiInstance.PutFleetsFleetIdMembersMemberId(fleetId, memberId, movement, datasource, token, userAgent, xUserAgent);
+                apiInstance.PutFleetsFleetIdMembersMemberId(fleetId, memberId, movement, datasource, token);
             }
             catch (Exception e)
             {
@@ -880,8 +846,6 @@ Name | Type | Description  | Notes
  **movement** | [**PutFleetsFleetIdMembersMemberIdMovement**](PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -893,14 +857,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="putfleetsfleetidsquadssquadid"></a>
 # **PutFleetsFleetIdSquadsSquadId**
-> void PutFleetsFleetIdSquadsSquadId (long? fleetId, PutFleetsFleetIdSquadsSquadIdNaming naming, long? squadId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PutFleetsFleetIdSquadsSquadId (long? fleetId, PutFleetsFleetIdSquadsSquadIdNaming naming, long? squadId, string datasource = null, string token = null)
 
 Rename fleet squad
 
@@ -910,9 +874,9 @@ Rename a fleet squad  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -929,13 +893,11 @@ namespace Example
             var squadId = 789;  // long? | The squad to rename
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Rename fleet squad
-                apiInstance.PutFleetsFleetIdSquadsSquadId(fleetId, naming, squadId, datasource, token, userAgent, xUserAgent);
+                apiInstance.PutFleetsFleetIdSquadsSquadId(fleetId, naming, squadId, datasource, token);
             }
             catch (Exception e)
             {
@@ -955,8 +917,6 @@ Name | Type | Description  | Notes
  **squadId** | **long?**| The squad to rename | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -968,14 +928,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="putfleetsfleetidwingswingid"></a>
 # **PutFleetsFleetIdWingsWingId**
-> void PutFleetsFleetIdWingsWingId (long? fleetId, PutFleetsFleetIdWingsWingIdNaming naming, long? wingId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PutFleetsFleetIdWingsWingId (long? fleetId, PutFleetsFleetIdWingsWingIdNaming naming, long? wingId, string datasource = null, string token = null)
 
 Rename fleet wing
 
@@ -985,9 +945,9 @@ Rename a fleet wing  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -1004,13 +964,11 @@ namespace Example
             var wingId = 789;  // long? | The wing to rename
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Rename fleet wing
-                apiInstance.PutFleetsFleetIdWingsWingId(fleetId, naming, wingId, datasource, token, userAgent, xUserAgent);
+                apiInstance.PutFleetsFleetIdWingsWingId(fleetId, naming, wingId, datasource, token);
             }
             catch (Exception e)
             {
@@ -1030,8 +988,6 @@ Name | Type | Description  | Notes
  **wingId** | **long?**| The wing to rename | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -1043,7 +999,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

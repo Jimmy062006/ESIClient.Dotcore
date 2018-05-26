@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCorporationsCorporationIdOutpostsOutpostIdCoordinates
+# ESIClient.Dotcore.Model.GetCorporationsCorporationIdOutpostsOutpostIdCoordinates
 ## Properties
 
 Name | Type | Description | Notes

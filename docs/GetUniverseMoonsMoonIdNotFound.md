@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseMoonsMoonIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseMoonsMoonIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseStargatesStargateIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseStargatesStargateIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

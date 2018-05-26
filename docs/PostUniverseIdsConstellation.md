@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostUniverseIdsConstellation
+# ESIClient.Dotcore.Model.PostUniverseIdsConstellation
 ## Properties
 
 Name | Type | Description | Notes

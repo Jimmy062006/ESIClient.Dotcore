@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCorporationsCorporationIdBookmarksItem
+# ESIClient.Dotcore.Model.GetCorporationsCorporationIdBookmarksItem
 ## Properties
 
 Name | Type | Description | Notes

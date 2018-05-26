@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PutFleetsFleetIdSquadsSquadIdNaming
+# ESIClient.Dotcore.Model.PutFleetsFleetIdSquadsSquadIdNaming
 ## Properties
 
 Name | Type | Description | Notes

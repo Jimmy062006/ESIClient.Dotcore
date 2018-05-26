@@ -1,6 +1,6 @@
-# IO.Swagger.Api.UserInterfaceApi
+# ESIClient.Dotcore.Api.UserInterfaceApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="postuiautopilotwaypoint"></a>
 # **PostUiAutopilotWaypoint**
-> void PostUiAutopilotWaypoint (bool? addToBeginning, bool? clearOtherWaypoints, long? destinationId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PostUiAutopilotWaypoint (bool? addToBeginning, bool? clearOtherWaypoints, long? destinationId, string datasource = null, string token = null)
 
 Set Autopilot Waypoint
 
@@ -23,9 +23,9 @@ Set a solar system as autopilot waypoint  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -42,13 +42,11 @@ namespace Example
             var destinationId = 789;  // long? | The destination to travel to, can be solar system, station or structure's id
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Set Autopilot Waypoint
-                apiInstance.PostUiAutopilotWaypoint(addToBeginning, clearOtherWaypoints, destinationId, datasource, token, userAgent, xUserAgent);
+                apiInstance.PostUiAutopilotWaypoint(addToBeginning, clearOtherWaypoints, destinationId, datasource, token);
             }
             catch (Exception e)
             {
@@ -68,8 +66,6 @@ Name | Type | Description  | Notes
  **destinationId** | **long?**| The destination to travel to, can be solar system, station or structure&#39;s id | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -81,14 +77,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postuiopenwindowcontract"></a>
 # **PostUiOpenwindowContract**
-> void PostUiOpenwindowContract (int? contractId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PostUiOpenwindowContract (int? contractId, string datasource = null, string token = null)
 
 Open Contract Window
 
@@ -98,9 +94,9 @@ Open the contract window inside the client  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -115,13 +111,11 @@ namespace Example
             var contractId = 56;  // int? | The contract to open
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Open Contract Window
-                apiInstance.PostUiOpenwindowContract(contractId, datasource, token, userAgent, xUserAgent);
+                apiInstance.PostUiOpenwindowContract(contractId, datasource, token);
             }
             catch (Exception e)
             {
@@ -139,8 +133,6 @@ Name | Type | Description  | Notes
  **contractId** | **int?**| The contract to open | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -152,14 +144,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postuiopenwindowinformation"></a>
 # **PostUiOpenwindowInformation**
-> void PostUiOpenwindowInformation (int? targetId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PostUiOpenwindowInformation (int? targetId, string datasource = null, string token = null)
 
 Open Information Window
 
@@ -169,9 +161,9 @@ Open the information window for a character, corporation or alliance inside the 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -186,13 +178,11 @@ namespace Example
             var targetId = 56;  // int? | The target to open
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Open Information Window
-                apiInstance.PostUiOpenwindowInformation(targetId, datasource, token, userAgent, xUserAgent);
+                apiInstance.PostUiOpenwindowInformation(targetId, datasource, token);
             }
             catch (Exception e)
             {
@@ -210,8 +200,6 @@ Name | Type | Description  | Notes
  **targetId** | **int?**| The target to open | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -223,14 +211,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postuiopenwindowmarketdetails"></a>
 # **PostUiOpenwindowMarketdetails**
-> void PostUiOpenwindowMarketdetails (int? typeId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PostUiOpenwindowMarketdetails (int? typeId, string datasource = null, string token = null)
 
 Open Market Details
 
@@ -240,9 +228,9 @@ Open the market details window for a specific typeID inside the client  - --
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -257,13 +245,11 @@ namespace Example
             var typeId = 56;  // int? | The item type to open in market window
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Open Market Details
-                apiInstance.PostUiOpenwindowMarketdetails(typeId, datasource, token, userAgent, xUserAgent);
+                apiInstance.PostUiOpenwindowMarketdetails(typeId, datasource, token);
             }
             catch (Exception e)
             {
@@ -281,8 +267,6 @@ Name | Type | Description  | Notes
  **typeId** | **int?**| The item type to open in market window | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -294,14 +278,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postuiopenwindownewmail"></a>
 # **PostUiOpenwindowNewmail**
-> void PostUiOpenwindowNewmail (PostUiOpenwindowNewmailNewMail newMail, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> void PostUiOpenwindowNewmail (PostUiOpenwindowNewmailNewMail newMail, string datasource = null, string token = null)
 
 Open New Mail Window
 
@@ -311,9 +295,9 @@ Open the New Mail window, according to settings from the request if applicable  
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -328,13 +312,11 @@ namespace Example
             var newMail = new PostUiOpenwindowNewmailNewMail(); // PostUiOpenwindowNewmailNewMail | The details of mail to create
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Open New Mail Window
-                apiInstance.PostUiOpenwindowNewmail(newMail, datasource, token, userAgent, xUserAgent);
+                apiInstance.PostUiOpenwindowNewmail(newMail, datasource, token);
             }
             catch (Exception e)
             {
@@ -352,8 +334,6 @@ Name | Type | Description  | Notes
  **newMail** | [**PostUiOpenwindowNewmailNewMail**](PostUiOpenwindowNewmailNewMail.md)| The details of mail to create | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -365,7 +345,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

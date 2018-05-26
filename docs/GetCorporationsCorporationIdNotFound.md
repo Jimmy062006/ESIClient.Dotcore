@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCorporationsCorporationIdNotFound
+# ESIClient.Dotcore.Model.GetCorporationsCorporationIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

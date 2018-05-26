@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetUniverseRegionsRegionIdNotFound
+# ESIClient.Dotcore.Model.GetUniverseRegionsRegionIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

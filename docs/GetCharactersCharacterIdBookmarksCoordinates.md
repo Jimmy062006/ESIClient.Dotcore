@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdBookmarksCoordinates
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdBookmarksCoordinates
 ## Properties
 
 Name | Type | Description | Notes

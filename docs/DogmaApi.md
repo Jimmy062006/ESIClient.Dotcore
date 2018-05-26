@@ -1,6 +1,6 @@
-# IO.Swagger.Api.DogmaApi
+# ESIClient.Dotcore.Api.DogmaApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getdogmaattributes"></a>
 # **GetDogmaAttributes**
-> List<int?> GetDogmaAttributes (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetDogmaAttributes (string datasource = null, string ifNoneMatch = null)
 
 Get attributes
 
@@ -22,9 +22,9 @@ Get a list of dogma attribute ids  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -34,13 +34,12 @@ namespace Example
         {
             var apiInstance = new DogmaApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get attributes
-                List&lt;int?&gt; result = apiInstance.GetDogmaAttributes(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetDogmaAttributes(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,8 +56,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -70,14 +68,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getdogmaattributesattributeid"></a>
 # **GetDogmaAttributesAttributeId**
-> GetDogmaAttributesAttributeIdOk GetDogmaAttributesAttributeId (int? attributeId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetDogmaAttributesAttributeIdOk GetDogmaAttributesAttributeId (int? attributeId, string datasource = null, string ifNoneMatch = null)
 
 Get attribute information
 
@@ -87,9 +85,9 @@ Get information on a dogma attribute  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -100,13 +98,12 @@ namespace Example
             var apiInstance = new DogmaApi();
             var attributeId = 56;  // int? | A dogma attribute ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get attribute information
-                GetDogmaAttributesAttributeIdOk result = apiInstance.GetDogmaAttributesAttributeId(attributeId, datasource, userAgent, xUserAgent);
+                GetDogmaAttributesAttributeIdOk result = apiInstance.GetDogmaAttributesAttributeId(attributeId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -124,8 +121,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **attributeId** | **int?**| A dogma attribute ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -137,14 +133,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getdogmaeffects"></a>
 # **GetDogmaEffects**
-> List<int?> GetDogmaEffects (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetDogmaEffects (string datasource = null, string ifNoneMatch = null)
 
 Get effects
 
@@ -154,9 +150,9 @@ Get a list of dogma effect ids  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -166,13 +162,12 @@ namespace Example
         {
             var apiInstance = new DogmaApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get effects
-                List&lt;int?&gt; result = apiInstance.GetDogmaEffects(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetDogmaEffects(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,8 +184,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -202,14 +196,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getdogmaeffectseffectid"></a>
 # **GetDogmaEffectsEffectId**
-> GetDogmaEffectsEffectIdOk GetDogmaEffectsEffectId (int? effectId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetDogmaEffectsEffectIdOk GetDogmaEffectsEffectId (int? effectId, string datasource = null, string ifNoneMatch = null)
 
 Get effect information
 
@@ -219,9 +213,9 @@ Get information on a dogma effect  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -232,13 +226,12 @@ namespace Example
             var apiInstance = new DogmaApi();
             var effectId = 56;  // int? | A dogma effect ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get effect information
-                GetDogmaEffectsEffectIdOk result = apiInstance.GetDogmaEffectsEffectId(effectId, datasource, userAgent, xUserAgent);
+                GetDogmaEffectsEffectIdOk result = apiInstance.GetDogmaEffectsEffectId(effectId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -256,8 +249,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **effectId** | **int?**| A dogma effect ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -269,7 +261,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

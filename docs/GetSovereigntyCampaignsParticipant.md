@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetSovereigntyCampaignsParticipant
+# ESIClient.Dotcore.Model.GetSovereigntyCampaignsParticipant
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetMarketsRegionIdHistoryUnprocessableEntity
+# ESIClient.Dotcore.Model.GetMarketsRegionIdHistoryUnprocessableEntity
 ## Properties
 
 Name | Type | Description | Notes

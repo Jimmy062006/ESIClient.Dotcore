@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GetCharactersCharacterIdMailMailIdNotFound
+# ESIClient.Dotcore.Model.GetCharactersCharacterIdMailMailIdNotFound
 ## Properties
 
 Name | Type | Description | Notes

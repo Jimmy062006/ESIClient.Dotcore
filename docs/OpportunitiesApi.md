@@ -1,6 +1,6 @@
-# IO.Swagger.Api.OpportunitiesApi
+# ESIClient.Dotcore.Api.OpportunitiesApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridopportunities"></a>
 # **GetCharactersCharacterIdOpportunities**
-> List<GetCharactersCharacterIdOpportunities200Ok> GetCharactersCharacterIdOpportunities (int? characterId, string datasource = null, string token = null, string userAgent = null, string xUserAgent = null)
+> List<GetCharactersCharacterIdOpportunities200Ok> GetCharactersCharacterIdOpportunities (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get a character's completed tasks
 
@@ -23,9 +23,9 @@ Return a list of tasks finished by a character  - --  This route is cached for u
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -39,14 +39,13 @@ namespace Example
             var apiInstance = new OpportunitiesApi();
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
 
             try
             {
                 // Get a character's completed tasks
-                List&lt;GetCharactersCharacterIdOpportunities200Ok&gt; result = apiInstance.GetCharactersCharacterIdOpportunities(characterId, datasource, token, userAgent, xUserAgent);
+                List&lt;GetCharactersCharacterIdOpportunities200Ok&gt; result = apiInstance.GetCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,9 +63,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -78,14 +76,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getopportunitiesgroups"></a>
 # **GetOpportunitiesGroups**
-> List<int?> GetOpportunitiesGroups (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetOpportunitiesGroups (string datasource = null, string ifNoneMatch = null)
 
 Get opportunities groups
 
@@ -95,9 +93,9 @@ Return a list of opportunities groups  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -107,13 +105,12 @@ namespace Example
         {
             var apiInstance = new OpportunitiesApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get opportunities groups
-                List&lt;int?&gt; result = apiInstance.GetOpportunitiesGroups(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetOpportunitiesGroups(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -130,8 +127,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -143,14 +139,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getopportunitiesgroupsgroupid"></a>
 # **GetOpportunitiesGroupsGroupId**
-> GetOpportunitiesGroupsGroupIdOk GetOpportunitiesGroupsGroupId (int? groupId, string datasource = null, string language = null, string userAgent = null, string xUserAgent = null)
+> GetOpportunitiesGroupsGroupIdOk GetOpportunitiesGroupsGroupId (int? groupId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get opportunities group
 
@@ -160,9 +156,9 @@ Return information of an opportunities group  - --  This route expires daily at 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -172,15 +168,15 @@ namespace Example
         {
             var apiInstance = new OpportunitiesApi();
             var groupId = 56;  // int? | ID of an opportunities group
+            var acceptLanguage = acceptLanguage_example;  // string | Language to use in the response (optional)  (default to en-us)
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var language = language_example;  // string | Language to use in the response (optional)  (default to en-us)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var language = language_example;  // string | Language to use in the response, takes precedence over Accept-Language (optional)  (default to en-us)
 
             try
             {
                 // Get opportunities group
-                GetOpportunitiesGroupsGroupIdOk result = apiInstance.GetOpportunitiesGroupsGroupId(groupId, datasource, language, userAgent, xUserAgent);
+                GetOpportunitiesGroupsGroupIdOk result = apiInstance.GetOpportunitiesGroupsGroupId(groupId, acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -197,10 +193,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **int?**| ID of an opportunities group | 
+ **acceptLanguage** | **string**| Language to use in the response | [optional] [default to en-us]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **language** | **string**| Language to use in the response | [optional] [default to en-us]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
 
 ### Return type
 
@@ -212,14 +208,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getopportunitiestasks"></a>
 # **GetOpportunitiesTasks**
-> List<int?> GetOpportunitiesTasks (string datasource = null, string userAgent = null, string xUserAgent = null)
+> List<int?> GetOpportunitiesTasks (string datasource = null, string ifNoneMatch = null)
 
 Get opportunities tasks
 
@@ -229,9 +225,9 @@ Return a list of opportunities tasks  - --  This route expires daily at 11:05
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -241,13 +237,12 @@ namespace Example
         {
             var apiInstance = new OpportunitiesApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get opportunities tasks
-                List&lt;int?&gt; result = apiInstance.GetOpportunitiesTasks(datasource, userAgent, xUserAgent);
+                List&lt;int?&gt; result = apiInstance.GetOpportunitiesTasks(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -264,8 +259,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -277,14 +271,14 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getopportunitiestaskstaskid"></a>
 # **GetOpportunitiesTasksTaskId**
-> GetOpportunitiesTasksTaskIdOk GetOpportunitiesTasksTaskId (int? taskId, string datasource = null, string userAgent = null, string xUserAgent = null)
+> GetOpportunitiesTasksTaskIdOk GetOpportunitiesTasksTaskId (int? taskId, string datasource = null, string ifNoneMatch = null)
 
 Get opportunities task
 
@@ -294,9 +288,9 @@ Return information of an opportunities task  - --  This route expires daily at 1
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
 
 namespace Example
 {
@@ -307,13 +301,12 @@ namespace Example
             var apiInstance = new OpportunitiesApi();
             var taskId = 56;  // int? | ID of an opportunities task
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var userAgent = userAgent_example;  // string | Client identifier, takes precedence over headers (optional) 
-            var xUserAgent = xUserAgent_example;  // string | Client identifier, takes precedence over User-Agent (optional) 
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // Get opportunities task
-                GetOpportunitiesTasksTaskIdOk result = apiInstance.GetOpportunitiesTasksTaskId(taskId, datasource, userAgent, xUserAgent);
+                GetOpportunitiesTasksTaskIdOk result = apiInstance.GetOpportunitiesTasksTaskId(taskId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -331,8 +324,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **int?**| ID of an opportunities task | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **userAgent** | **string**| Client identifier, takes precedence over headers | [optional] 
- **xUserAgent** | **string**| Client identifier, takes precedence over User-Agent | [optional] 
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
 
@@ -344,7 +336,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

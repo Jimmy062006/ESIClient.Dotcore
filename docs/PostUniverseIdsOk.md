@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostUniverseIdsOk
+# ESIClient.Dotcore.Model.PostUniverseIdsOk
 ## Properties
 
 Name | Type | Description | Notes
@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **Factions** | [**List&lt;PostUniverseIdsFaction&gt;**](PostUniverseIdsFaction.md) | factions array | [optional] 
 **InventoryTypes** | [**List&lt;PostUniverseIdsInventoryType&gt;**](PostUniverseIdsInventoryType.md) | inventory_types array | [optional] 
 **Regions** | [**List&lt;PostUniverseIdsRegion&gt;**](PostUniverseIdsRegion.md) | regions array | [optional] 
-**Systems** | [**List&lt;PostUniverseIdsSystem&gt;**](PostUniverseIdsSystem.md) | systems array | [optional] 
 **Stations** | [**List&lt;PostUniverseIdsStation&gt;**](PostUniverseIdsStation.md) | stations array | [optional] 
+**Systems** | [**List&lt;PostUniverseIdsSystem&gt;**](PostUniverseIdsSystem.md) | systems array | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

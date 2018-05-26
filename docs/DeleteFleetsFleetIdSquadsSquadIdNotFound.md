@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DeleteFleetsFleetIdSquadsSquadIdNotFound
+# ESIClient.Dotcore.Model.DeleteFleetsFleetIdSquadsSquadIdNotFound
 ## Properties
 
 Name | Type | Description | Notes
