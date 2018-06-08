@@ -439,7 +439,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdBookmarks200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdBookmarks200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdBookmarks200Ok>)));
         }
 
@@ -525,7 +525,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdBookmarks200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdBookmarks200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdBookmarks200Ok>)));
         }
 
@@ -610,7 +610,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdBookmarksFolders200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdBookmarksFolders200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdBookmarksFolders200Ok>)));
         }
 
@@ -696,7 +696,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdBookmarksFolders200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdBookmarksFolders200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdBookmarksFolders200Ok>)));
         }
 
@@ -781,7 +781,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdBookmarks200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdBookmarks200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdBookmarks200Ok>)));
         }
 
@@ -867,7 +867,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdBookmarks200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdBookmarks200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdBookmarks200Ok>)));
         }
 
@@ -952,7 +952,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdBookmarksFolders200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdBookmarksFolders200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdBookmarksFolders200Ok>)));
         }
 
@@ -1038,7 +1038,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdBookmarksFolders200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdBookmarksFolders200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdBookmarksFolders200Ok>)));
         }
 

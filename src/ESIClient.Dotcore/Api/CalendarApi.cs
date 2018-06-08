@@ -439,7 +439,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdCalendar200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdCalendar200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdCalendar200Ok>)));
         }
 
@@ -525,7 +525,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdCalendar200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdCalendar200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdCalendar200Ok>)));
         }
 
@@ -613,7 +613,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCharactersCharacterIdCalendarEventIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCharactersCharacterIdCalendarEventIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCharactersCharacterIdCalendarEventIdOk)));
         }
 
@@ -702,7 +702,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCharactersCharacterIdCalendarEventIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCharactersCharacterIdCalendarEventIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCharactersCharacterIdCalendarEventIdOk)));
         }
 
@@ -790,7 +790,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>)));
         }
 
@@ -879,7 +879,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>)));
         }
 
@@ -976,7 +976,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1074,7 +1074,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 

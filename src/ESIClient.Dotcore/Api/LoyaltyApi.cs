@@ -308,7 +308,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdLoyaltyPoints200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdLoyaltyPoints200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdLoyaltyPoints200Ok>)));
         }
 
@@ -391,7 +391,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdLoyaltyPoints200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdLoyaltyPoints200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdLoyaltyPoints200Ok>)));
         }
 
@@ -464,7 +464,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetLoyaltyStoresCorporationIdOffers200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetLoyaltyStoresCorporationIdOffers200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetLoyaltyStoresCorporationIdOffers200Ok>)));
         }
 
@@ -538,7 +538,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetLoyaltyStoresCorporationIdOffers200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetLoyaltyStoresCorporationIdOffers200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetLoyaltyStoresCorporationIdOffers200Ok>)));
         }
 

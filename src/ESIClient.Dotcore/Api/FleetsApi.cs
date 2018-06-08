@@ -986,7 +986,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1071,7 +1071,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1155,7 +1155,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1240,7 +1240,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1324,7 +1324,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1409,7 +1409,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -1491,7 +1491,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCharactersCharacterIdFleetOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCharactersCharacterIdFleetOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCharactersCharacterIdFleetOk)));
         }
 
@@ -1574,7 +1574,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCharactersCharacterIdFleetOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCharactersCharacterIdFleetOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCharactersCharacterIdFleetOk)));
         }
 
@@ -1656,7 +1656,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFleetsFleetIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFleetsFleetIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFleetsFleetIdOk)));
         }
 
@@ -1739,7 +1739,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFleetsFleetIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFleetsFleetIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFleetsFleetIdOk)));
         }
 
@@ -1827,7 +1827,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFleetsFleetIdMembers200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFleetsFleetIdMembers200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFleetsFleetIdMembers200Ok>)));
         }
 
@@ -1916,7 +1916,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFleetsFleetIdMembers200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFleetsFleetIdMembers200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFleetsFleetIdMembers200Ok>)));
         }
 
@@ -2004,7 +2004,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFleetsFleetIdWings200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFleetsFleetIdWings200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFleetsFleetIdWings200Ok>)));
         }
 
@@ -2093,7 +2093,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFleetsFleetIdWings200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFleetsFleetIdWings200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFleetsFleetIdWings200Ok>)));
         }
 
@@ -2184,7 +2184,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -2276,7 +2276,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -2355,7 +2355,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostFleetsFleetIdWingsCreated>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostFleetsFleetIdWingsCreated) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostFleetsFleetIdWingsCreated)));
         }
 
@@ -2435,7 +2435,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostFleetsFleetIdWingsCreated>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostFleetsFleetIdWingsCreated) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostFleetsFleetIdWingsCreated)));
         }
 
@@ -2520,7 +2520,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostFleetsFleetIdWingsWingIdSquadsCreated>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostFleetsFleetIdWingsWingIdSquadsCreated) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostFleetsFleetIdWingsWingIdSquadsCreated)));
         }
 
@@ -2606,7 +2606,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostFleetsFleetIdWingsWingIdSquadsCreated>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostFleetsFleetIdWingsWingIdSquadsCreated) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostFleetsFleetIdWingsWingIdSquadsCreated)));
         }
 
@@ -2697,7 +2697,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -2789,7 +2789,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -2886,7 +2886,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -2984,7 +2984,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -3081,7 +3081,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -3179,7 +3179,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -3276,7 +3276,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -3374,7 +3374,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 

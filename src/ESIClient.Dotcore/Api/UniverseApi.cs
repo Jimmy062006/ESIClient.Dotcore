@@ -1731,7 +1731,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseAncestries200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseAncestries200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseAncestries200Ok>)));
         }
 
@@ -1805,7 +1805,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseAncestries200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseAncestries200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseAncestries200Ok>)));
         }
 
@@ -1878,7 +1878,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseAsteroidBeltsAsteroidBeltIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseAsteroidBeltsAsteroidBeltIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseAsteroidBeltsAsteroidBeltIdOk)));
         }
 
@@ -1952,7 +1952,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseAsteroidBeltsAsteroidBeltIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseAsteroidBeltsAsteroidBeltIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseAsteroidBeltsAsteroidBeltIdOk)));
         }
 
@@ -2025,7 +2025,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseBloodlines200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseBloodlines200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseBloodlines200Ok>)));
         }
 
@@ -2099,7 +2099,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseBloodlines200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseBloodlines200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseBloodlines200Ok>)));
         }
 
@@ -2166,7 +2166,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -2234,7 +2234,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -2313,7 +2313,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseCategoriesCategoryIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseCategoriesCategoryIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseCategoriesCategoryIdOk)));
         }
 
@@ -2393,7 +2393,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseCategoriesCategoryIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseCategoriesCategoryIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseCategoriesCategoryIdOk)));
         }
 
@@ -2460,7 +2460,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -2528,7 +2528,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -2607,7 +2607,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseConstellationsConstellationIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseConstellationsConstellationIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseConstellationsConstellationIdOk)));
         }
 
@@ -2687,7 +2687,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseConstellationsConstellationIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseConstellationsConstellationIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseConstellationsConstellationIdOk)));
         }
 
@@ -2760,7 +2760,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseFactions200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseFactions200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseFactions200Ok>)));
         }
 
@@ -2834,7 +2834,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseFactions200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseFactions200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseFactions200Ok>)));
         }
 
@@ -2901,7 +2901,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -2969,7 +2969,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -3042,7 +3042,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseGraphicsGraphicIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseGraphicsGraphicIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseGraphicsGraphicIdOk)));
         }
 
@@ -3116,7 +3116,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseGraphicsGraphicIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseGraphicsGraphicIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseGraphicsGraphicIdOk)));
         }
 
@@ -3186,7 +3186,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -3257,7 +3257,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -3336,7 +3336,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseGroupsGroupIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseGroupsGroupIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseGroupsGroupIdOk)));
         }
 
@@ -3416,7 +3416,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseGroupsGroupIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseGroupsGroupIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseGroupsGroupIdOk)));
         }
 
@@ -3489,7 +3489,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseMoonsMoonIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseMoonsMoonIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseMoonsMoonIdOk)));
         }
 
@@ -3563,7 +3563,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseMoonsMoonIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseMoonsMoonIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseMoonsMoonIdOk)));
         }
 
@@ -3636,7 +3636,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniversePlanetsPlanetIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniversePlanetsPlanetIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniversePlanetsPlanetIdOk)));
         }
 
@@ -3710,7 +3710,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniversePlanetsPlanetIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniversePlanetsPlanetIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniversePlanetsPlanetIdOk)));
         }
 
@@ -3783,7 +3783,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseRaces200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseRaces200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseRaces200Ok>)));
         }
 
@@ -3857,7 +3857,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseRaces200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseRaces200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseRaces200Ok>)));
         }
 
@@ -3924,7 +3924,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -3992,7 +3992,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -4071,7 +4071,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseRegionsRegionIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseRegionsRegionIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseRegionsRegionIdOk)));
         }
 
@@ -4151,7 +4151,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseRegionsRegionIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseRegionsRegionIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseRegionsRegionIdOk)));
         }
 
@@ -4224,7 +4224,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStargatesStargateIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStargatesStargateIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStargatesStargateIdOk)));
         }
 
@@ -4298,7 +4298,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStargatesStargateIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStargatesStargateIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStargatesStargateIdOk)));
         }
 
@@ -4371,7 +4371,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStarsStarIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStarsStarIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStarsStarIdOk)));
         }
 
@@ -4445,7 +4445,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStarsStarIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStarsStarIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStarsStarIdOk)));
         }
 
@@ -4518,7 +4518,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStationsStationIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStationsStationIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStationsStationIdOk)));
         }
 
@@ -4592,7 +4592,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStationsStationIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStationsStationIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStationsStationIdOk)));
         }
 
@@ -4659,7 +4659,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<long?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<long?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<long?>)));
         }
 
@@ -4727,7 +4727,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<long?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<long?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<long?>)));
         }
 
@@ -4809,7 +4809,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStructuresStructureIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStructuresStructureIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStructuresStructureIdOk)));
         }
 
@@ -4892,7 +4892,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseStructuresStructureIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseStructuresStructureIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseStructuresStructureIdOk)));
         }
 
@@ -4959,7 +4959,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseSystemJumps200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseSystemJumps200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseSystemJumps200Ok>)));
         }
 
@@ -5027,7 +5027,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseSystemJumps200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseSystemJumps200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseSystemJumps200Ok>)));
         }
 
@@ -5094,7 +5094,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseSystemKills200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseSystemKills200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseSystemKills200Ok>)));
         }
 
@@ -5162,7 +5162,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetUniverseSystemKills200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetUniverseSystemKills200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetUniverseSystemKills200Ok>)));
         }
 
@@ -5229,7 +5229,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -5297,7 +5297,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -5376,7 +5376,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseSystemsSystemIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseSystemsSystemIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseSystemsSystemIdOk)));
         }
 
@@ -5456,7 +5456,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseSystemsSystemIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseSystemsSystemIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseSystemsSystemIdOk)));
         }
 
@@ -5526,7 +5526,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -5597,7 +5597,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -5676,7 +5676,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseTypesTypeIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseTypesTypeIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseTypesTypeIdOk)));
         }
 
@@ -5756,7 +5756,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetUniverseTypesTypeIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetUniverseTypesTypeIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUniverseTypesTypeIdOk)));
         }
 
@@ -5839,7 +5839,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostUniverseIdsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostUniverseIdsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostUniverseIdsOk)));
         }
 
@@ -5923,7 +5923,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostUniverseIdsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostUniverseIdsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostUniverseIdsOk)));
         }
 
@@ -6000,7 +6000,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostUniverseNames200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostUniverseNames200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostUniverseNames200Ok>)));
         }
 
@@ -6078,7 +6078,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostUniverseNames200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostUniverseNames200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostUniverseNames200Ok>)));
         }
 

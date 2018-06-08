@@ -381,7 +381,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -449,7 +449,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -522,7 +522,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetDogmaAttributesAttributeIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetDogmaAttributesAttributeIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDogmaAttributesAttributeIdOk)));
         }
 
@@ -596,7 +596,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetDogmaAttributesAttributeIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetDogmaAttributesAttributeIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDogmaAttributesAttributeIdOk)));
         }
 
@@ -663,7 +663,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -731,7 +731,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<int?>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<int?>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<int?>)));
         }
 
@@ -804,7 +804,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetDogmaEffectsEffectIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetDogmaEffectsEffectIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDogmaEffectsEffectIdOk)));
         }
 
@@ -878,7 +878,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetDogmaEffectsEffectIdOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetDogmaEffectsEffectIdOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDogmaEffectsEffectIdOk)));
         }
 

@@ -327,7 +327,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetSovereigntyCampaigns200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetSovereigntyCampaigns200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetSovereigntyCampaigns200Ok>)));
         }
 
@@ -395,7 +395,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetSovereigntyCampaigns200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetSovereigntyCampaigns200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetSovereigntyCampaigns200Ok>)));
         }
 
@@ -462,7 +462,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetSovereigntyMap200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetSovereigntyMap200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetSovereigntyMap200Ok>)));
         }
 
@@ -530,7 +530,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetSovereigntyMap200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetSovereigntyMap200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetSovereigntyMap200Ok>)));
         }
 
@@ -597,7 +597,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetSovereigntyStructures200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetSovereigntyStructures200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetSovereigntyStructures200Ok>)));
         }
 
@@ -665,7 +665,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetSovereigntyStructures200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetSovereigntyStructures200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetSovereigntyStructures200Ok>)));
         }
 

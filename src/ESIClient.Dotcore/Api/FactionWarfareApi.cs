@@ -588,7 +588,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCharactersCharacterIdFwStatsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCharactersCharacterIdFwStatsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCharactersCharacterIdFwStatsOk)));
         }
 
@@ -671,7 +671,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCharactersCharacterIdFwStatsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCharactersCharacterIdFwStatsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCharactersCharacterIdFwStatsOk)));
         }
 
@@ -753,7 +753,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCorporationsCorporationIdFwStatsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCorporationsCorporationIdFwStatsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCorporationsCorporationIdFwStatsOk)));
         }
 
@@ -836,7 +836,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetCorporationsCorporationIdFwStatsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetCorporationsCorporationIdFwStatsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetCorporationsCorporationIdFwStatsOk)));
         }
 
@@ -903,7 +903,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFwLeaderboardsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFwLeaderboardsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFwLeaderboardsOk)));
         }
 
@@ -971,7 +971,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFwLeaderboardsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFwLeaderboardsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFwLeaderboardsOk)));
         }
 
@@ -1038,7 +1038,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFwLeaderboardsCharactersOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFwLeaderboardsCharactersOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFwLeaderboardsCharactersOk)));
         }
 
@@ -1106,7 +1106,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFwLeaderboardsCharactersOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFwLeaderboardsCharactersOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFwLeaderboardsCharactersOk)));
         }
 
@@ -1173,7 +1173,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFwLeaderboardsCorporationsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFwLeaderboardsCorporationsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFwLeaderboardsCorporationsOk)));
         }
 
@@ -1241,7 +1241,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetFwLeaderboardsCorporationsOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetFwLeaderboardsCorporationsOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFwLeaderboardsCorporationsOk)));
         }
 
@@ -1308,7 +1308,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFwStats200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFwStats200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFwStats200Ok>)));
         }
 
@@ -1376,7 +1376,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFwStats200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFwStats200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFwStats200Ok>)));
         }
 
@@ -1443,7 +1443,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFwSystems200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFwSystems200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFwSystems200Ok>)));
         }
 
@@ -1511,7 +1511,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFwSystems200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFwSystems200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFwSystems200Ok>)));
         }
 
@@ -1578,7 +1578,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFwWars200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFwWars200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFwWars200Ok>)));
         }
 
@@ -1646,7 +1646,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetFwWars200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetFwWars200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetFwWars200Ok>)));
         }
 

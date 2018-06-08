@@ -249,7 +249,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetInsurancePrices200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetInsurancePrices200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetInsurancePrices200Ok>)));
         }
 
@@ -323,7 +323,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetInsurancePrices200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetInsurancePrices200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetInsurancePrices200Ok>)));
         }
 
