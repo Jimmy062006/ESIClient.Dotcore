@@ -377,7 +377,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdKillmailsRecent200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdKillmailsRecent200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdKillmailsRecent200Ok>)));
         }
 
@@ -463,7 +463,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdKillmailsRecent200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdKillmailsRecent200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdKillmailsRecent200Ok>)));
         }
 
@@ -548,7 +548,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdKillmailsRecent200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdKillmailsRecent200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdKillmailsRecent200Ok>)));
         }
 
@@ -634,7 +634,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdKillmailsRecent200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdKillmailsRecent200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdKillmailsRecent200Ok>)));
         }
 
@@ -713,7 +713,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetKillmailsKillmailIdKillmailHashOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetKillmailsKillmailIdKillmailHashOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetKillmailsKillmailIdKillmailHashOk)));
         }
 
@@ -793,7 +793,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetKillmailsKillmailIdKillmailHashOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetKillmailsKillmailIdKillmailHashOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetKillmailsKillmailIdKillmailHashOk)));
         }
 

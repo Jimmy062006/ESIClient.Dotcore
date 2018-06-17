@@ -539,7 +539,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdAssets200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdAssets200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdAssets200Ok>)));
         }
 
@@ -625,7 +625,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdAssets200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdAssets200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdAssets200Ok>)));
         }
 
@@ -710,7 +710,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdAssets200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdAssets200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdAssets200Ok>)));
         }
 
@@ -796,7 +796,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCorporationsCorporationIdAssets200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCorporationsCorporationIdAssets200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCorporationsCorporationIdAssets200Ok>)));
         }
 
@@ -888,7 +888,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCharactersCharacterIdAssetsLocations200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCharactersCharacterIdAssetsLocations200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCharactersCharacterIdAssetsLocations200Ok>)));
         }
 
@@ -981,7 +981,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCharactersCharacterIdAssetsLocations200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCharactersCharacterIdAssetsLocations200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCharactersCharacterIdAssetsLocations200Ok>)));
         }
 
@@ -1073,7 +1073,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCharactersCharacterIdAssetsNames200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCharactersCharacterIdAssetsNames200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCharactersCharacterIdAssetsNames200Ok>)));
         }
 
@@ -1166,7 +1166,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCharactersCharacterIdAssetsNames200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCharactersCharacterIdAssetsNames200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCharactersCharacterIdAssetsNames200Ok>)));
         }
 
@@ -1258,7 +1258,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCorporationsCorporationIdAssetsLocations200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCorporationsCorporationIdAssetsLocations200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCorporationsCorporationIdAssetsLocations200Ok>)));
         }
 
@@ -1351,7 +1351,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCorporationsCorporationIdAssetsLocations200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCorporationsCorporationIdAssetsLocations200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCorporationsCorporationIdAssetsLocations200Ok>)));
         }
 
@@ -1443,7 +1443,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCorporationsCorporationIdAssetsNames200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCorporationsCorporationIdAssetsNames200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCorporationsCorporationIdAssetsNames200Ok>)));
         }
 
@@ -1536,7 +1536,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<PostCorporationsCorporationIdAssetsNames200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<PostCorporationsCorporationIdAssetsNames200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PostCorporationsCorporationIdAssetsNames200Ok>)));
         }
 

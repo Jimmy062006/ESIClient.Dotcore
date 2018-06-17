@@ -235,7 +235,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetStatusOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetStatusOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetStatusOk)));
         }
 
@@ -303,7 +303,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<GetStatusOk>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (GetStatusOk) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetStatusOk)));
         }
 

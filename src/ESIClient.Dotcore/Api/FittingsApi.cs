@@ -368,7 +368,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -453,7 +453,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 null);
         }
 
@@ -535,7 +535,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdFittings200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdFittings200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdFittings200Ok>)));
         }
 
@@ -618,7 +618,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<List<GetCharactersCharacterIdFittings200Ok>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (List<GetCharactersCharacterIdFittings200Ok>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GetCharactersCharacterIdFittings200Ok>)));
         }
 
@@ -710,7 +710,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostCharactersCharacterIdFittingsCreated>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostCharactersCharacterIdFittingsCreated) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostCharactersCharacterIdFittingsCreated)));
         }
 
@@ -803,7 +803,7 @@ namespace ESIClient.Dotcore.Api
             }
 
             return new ApiResponse<PostCharactersCharacterIdFittingsCreated>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Key, x => x.Value.FirstOrDefault().ToString()),
                 (PostCharactersCharacterIdFittingsCreated) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PostCharactersCharacterIdFittingsCreated)));
         }
 
