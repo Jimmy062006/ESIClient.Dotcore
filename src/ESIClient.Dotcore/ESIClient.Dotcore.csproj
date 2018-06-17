@@ -5,8 +5,8 @@
     <AssemblyName>ESIClient.Dotcore</AssemblyName>
     <PackageId>ESIClient.Dotcore</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>Swagger</Authors>
-    <Company>Swagger</Company>
+    <Authors>Jimmy0620006</Authors>
+    <Company>opux.space</Company>
     <AssemblyTitle>Swagger Library</AssemblyTitle>
     <Description>A library generated from a Swagger doc</Description>
     <Copyright>No Copyright</Copyright>
@@ -14,7 +14,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>ESIClient.Dotcore</RootNamespace>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
