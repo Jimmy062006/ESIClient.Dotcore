@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridwalletjournal"></a>
 # **GetCharactersCharacterIdWalletJournal**
-> List<GetCharactersCharacterIdWalletJournal200Ok> GetCharactersCharacterIdWalletJournal (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdWalletJournal (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get character wallet journal
 
@@ -117,7 +117,7 @@ namespace Example
             try
             {
                 // Get character wallet journal
-                List&lt;GetCharactersCharacterIdWalletJournal200Ok&gt; result = apiInstance.GetCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdWalletJournal200Ok>**](GetCharactersCharacterIdWalletJournal200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridwallettransactions"></a>
 # **GetCharactersCharacterIdWalletTransactions**
-> List<GetCharactersCharacterIdWalletTransactions200Ok> GetCharactersCharacterIdWalletTransactions (int? characterId, string datasource = null, long? fromId = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdWalletTransactions (int? characterId, string datasource = null, long? fromId = null, string ifNoneMatch = null, string token = null)
 
 Get wallet transactions
 
@@ -189,7 +189,7 @@ namespace Example
             try
             {
                 // Get wallet transactions
-                List&lt;GetCharactersCharacterIdWalletTransactions200Ok&gt; result = apiInstance.GetCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdWalletTransactions200Ok>**](GetCharactersCharacterIdWalletTransactions200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidwallets"></a>
 # **GetCorporationsCorporationIdWallets**
-> List<GetCorporationsCorporationIdWallets200Ok> GetCorporationsCorporationIdWallets (int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCorporationsCorporationIdWallets (int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Returns a corporation's wallet balance
 
@@ -260,7 +260,7 @@ namespace Example
             try
             {
                 // Returns a corporation's wallet balance
-                List&lt;GetCorporationsCorporationIdWallets200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdWallets200Ok>**](GetCorporationsCorporationIdWallets200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidwalletsdivisionjournal"></a>
 # **GetCorporationsCorporationIdWalletsDivisionJournal**
-> List<GetCorporationsCorporationIdWalletsDivisionJournal200Ok> GetCorporationsCorporationIdWalletsDivisionJournal (int? corporationId, int? division, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdWalletsDivisionJournal (int? corporationId, int? division, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get corporation wallet journal
 
@@ -332,7 +332,7 @@ namespace Example
             try
             {
                 // Get corporation wallet journal
-                List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdWalletsDivisionJournal200Ok>**](GetCorporationsCorporationIdWalletsDivisionJournal200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidwalletsdivisiontransactions"></a>
 # **GetCorporationsCorporationIdWalletsDivisionTransactions**
-> List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok> GetCorporationsCorporationIdWalletsDivisionTransactions (int? corporationId, int? division, string datasource = null, long? fromId = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCorporationsCorporationIdWalletsDivisionTransactions (int? corporationId, int? division, string datasource = null, long? fromId = null, string ifNoneMatch = null, string token = null)
 
 Get corporation wallet transactions
 
@@ -406,7 +406,7 @@ namespace Example
             try
             {
                 // Get corporation wallet transactions
-                List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok>**](GetCorporationsCorporationIdWalletsDivisionTransactions200Ok.md)
+**List<Object>**
 
 ### Authorization
 

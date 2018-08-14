@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetCharactersCharacterIdOrders**](MarketApi.md#getcharacterscharacteridorders) | **GET** /v2/characters/{character_id}/orders/ | List open orders from a character
 [**GetCharactersCharacterIdOrdersHistory**](MarketApi.md#getcharacterscharacteridordershistory) | **GET** /v1/characters/{character_id}/orders/history/ | List historical orders by a character
-[**GetCorporationsCorporationIdOrders**](MarketApi.md#getcorporationscorporationidorders) | **GET** /v2/corporations/{corporation_id}/orders/ | List open orders from a corporation
-[**GetCorporationsCorporationIdOrdersHistory**](MarketApi.md#getcorporationscorporationidordershistory) | **GET** /v1/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
+[**GetCorporationsCorporationIdOrders**](MarketApi.md#getcorporationscorporationidorders) | **GET** /v3/corporations/{corporation_id}/orders/ | List open orders from a corporation
+[**GetCorporationsCorporationIdOrdersHistory**](MarketApi.md#getcorporationscorporationidordershistory) | **GET** /v2/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
 [**GetMarketsGroups**](MarketApi.md#getmarketsgroups) | **GET** /v1/markets/groups/ | Get item groups
 [**GetMarketsGroupsMarketGroupId**](MarketApi.md#getmarketsgroupsmarketgroupid) | **GET** /v1/markets/groups/{market_group_id}/ | Get item group information
 [**GetMarketsPrices**](MarketApi.md#getmarketsprices) | **GET** /v1/markets/prices/ | List market prices
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridorders"></a>
 # **GetCharactersCharacterIdOrders**
-> List<GetCharactersCharacterIdOrders200Ok> GetCharactersCharacterIdOrders (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdOrders (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 List open orders from a character
 
@@ -51,7 +51,7 @@ namespace Example
             try
             {
                 // List open orders from a character
-                List&lt;GetCharactersCharacterIdOrders200Ok&gt; result = apiInstance.GetCharactersCharacterIdOrders(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdOrders(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdOrders200Ok>**](GetCharactersCharacterIdOrders200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridordershistory"></a>
 # **GetCharactersCharacterIdOrdersHistory**
-> List<GetCharactersCharacterIdOrdersHistory200Ok> GetCharactersCharacterIdOrdersHistory (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdOrdersHistory (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List historical orders by a character
 
@@ -122,7 +122,7 @@ namespace Example
             try
             {
                 // List historical orders by a character
-                List&lt;GetCharactersCharacterIdOrdersHistory200Ok&gt; result = apiInstance.GetCharactersCharacterIdOrdersHistory(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdOrdersHistory(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdOrdersHistory200Ok>**](GetCharactersCharacterIdOrdersHistory200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidorders"></a>
 # **GetCorporationsCorporationIdOrders**
-> List<GetCorporationsCorporationIdOrders200Ok> GetCorporationsCorporationIdOrders (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdOrders (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List open orders from a corporation
 
@@ -194,7 +194,7 @@ namespace Example
             try
             {
                 // List open orders from a corporation
-                List&lt;GetCorporationsCorporationIdOrders200Ok&gt; result = apiInstance.GetCorporationsCorporationIdOrders(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdOrders(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdOrders200Ok>**](GetCorporationsCorporationIdOrders200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidordershistory"></a>
 # **GetCorporationsCorporationIdOrdersHistory**
-> List<GetCorporationsCorporationIdOrdersHistory200Ok> GetCorporationsCorporationIdOrdersHistory (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdOrdersHistory (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List historical orders from a corporation
 
@@ -266,7 +266,7 @@ namespace Example
             try
             {
                 // List historical orders from a corporation
-                List&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; result = apiInstance.GetCorporationsCorporationIdOrdersHistory(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdOrdersHistory(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdOrdersHistory200Ok>**](GetCorporationsCorporationIdOrdersHistory200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -437,7 +437,7 @@ No authorization required
 
 <a name="getmarketsprices"></a>
 # **GetMarketsPrices**
-> List<GetMarketsPrices200Ok> GetMarketsPrices (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetMarketsPrices (string datasource = null, string ifNoneMatch = null)
 
 List market prices
 
@@ -464,7 +464,7 @@ namespace Example
             try
             {
                 // List market prices
-                List&lt;GetMarketsPrices200Ok&gt; result = apiInstance.GetMarketsPrices(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetMarketsPrices(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetMarketsPrices200Ok>**](GetMarketsPrices200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -500,7 +500,7 @@ No authorization required
 
 <a name="getmarketsregionidhistory"></a>
 # **GetMarketsRegionIdHistory**
-> List<GetMarketsRegionIdHistory200Ok> GetMarketsRegionIdHistory (int? regionId, int? typeId, string datasource = null, string ifNoneMatch = null)
+> List<Object> GetMarketsRegionIdHistory (int? regionId, int? typeId, string datasource = null, string ifNoneMatch = null)
 
 List historical market statistics in a region
 
@@ -529,7 +529,7 @@ namespace Example
             try
             {
                 // List historical market statistics in a region
-                List&lt;GetMarketsRegionIdHistory200Ok&gt; result = apiInstance.GetMarketsRegionIdHistory(regionId, typeId, datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetMarketsRegionIdHistory(regionId, typeId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetMarketsRegionIdHistory200Ok>**](GetMarketsRegionIdHistory200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -567,7 +567,7 @@ No authorization required
 
 <a name="getmarketsregionidorders"></a>
 # **GetMarketsRegionIdOrders**
-> List<GetMarketsRegionIdOrders200Ok> GetMarketsRegionIdOrders (string orderType, int? regionId, string datasource = null, string ifNoneMatch = null, int? page = null, int? typeId = null)
+> List<Object> GetMarketsRegionIdOrders (string orderType, int? regionId, string datasource = null, string ifNoneMatch = null, int? page = null, int? typeId = null)
 
 List orders in a region
 
@@ -598,7 +598,7 @@ namespace Example
             try
             {
                 // List orders in a region
-                List&lt;GetMarketsRegionIdOrders200Ok&gt; result = apiInstance.GetMarketsRegionIdOrders(orderType, regionId, datasource, ifNoneMatch, page, typeId);
+                List&lt;Object&gt; result = apiInstance.GetMarketsRegionIdOrders(orderType, regionId, datasource, ifNoneMatch, page, typeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -623,7 +623,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetMarketsRegionIdOrders200Ok>**](GetMarketsRegionIdOrders200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -705,7 +705,7 @@ No authorization required
 
 <a name="getmarketsstructuresstructureid"></a>
 # **GetMarketsStructuresStructureId**
-> List<GetMarketsStructuresStructureId200Ok> GetMarketsStructuresStructureId (long? structureId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetMarketsStructuresStructureId (long? structureId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List orders in a structure
 
@@ -738,7 +738,7 @@ namespace Example
             try
             {
                 // List orders in a structure
-                List&lt;GetMarketsStructuresStructureId200Ok&gt; result = apiInstance.GetMarketsStructuresStructureId(structureId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetMarketsStructuresStructureId(structureId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetMarketsStructuresStructureId200Ok>**](GetMarketsStructuresStructureId200Ok.md)
+**List<Object>**
 
 ### Authorization
 

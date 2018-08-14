@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getsovereigntycampaigns"></a>
 # **GetSovereigntyCampaigns**
-> List<GetSovereigntyCampaigns200Ok> GetSovereigntyCampaigns (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetSovereigntyCampaigns (string datasource = null, string ifNoneMatch = null)
 
 List sovereignty campaigns
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // List sovereignty campaigns
-                List&lt;GetSovereigntyCampaigns200Ok&gt; result = apiInstance.GetSovereigntyCampaigns(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetSovereigntyCampaigns(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetSovereigntyCampaigns200Ok>**](GetSovereigntyCampaigns200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 
 <a name="getsovereigntymap"></a>
 # **GetSovereigntyMap**
-> List<GetSovereigntyMap200Ok> GetSovereigntyMap (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetSovereigntyMap (string datasource = null, string ifNoneMatch = null)
 
 List sovereignty of systems
 
@@ -101,7 +101,7 @@ namespace Example
             try
             {
                 // List sovereignty of systems
-                List&lt;GetSovereigntyMap200Ok&gt; result = apiInstance.GetSovereigntyMap(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetSovereigntyMap(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetSovereigntyMap200Ok>**](GetSovereigntyMap200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -137,7 +137,7 @@ No authorization required
 
 <a name="getsovereigntystructures"></a>
 # **GetSovereigntyStructures**
-> List<GetSovereigntyStructures200Ok> GetSovereigntyStructures (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetSovereigntyStructures (string datasource = null, string ifNoneMatch = null)
 
 List sovereignty structures
 
@@ -164,7 +164,7 @@ namespace Example
             try
             {
                 // List sovereignty structures
-                List&lt;GetSovereigntyStructures200Ok&gt; result = apiInstance.GetSovereigntyStructures(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetSovereigntyStructures(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetSovereigntyStructures200Ok>**](GetSovereigntyStructures200Ok.md)
+**List<Object>**
 
 ### Authorization
 

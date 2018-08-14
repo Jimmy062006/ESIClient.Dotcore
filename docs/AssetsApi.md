@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridassets"></a>
 # **GetCharactersCharacterIdAssets**
-> List<GetCharactersCharacterIdAssets200Ok> GetCharactersCharacterIdAssets (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdAssets (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get character assets
 
@@ -47,7 +47,7 @@ namespace Example
             try
             {
                 // Get character assets
-                List&lt;GetCharactersCharacterIdAssets200Ok&gt; result = apiInstance.GetCharactersCharacterIdAssets(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdAssets(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdAssets200Ok>**](GetCharactersCharacterIdAssets200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidassets"></a>
 # **GetCorporationsCorporationIdAssets**
-> List<GetCorporationsCorporationIdAssets200Ok> GetCorporationsCorporationIdAssets (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdAssets (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get corporation assets
 
@@ -119,7 +119,7 @@ namespace Example
             try
             {
                 // Get corporation assets
-                List&lt;GetCorporationsCorporationIdAssets200Ok&gt; result = apiInstance.GetCorporationsCorporationIdAssets(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdAssets(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdAssets200Ok>**](GetCorporationsCorporationIdAssets200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 <a name="postcharacterscharacteridassetslocations"></a>
 # **PostCharactersCharacterIdAssetsLocations**
-> List<PostCharactersCharacterIdAssetsLocations200Ok> PostCharactersCharacterIdAssetsLocations (int? characterId, List<long?> itemIds, string datasource = null, string token = null)
+> List<Object> PostCharactersCharacterIdAssetsLocations (int? characterId, List<long?> itemIds, string datasource = null, string token = null)
 
 Get character asset locations
 
@@ -190,7 +190,7 @@ namespace Example
             try
             {
                 // Get character asset locations
-                List&lt;PostCharactersCharacterIdAssetsLocations200Ok&gt; result = apiInstance.PostCharactersCharacterIdAssetsLocations(characterId, itemIds, datasource, token);
+                List&lt;Object&gt; result = apiInstance.PostCharactersCharacterIdAssetsLocations(characterId, itemIds, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<PostCharactersCharacterIdAssetsLocations200Ok>**](PostCharactersCharacterIdAssetsLocations200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 <a name="postcharacterscharacteridassetsnames"></a>
 # **PostCharactersCharacterIdAssetsNames**
-> List<PostCharactersCharacterIdAssetsNames200Ok> PostCharactersCharacterIdAssetsNames (int? characterId, List<long?> itemIds, string datasource = null, string token = null)
+> List<Object> PostCharactersCharacterIdAssetsNames (int? characterId, List<long?> itemIds, string datasource = null, string token = null)
 
 Get character asset names
 
@@ -260,7 +260,7 @@ namespace Example
             try
             {
                 // Get character asset names
-                List&lt;PostCharactersCharacterIdAssetsNames200Ok&gt; result = apiInstance.PostCharactersCharacterIdAssetsNames(characterId, itemIds, datasource, token);
+                List&lt;Object&gt; result = apiInstance.PostCharactersCharacterIdAssetsNames(characterId, itemIds, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<PostCharactersCharacterIdAssetsNames200Ok>**](PostCharactersCharacterIdAssetsNames200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 <a name="postcorporationscorporationidassetslocations"></a>
 # **PostCorporationsCorporationIdAssetsLocations**
-> List<PostCorporationsCorporationIdAssetsLocations200Ok> PostCorporationsCorporationIdAssetsLocations (int? corporationId, List<long?> itemIds, string datasource = null, string token = null)
+> List<Object> PostCorporationsCorporationIdAssetsLocations (int? corporationId, List<long?> itemIds, string datasource = null, string token = null)
 
 Get corporation asset locations
 
@@ -330,7 +330,7 @@ namespace Example
             try
             {
                 // Get corporation asset locations
-                List&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; result = apiInstance.PostCorporationsCorporationIdAssetsLocations(corporationId, itemIds, datasource, token);
+                List&lt;Object&gt; result = apiInstance.PostCorporationsCorporationIdAssetsLocations(corporationId, itemIds, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<PostCorporationsCorporationIdAssetsLocations200Ok>**](PostCorporationsCorporationIdAssetsLocations200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 <a name="postcorporationscorporationidassetsnames"></a>
 # **PostCorporationsCorporationIdAssetsNames**
-> List<PostCorporationsCorporationIdAssetsNames200Ok> PostCorporationsCorporationIdAssetsNames (int? corporationId, List<long?> itemIds, string datasource = null, string token = null)
+> List<Object> PostCorporationsCorporationIdAssetsNames (int? corporationId, List<long?> itemIds, string datasource = null, string token = null)
 
 Get coporation asset names
 
@@ -400,7 +400,7 @@ namespace Example
             try
             {
                 // Get coporation asset names
-                List&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; result = apiInstance.PostCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token);
+                List&lt;Object&gt; result = apiInstance.PostCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<PostCorporationsCorporationIdAssetsNames200Ok>**](PostCorporationsCorporationIdAssetsNames200Ok.md)
+**List<Object>**
 
 ### Authorization
 

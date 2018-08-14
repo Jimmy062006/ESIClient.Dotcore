@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**GetCharactersCharacterIdContracts**](ContractsApi.md#getcharacterscharacteridcontracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 [**GetCharactersCharacterIdContractsContractIdBids**](ContractsApi.md#getcharacterscharacteridcontractscontractidbids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 [**GetCharactersCharacterIdContractsContractIdItems**](ContractsApi.md#getcharacterscharacteridcontractscontractiditems) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
-[**GetCorporationsCorporationIdContracts**](ContractsApi.md#getcorporationscorporationidcontracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get coporation contracts
+[**GetCorporationsCorporationIdContracts**](ContractsApi.md#getcorporationscorporationidcontracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get corporation contracts
 [**GetCorporationsCorporationIdContractsContractIdBids**](ContractsApi.md#getcorporationscorporationidcontractscontractidbids) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
 [**GetCorporationsCorporationIdContractsContractIdItems**](ContractsApi.md#getcorporationscorporationidcontractscontractiditems) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
 
 
 <a name="getcharacterscharacteridcontracts"></a>
 # **GetCharactersCharacterIdContracts**
-> List<GetCharactersCharacterIdContracts200Ok> GetCharactersCharacterIdContracts (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdContracts (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get contracts
 
@@ -47,7 +47,7 @@ namespace Example
             try
             {
                 // Get contracts
-                List&lt;GetCharactersCharacterIdContracts200Ok&gt; result = apiInstance.GetCharactersCharacterIdContracts(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdContracts(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdContracts200Ok>**](GetCharactersCharacterIdContracts200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridcontractscontractidbids"></a>
 # **GetCharactersCharacterIdContractsContractIdBids**
-> List<GetCharactersCharacterIdContractsContractIdBids200Ok> GetCharactersCharacterIdContractsContractIdBids (int? characterId, int? contractId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdContractsContractIdBids (int? characterId, int? contractId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get contract bids
 
@@ -119,7 +119,7 @@ namespace Example
             try
             {
                 // Get contract bids
-                List&lt;GetCharactersCharacterIdContractsContractIdBids200Ok&gt; result = apiInstance.GetCharactersCharacterIdContractsContractIdBids(characterId, contractId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdContractsContractIdBids(characterId, contractId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdContractsContractIdBids200Ok>**](GetCharactersCharacterIdContractsContractIdBids200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridcontractscontractiditems"></a>
 # **GetCharactersCharacterIdContractsContractIdItems**
-> List<GetCharactersCharacterIdContractsContractIdItems200Ok> GetCharactersCharacterIdContractsContractIdItems (int? characterId, int? contractId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdContractsContractIdItems (int? characterId, int? contractId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get contract items
 
@@ -191,7 +191,7 @@ namespace Example
             try
             {
                 // Get contract items
-                List&lt;GetCharactersCharacterIdContractsContractIdItems200Ok&gt; result = apiInstance.GetCharactersCharacterIdContractsContractIdItems(characterId, contractId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdContractsContractIdItems(characterId, contractId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdContractsContractIdItems200Ok>**](GetCharactersCharacterIdContractsContractIdItems200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -230,11 +230,11 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidcontracts"></a>
 # **GetCorporationsCorporationIdContracts**
-> List<GetCorporationsCorporationIdContracts200Ok> GetCorporationsCorporationIdContracts (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdContracts (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
-Get coporation contracts
+Get corporation contracts
 
-Returns contracts available to a coporation, only if the corporation is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \"in_progress\".  - --  This route is cached for up to 300 seconds
+Returns contracts available to a corporation, only if the corporation is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \"in_progress\".  - --  This route is cached for up to 300 seconds
 
 ### Example
 ```csharp
@@ -262,8 +262,8 @@ namespace Example
 
             try
             {
-                // Get coporation contracts
-                List&lt;GetCorporationsCorporationIdContracts200Ok&gt; result = apiInstance.GetCorporationsCorporationIdContracts(corporationId, datasource, ifNoneMatch, page, token);
+                // Get corporation contracts
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdContracts(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdContracts200Ok>**](GetCorporationsCorporationIdContracts200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidcontractscontractidbids"></a>
 # **GetCorporationsCorporationIdContractsContractIdBids**
-> List<GetCorporationsCorporationIdContractsContractIdBids200Ok> GetCorporationsCorporationIdContractsContractIdBids (int? contractId, int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdContractsContractIdBids (int? contractId, int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get corporation contract bids
 
@@ -336,7 +336,7 @@ namespace Example
             try
             {
                 // Get corporation contract bids
-                List&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; result = apiInstance.GetCorporationsCorporationIdContractsContractIdBids(contractId, corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdContractsContractIdBids(contractId, corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdContractsContractIdBids200Ok>**](GetCorporationsCorporationIdContractsContractIdBids200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidcontractscontractiditems"></a>
 # **GetCorporationsCorporationIdContractsContractIdItems**
-> List<GetCorporationsCorporationIdContractsContractIdItems200Ok> GetCorporationsCorporationIdContractsContractIdItems (int? contractId, int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCorporationsCorporationIdContractsContractIdItems (int? contractId, int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get corporation contract items
 
@@ -409,7 +409,7 @@ namespace Example
             try
             {
                 // Get corporation contract items
-                List&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; result = apiInstance.GetCorporationsCorporationIdContractsContractIdItems(contractId, corporationId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdContractsContractIdItems(contractId, corporationId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdContractsContractIdItems200Ok>**](GetCorporationsCorporationIdContractsContractIdItems200Ok.md)
+**List<Object>**
 
 ### Authorization
 

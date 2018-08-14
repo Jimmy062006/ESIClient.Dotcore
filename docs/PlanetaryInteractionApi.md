@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridplanets"></a>
 # **GetCharactersCharacterIdPlanets**
-> List<GetCharactersCharacterIdPlanets200Ok> GetCharactersCharacterIdPlanets (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdPlanets (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get colonies
 
@@ -44,7 +44,7 @@ namespace Example
             try
             {
                 // Get colonies
-                List&lt;GetCharactersCharacterIdPlanets200Ok&gt; result = apiInstance.GetCharactersCharacterIdPlanets(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdPlanets(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdPlanets200Ok>**](GetCharactersCharacterIdPlanets200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidcustomsoffices"></a>
 # **GetCorporationsCorporationIdCustomsOffices**
-> List<GetCorporationsCorporationIdCustomsOffices200Ok> GetCorporationsCorporationIdCustomsOffices (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdCustomsOffices (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List corporation customs offices
 
@@ -187,7 +187,7 @@ namespace Example
             try
             {
                 // List corporation customs offices
-                List&lt;GetCorporationsCorporationIdCustomsOffices200Ok&gt; result = apiInstance.GetCorporationsCorporationIdCustomsOffices(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdCustomsOffices(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdCustomsOffices200Ok>**](GetCorporationsCorporationIdCustomsOffices200Ok.md)
+**List<Object>**
 
 ### Authorization
 

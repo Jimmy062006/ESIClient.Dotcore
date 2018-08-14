@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Escrow** | **double?** | For buy orders, the amount of ISK in escrow | [optional] 
 **IsBuyOrder** | **bool?** | True if the order is a bid (buy) order | [optional] 
 **Issued** | **DateTime?** | Date and time when this order was issued | 
+**IssuedBy** | **int?** | The character who issued this order | [optional] 
 **LocationId** | **long?** | ID of the location where order was placed | 
 **MinVolume** | **int?** | For buy orders, the minimum quantity that will be accepted in a matching sell order | [optional] 
 **OrderId** | **long?** | Unique order ID | 
@@ -17,7 +18,7 @@ Name | Type | Description | Notes
 **TypeId** | **int?** | The type ID of the item transacted in this order | 
 **VolumeRemain** | **int?** | Quantity of items still required or offered | 
 **VolumeTotal** | **int?** | Quantity of items required or offered at time order was placed | 
-**WalletDivision** | **int?** | The corporation wallet division used for this order. | 
+**WalletDivision** | **int?** | The corporation wallet division used for this order | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getincursions"></a>
 # **GetIncursions**
-> List<GetIncursions200Ok> GetIncursions (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetIncursions (string datasource = null, string ifNoneMatch = null)
 
 List incursions
 
@@ -36,7 +36,7 @@ namespace Example
             try
             {
                 // List incursions
-                List&lt;GetIncursions200Ok&gt; result = apiInstance.GetIncursions(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetIncursions(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetIncursions200Ok>**](GetIncursions200Ok.md)
+**List<Object>**
 
 ### Authorization
 

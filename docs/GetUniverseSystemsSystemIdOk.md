@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConstellationId** | **int?** | The constellation this solar system is in | 
 **Name** | **string** | name string | 
-**Planets** | [**List&lt;GetUniverseSystemsSystemIdPlanet&gt;**](GetUniverseSystemsSystemIdPlanet.md) | planets array | 
+**Planets** | [**List&lt;GetUniverseSystemsSystemIdPlanet&gt;**](GetUniverseSystemsSystemIdPlanet.md) | planets array | [optional] 
 **Position** | [**GetUniverseSystemsSystemIdPosition**](GetUniverseSystemsSystemIdPosition.md) |  | 
 **SecurityClass** | **string** | security_class string | [optional] 
 **SecurityStatus** | **float?** | security_status number | 
-**StarId** | **int?** | star_id integer | 
+**StarId** | **int?** | star_id integer | [optional] 
 **Stargates** | **List&lt;int?&gt;** | stargates array | [optional] 
 **Stations** | **List&lt;int?&gt;** | stations array | [optional] 
 **SystemId** | **int?** | system_id integer | 

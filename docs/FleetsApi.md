@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 <a name="getfleetsfleetidmembers"></a>
 # **GetFleetsFleetIdMembers**
-> List<GetFleetsFleetIdMembers200Ok> GetFleetsFleetIdMembers (long? fleetId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, string token = null)
+> List<Object> GetFleetsFleetIdMembers (long? fleetId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, string token = null)
 
 Get fleet members
 
@@ -403,7 +403,7 @@ namespace Example
             try
             {
                 // Get fleet members
-                List&lt;GetFleetsFleetIdMembers200Ok&gt; result = apiInstance.GetFleetsFleetIdMembers(fleetId, acceptLanguage, datasource, ifNoneMatch, language, token);
+                List&lt;Object&gt; result = apiInstance.GetFleetsFleetIdMembers(fleetId, acceptLanguage, datasource, ifNoneMatch, language, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetFleetsFleetIdMembers200Ok>**](GetFleetsFleetIdMembers200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 <a name="getfleetsfleetidwings"></a>
 # **GetFleetsFleetIdWings**
-> List<GetFleetsFleetIdWings200Ok> GetFleetsFleetIdWings (long? fleetId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, string token = null)
+> List<Object> GetFleetsFleetIdWings (long? fleetId, string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null, string token = null)
 
 Get fleet wings
 
@@ -477,7 +477,7 @@ namespace Example
             try
             {
                 // Get fleet wings
-                List&lt;GetFleetsFleetIdWings200Ok&gt; result = apiInstance.GetFleetsFleetIdWings(fleetId, acceptLanguage, datasource, ifNoneMatch, language, token);
+                List&lt;Object&gt; result = apiInstance.GetFleetsFleetIdWings(fleetId, acceptLanguage, datasource, ifNoneMatch, language, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetFleetsFleetIdWings200Ok>**](GetFleetsFleetIdWings200Ok.md)
+**List<Object>**
 
 ### Authorization
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | The full name of the structure | 
+**OwnerId** | **int?** | The ID of the corporation who owns this particular structure | 
 **Position** | [**GetUniverseStructuresStructureIdPosition**](GetUniverseStructuresStructureIdPosition.md) |  | [optional] 
 **SolarSystemId** | **int?** | solar_system_id integer | 
 **TypeId** | **int?** | type_id integer | [optional] 

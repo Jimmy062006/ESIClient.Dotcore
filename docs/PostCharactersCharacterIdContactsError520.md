@@ -1,9 +1,9 @@
-# ESIClient.Dotcore.Model.GetMarketsRegionIdHistory520Response
+# ESIClient.Dotcore.Model.PostCharactersCharacterIdContactsError520
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Error** | **string** | 520 response message | [optional] 
+**Error** | **string** | Error 520 message | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

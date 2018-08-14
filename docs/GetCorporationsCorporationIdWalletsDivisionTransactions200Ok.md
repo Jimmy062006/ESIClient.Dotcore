@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **ClientId** | **int?** | client_id integer | 
 **Date** | **DateTime?** | Date and time of transaction | 
 **IsBuy** | **bool?** | is_buy boolean | 
-**JournalRefId** | **long?** | journal_ref_id integer | 
+**JournalRefId** | **long?** | -1 if there is no corresponding wallet journal entry | 
 **LocationId** | **long?** | location_id integer | 
 **Quantity** | **int?** | quantity integer | 
 **TransactionId** | **long?** | Unique transaction ID | 

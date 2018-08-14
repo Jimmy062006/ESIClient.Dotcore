@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**GetFwLeaderboardsCharacters**](FactionWarfareApi.md#getfwleaderboardscharacters) | **GET** /v1/fw/leaderboards/characters/ | List of the top pilots in faction warfare
 [**GetFwLeaderboardsCorporations**](FactionWarfareApi.md#getfwleaderboardscorporations) | **GET** /v1/fw/leaderboards/corporations/ | List of the top corporations in faction warfare
 [**GetFwStats**](FactionWarfareApi.md#getfwstats) | **GET** /v1/fw/stats/ | An overview of statistics about factions involved in faction warfare
-[**GetFwSystems**](FactionWarfareApi.md#getfwsystems) | **GET** /v1/fw/systems/ | Ownership of faction warfare systems
+[**GetFwSystems**](FactionWarfareApi.md#getfwsystems) | **GET** /v2/fw/systems/ | Ownership of faction warfare systems
 [**GetFwWars**](FactionWarfareApi.md#getfwwars) | **GET** /v1/fw/wars/ | Data about which NPC factions are at war
 
 
@@ -345,7 +345,7 @@ No authorization required
 
 <a name="getfwstats"></a>
 # **GetFwStats**
-> List<GetFwStats200Ok> GetFwStats (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetFwStats (string datasource = null, string ifNoneMatch = null)
 
 An overview of statistics about factions involved in faction warfare
 
@@ -372,7 +372,7 @@ namespace Example
             try
             {
                 // An overview of statistics about factions involved in faction warfare
-                List&lt;GetFwStats200Ok&gt; result = apiInstance.GetFwStats(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetFwStats(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetFwStats200Ok>**](GetFwStats200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -408,11 +408,11 @@ No authorization required
 
 <a name="getfwsystems"></a>
 # **GetFwSystems**
-> List<GetFwSystems200Ok> GetFwSystems (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetFwSystems (string datasource = null, string ifNoneMatch = null)
 
 Ownership of faction warfare systems
 
-An overview of the current ownership of faction warfare solar systems  - --  This route is cached for up to 1800 seconds  - -- Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
+An overview of the current ownership of faction warfare solar systems  - --  This route is cached for up to 1800 seconds
 
 ### Example
 ```csharp
@@ -435,7 +435,7 @@ namespace Example
             try
             {
                 // Ownership of faction warfare systems
-                List&lt;GetFwSystems200Ok&gt; result = apiInstance.GetFwSystems(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetFwSystems(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetFwSystems200Ok>**](GetFwSystems200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -471,7 +471,7 @@ No authorization required
 
 <a name="getfwwars"></a>
 # **GetFwWars**
-> List<GetFwWars200Ok> GetFwWars (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetFwWars (string datasource = null, string ifNoneMatch = null)
 
 Data about which NPC factions are at war
 
@@ -498,7 +498,7 @@ namespace Example
             try
             {
                 // Data about which NPC factions are at war
-                List&lt;GetFwWars200Ok&gt; result = apiInstance.GetFwWars(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetFwWars(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetFwWars200Ok>**](GetFwWars200Ok.md)
+**List<Object>**
 
 ### Authorization
 

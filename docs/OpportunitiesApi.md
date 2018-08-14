@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridopportunities"></a>
 # **GetCharactersCharacterIdOpportunities**
-> List<GetCharactersCharacterIdOpportunities200Ok> GetCharactersCharacterIdOpportunities (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdOpportunities (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get a character's completed tasks
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Get a character's completed tasks
-                List&lt;GetCharactersCharacterIdOpportunities200Ok&gt; result = apiInstance.GetCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdOpportunities200Ok>**](GetCharactersCharacterIdOpportunities200Ok.md)
+**List<Object>**
 
 ### Authorization
 

@@ -5,14 +5,14 @@ All URIs are relative to *https://esi.evetech.net*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DeleteCharactersCharacterIdContacts**](ContactsApi.md#deletecharacterscharacteridcontacts) | **DELETE** /v2/characters/{character_id}/contacts/ | Delete contacts
-[**GetAlliancesAllianceIdContacts**](ContactsApi.md#getalliancesallianceidcontacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
+[**GetAlliancesAllianceIdContacts**](ContactsApi.md#getalliancesallianceidcontacts) | **GET** /v2/alliances/{alliance_id}/contacts/ | Get alliance contacts
 [**GetAlliancesAllianceIdContactsLabels**](ContactsApi.md#getalliancesallianceidcontactslabels) | **GET** /v1/alliances/{alliance_id}/contacts/labels/ | Get alliance contact labels
-[**GetCharactersCharacterIdContacts**](ContactsApi.md#getcharacterscharacteridcontacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
+[**GetCharactersCharacterIdContacts**](ContactsApi.md#getcharacterscharacteridcontacts) | **GET** /v2/characters/{character_id}/contacts/ | Get contacts
 [**GetCharactersCharacterIdContactsLabels**](ContactsApi.md#getcharacterscharacteridcontactslabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
-[**GetCorporationsCorporationIdContacts**](ContactsApi.md#getcorporationscorporationidcontacts) | **GET** /v1/corporations/{corporation_id}/contacts/ | Get corporation contacts
+[**GetCorporationsCorporationIdContacts**](ContactsApi.md#getcorporationscorporationidcontacts) | **GET** /v2/corporations/{corporation_id}/contacts/ | Get corporation contacts
 [**GetCorporationsCorporationIdContactsLabels**](ContactsApi.md#getcorporationscorporationidcontactslabels) | **GET** /v1/corporations/{corporation_id}/contacts/labels/ | Get corporation contact labels
-[**PostCharactersCharacterIdContacts**](ContactsApi.md#postcharacterscharacteridcontacts) | **POST** /v1/characters/{character_id}/contacts/ | Add contacts
-[**PutCharactersCharacterIdContacts**](ContactsApi.md#putcharacterscharacteridcontacts) | **PUT** /v1/characters/{character_id}/contacts/ | Edit contacts
+[**PostCharactersCharacterIdContacts**](ContactsApi.md#postcharacterscharacteridcontacts) | **POST** /v2/characters/{character_id}/contacts/ | Add contacts
+[**PutCharactersCharacterIdContacts**](ContactsApi.md#putcharacterscharacteridcontacts) | **PUT** /v2/characters/{character_id}/contacts/ | Edit contacts
 
 
 <a name="deletecharacterscharacteridcontacts"></a>
@@ -86,11 +86,11 @@ void (empty response body)
 
 <a name="getalliancesallianceidcontacts"></a>
 # **GetAlliancesAllianceIdContacts**
-> List<GetAlliancesAllianceIdContacts200Ok> GetAlliancesAllianceIdContacts (int? allianceId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetAlliancesAllianceIdContacts (int? allianceId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get alliance contacts
 
-Return contacts of an alliance  - --  This route is cached for up to 300 seconds  - -- Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+Return contacts of an alliance  - --  This route is cached for up to 300 seconds
 
 ### Example
 ```csharp
@@ -119,7 +119,7 @@ namespace Example
             try
             {
                 // Get alliance contacts
-                List&lt;GetAlliancesAllianceIdContacts200Ok&gt; result = apiInstance.GetAlliancesAllianceIdContacts(allianceId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetAlliancesAllianceIdContacts(allianceId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetAlliancesAllianceIdContacts200Ok>**](GetAlliancesAllianceIdContacts200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 <a name="getalliancesallianceidcontactslabels"></a>
 # **GetAlliancesAllianceIdContactsLabels**
-> List<GetAlliancesAllianceIdContactsLabels200Ok> GetAlliancesAllianceIdContactsLabels (int? allianceId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetAlliancesAllianceIdContactsLabels (int? allianceId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get alliance contact labels
 
@@ -190,7 +190,7 @@ namespace Example
             try
             {
                 // Get alliance contact labels
-                List&lt;GetAlliancesAllianceIdContactsLabels200Ok&gt; result = apiInstance.GetAlliancesAllianceIdContactsLabels(allianceId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetAlliancesAllianceIdContactsLabels(allianceId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetAlliancesAllianceIdContactsLabels200Ok>**](GetAlliancesAllianceIdContactsLabels200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -228,11 +228,11 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridcontacts"></a>
 # **GetCharactersCharacterIdContacts**
-> List<GetCharactersCharacterIdContacts200Ok> GetCharactersCharacterIdContacts (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdContacts (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get contacts
 
-Return contacts of a character  - --  This route is cached for up to 300 seconds  - -- Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+Return contacts of a character  - --  This route is cached for up to 300 seconds
 
 ### Example
 ```csharp
@@ -261,7 +261,7 @@ namespace Example
             try
             {
                 // Get contacts
-                List&lt;GetCharactersCharacterIdContacts200Ok&gt; result = apiInstance.GetCharactersCharacterIdContacts(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdContacts(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdContacts200Ok>**](GetCharactersCharacterIdContacts200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridcontactslabels"></a>
 # **GetCharactersCharacterIdContactsLabels**
-> List<GetCharactersCharacterIdContactsLabels200Ok> GetCharactersCharacterIdContactsLabels (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdContactsLabels (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get contact labels
 
@@ -332,7 +332,7 @@ namespace Example
             try
             {
                 // Get contact labels
-                List&lt;GetCharactersCharacterIdContactsLabels200Ok&gt; result = apiInstance.GetCharactersCharacterIdContactsLabels(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdContactsLabels(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdContactsLabels200Ok>**](GetCharactersCharacterIdContactsLabels200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -370,11 +370,11 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidcontacts"></a>
 # **GetCorporationsCorporationIdContacts**
-> List<GetCorporationsCorporationIdContacts200Ok> GetCorporationsCorporationIdContacts (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdContacts (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get corporation contacts
 
-Return contacts of a corporation  - --  This route is cached for up to 300 seconds  - -- Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+Return contacts of a corporation  - --  This route is cached for up to 300 seconds
 
 ### Example
 ```csharp
@@ -403,7 +403,7 @@ namespace Example
             try
             {
                 // Get corporation contacts
-                List&lt;GetCorporationsCorporationIdContacts200Ok&gt; result = apiInstance.GetCorporationsCorporationIdContacts(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdContacts(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdContacts200Ok>**](GetCorporationsCorporationIdContacts200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidcontactslabels"></a>
 # **GetCorporationsCorporationIdContactsLabels**
-> List<GetCorporationsCorporationIdContactsLabels200Ok> GetCorporationsCorporationIdContactsLabels (int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCorporationsCorporationIdContactsLabels (int? corporationId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get corporation contact labels
 
@@ -474,7 +474,7 @@ namespace Example
             try
             {
                 // Get corporation contact labels
-                List&lt;GetCorporationsCorporationIdContactsLabels200Ok&gt; result = apiInstance.GetCorporationsCorporationIdContactsLabels(corporationId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdContactsLabels(corporationId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdContactsLabels200Ok>**](GetCorporationsCorporationIdContactsLabels200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -512,11 +512,11 @@ Name | Type | Description  | Notes
 
 <a name="postcharacterscharacteridcontacts"></a>
 # **PostCharactersCharacterIdContacts**
-> List<int?> PostCharactersCharacterIdContacts (int? characterId, List<int?> contactIds, float? standing, string datasource = null, long? labelId = null, string token = null, bool? watched = null)
+> List<int?> PostCharactersCharacterIdContacts (int? characterId, List<int?> contactIds, float? standing, string datasource = null, List<long?> labelIds = null, string token = null, bool? watched = null)
 
 Add contacts
 
-Bulk add contacts with same settings  - --  Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+Bulk add contacts with same settings  - -- 
 
 ### Example
 ```csharp
@@ -540,14 +540,14 @@ namespace Example
             var contactIds = ;  // List<int?> | A list of contacts
             var standing = 3.4;  // float? | Standing for the contact
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var labelId = 789;  // long? | Add a custom label to the new contact (optional)  (default to 0)
+            var labelIds = new List<long?>(); // List<long?> | Add custom labels to the new contact (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
             var watched = true;  // bool? | Whether the contact should be watched, note this is only effective on characters (optional)  (default to false)
 
             try
             {
                 // Add contacts
-                List&lt;int?&gt; result = apiInstance.PostCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, watched);
+                List&lt;int?&gt; result = apiInstance.PostCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelIds, token, watched);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
  **contactIds** | **List&lt;int?&gt;**| A list of contacts | 
  **standing** | **float?**| Standing for the contact | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **labelId** | **long?**| Add a custom label to the new contact | [optional] [default to 0]
+ **labelIds** | [**List&lt;long?&gt;**](long?.md)| Add custom labels to the new contact | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
  **watched** | **bool?**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 
@@ -588,11 +588,11 @@ Name | Type | Description  | Notes
 
 <a name="putcharacterscharacteridcontacts"></a>
 # **PutCharactersCharacterIdContacts**
-> void PutCharactersCharacterIdContacts (int? characterId, List<int?> contactIds, float? standing, string datasource = null, long? labelId = null, string token = null, bool? watched = null)
+> void PutCharactersCharacterIdContacts (int? characterId, List<int?> contactIds, float? standing, string datasource = null, List<long?> labelIds = null, string token = null, bool? watched = null)
 
 Edit contacts
 
-Bulk edit contacts with same settings  - --  Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+Bulk edit contacts with same settings  - -- 
 
 ### Example
 ```csharp
@@ -616,14 +616,14 @@ namespace Example
             var contactIds = ;  // List<int?> | A list of contacts
             var standing = 3.4;  // float? | Standing for the contact
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var labelId = 789;  // long? | Add a custom label to the contact, use 0 for clearing label (optional)  (default to 0)
+            var labelIds = new List<long?>(); // List<long?> | Add custom labels to the contact (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
             var watched = true;  // bool? | Whether the contact should be watched, note this is only effective on characters (optional)  (default to false)
 
             try
             {
                 // Edit contacts
-                apiInstance.PutCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, watched);
+                apiInstance.PutCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelIds, token, watched);
             }
             catch (Exception e)
             {
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
  **contactIds** | **List&lt;int?&gt;**| A list of contacts | 
  **standing** | **float?**| Standing for the contact | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **labelId** | **long?**| Add a custom label to the contact, use 0 for clearing label | [optional] [default to 0]
+ **labelIds** | [**List&lt;long?&gt;**](long?.md)| Add custom labels to the contact | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
  **watched** | **bool?**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 

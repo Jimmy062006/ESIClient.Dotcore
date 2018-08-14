@@ -155,7 +155,7 @@ void (empty response body)
 
 <a name="getcharacterscharacteridmail"></a>
 # **GetCharactersCharacterIdMail**
-> List<GetCharactersCharacterIdMail200Ok> GetCharactersCharacterIdMail (int? characterId, string datasource = null, string ifNoneMatch = null, List<int?> labels = null, int? lastMailId = null, string token = null)
+> List<Object> GetCharactersCharacterIdMail (int? characterId, string datasource = null, string ifNoneMatch = null, List<int?> labels = null, int? lastMailId = null, string token = null)
 
 Return mail headers
 
@@ -189,7 +189,7 @@ namespace Example
             try
             {
                 // Return mail headers
-                List&lt;GetCharactersCharacterIdMail200Ok&gt; result = apiInstance.GetCharactersCharacterIdMail(characterId, datasource, ifNoneMatch, labels, lastMailId, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdMail(characterId, datasource, ifNoneMatch, labels, lastMailId, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdMail200Ok>**](GetCharactersCharacterIdMail200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridmaillists"></a>
 # **GetCharactersCharacterIdMailLists**
-> List<GetCharactersCharacterIdMailLists200Ok> GetCharactersCharacterIdMailLists (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdMailLists (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Return mailing list subscriptions
 
@@ -331,7 +331,7 @@ namespace Example
             try
             {
                 // Return mailing list subscriptions
-                List&lt;GetCharactersCharacterIdMailLists200Ok&gt; result = apiInstance.GetCharactersCharacterIdMailLists(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdMailLists(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdMailLists200Ok>**](GetCharactersCharacterIdMailLists200Ok.md)
+**List<Object>**
 
 ### Authorization
 

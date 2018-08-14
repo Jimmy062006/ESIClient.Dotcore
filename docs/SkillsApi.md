@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridskillqueue"></a>
 # **GetCharactersCharacterIdSkillqueue**
-> List<GetCharactersCharacterIdSkillqueue200Ok> GetCharactersCharacterIdSkillqueue (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdSkillqueue (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get character's skill queue
 
@@ -113,7 +113,7 @@ namespace Example
             try
             {
                 // Get character's skill queue
-                List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; result = apiInstance.GetCharactersCharacterIdSkillqueue(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdSkillqueue(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdSkillqueue200Ok>**](GetCharactersCharacterIdSkillqueue200Ok.md)
+**List<Object>**
 
 ### Authorization
 

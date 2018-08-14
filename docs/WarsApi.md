@@ -141,7 +141,7 @@ No authorization required
 
 <a name="getwarswaridkillmails"></a>
 # **GetWarsWarIdKillmails**
-> List<GetWarsWarIdKillmails200Ok> GetWarsWarIdKillmails (int? warId, string datasource = null, string ifNoneMatch = null, int? page = null)
+> List<Object> GetWarsWarIdKillmails (int? warId, string datasource = null, string ifNoneMatch = null, int? page = null)
 
 List kills for a war
 
@@ -170,7 +170,7 @@ namespace Example
             try
             {
                 // List kills for a war
-                List&lt;GetWarsWarIdKillmails200Ok&gt; result = apiInstance.GetWarsWarIdKillmails(warId, datasource, ifNoneMatch, page);
+                List&lt;Object&gt; result = apiInstance.GetWarsWarIdKillmails(warId, datasource, ifNoneMatch, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetWarsWarIdKillmails200Ok>**](GetWarsWarIdKillmails200Ok.md)
+**List<Object>**
 
 ### Authorization
 

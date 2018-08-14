@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Contested** | **bool?** | contested boolean | 
+**Contested** | **string** | contested string | 
 **OccupierFactionId** | **int?** | occupier_faction_id integer | 
 **OwnerFactionId** | **int?** | owner_faction_id integer | 
 **SolarSystemId** | **int?** | solar_system_id integer | 

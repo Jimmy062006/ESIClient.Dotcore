@@ -1,10 +1,10 @@
-# ESIClient.Dotcore.Model.GetAlliancesNames200Ok
+# ESIClient.Dotcore.Model.GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllianceId** | **int?** | alliance_id integer | 
-**AllianceName** | **string** | alliance_name string | 
+**AttributeId** | **int?** | attribute_id integer | 
+**Value** | **float?** | value number | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

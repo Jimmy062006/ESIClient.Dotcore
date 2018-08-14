@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**GetAlliancesAllianceId**](AllianceApi.md#getalliancesallianceid) | **GET** /v3/alliances/{alliance_id}/ | Get alliance information
 [**GetAlliancesAllianceIdCorporations**](AllianceApi.md#getalliancesallianceidcorporations) | **GET** /v1/alliances/{alliance_id}/corporations/ | List alliance&#39;s corporations
 [**GetAlliancesAllianceIdIcons**](AllianceApi.md#getalliancesallianceidicons) | **GET** /v1/alliances/{alliance_id}/icons/ | Get alliance icon
-[**GetAlliancesNames**](AllianceApi.md#getalliancesnames) | **GET** /v2/alliances/names/ | Get alliance names
 
 
 <a name="getalliances"></a>
@@ -257,71 +256,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAlliancesAllianceIdIconsOk**](GetAlliancesAllianceIdIconsOk.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getalliancesnames"></a>
-# **GetAlliancesNames**
-> List<GetAlliancesNames200Ok> GetAlliancesNames (List<int?> allianceIds, string datasource = null, string ifNoneMatch = null)
-
-Get alliance names
-
-Resolve a set of alliance IDs to alliance names  - --  This route is cached for up to 3600 seconds
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using ESIClient.Dotcore.Api;
-using ESIClient.Dotcore.Client;
-using ESIClient.Dotcore.Model;
-
-namespace Example
-{
-    public class GetAlliancesNamesExample
-    {
-        public void main()
-        {
-            var apiInstance = new AllianceApi();
-            var allianceIds = new List<int?>(); // List<int?> | A comma separated list of alliance IDs
-            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
-
-            try
-            {
-                // Get alliance names
-                List&lt;GetAlliancesNames200Ok&gt; result = apiInstance.GetAlliancesNames(allianceIds, datasource, ifNoneMatch);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AllianceApi.GetAlliancesNames: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **allianceIds** | [**List&lt;int?&gt;**](int?.md)| A comma separated list of alliance IDs | 
- **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
-
-### Return type
-
-[**List<GetAlliancesNames200Ok>**](GetAlliancesNames200Ok.md)
 
 ### Authorization
 

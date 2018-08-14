@@ -25,11 +25,11 @@ Method | HTTP request | Description
 [**GetUniverseStarsStarId**](UniverseApi.md#getuniversestarsstarid) | **GET** /v1/universe/stars/{star_id}/ | Get star information
 [**GetUniverseStationsStationId**](UniverseApi.md#getuniversestationsstationid) | **GET** /v2/universe/stations/{station_id}/ | Get station information
 [**GetUniverseStructures**](UniverseApi.md#getuniversestructures) | **GET** /v1/universe/structures/ | List all public structures
-[**GetUniverseStructuresStructureId**](UniverseApi.md#getuniversestructuresstructureid) | **GET** /v1/universe/structures/{structure_id}/ | Get structure information
+[**GetUniverseStructuresStructureId**](UniverseApi.md#getuniversestructuresstructureid) | **GET** /v2/universe/structures/{structure_id}/ | Get structure information
 [**GetUniverseSystemJumps**](UniverseApi.md#getuniversesystemjumps) | **GET** /v1/universe/system_jumps/ | Get system jumps
 [**GetUniverseSystemKills**](UniverseApi.md#getuniversesystemkills) | **GET** /v2/universe/system_kills/ | Get system kills
 [**GetUniverseSystems**](UniverseApi.md#getuniversesystems) | **GET** /v1/universe/systems/ | Get solar systems
-[**GetUniverseSystemsSystemId**](UniverseApi.md#getuniversesystemssystemid) | **GET** /v3/universe/systems/{system_id}/ | Get solar system information
+[**GetUniverseSystemsSystemId**](UniverseApi.md#getuniversesystemssystemid) | **GET** /v4/universe/systems/{system_id}/ | Get solar system information
 [**GetUniverseTypes**](UniverseApi.md#getuniversetypes) | **GET** /v1/universe/types/ | Get types
 [**GetUniverseTypesTypeId**](UniverseApi.md#getuniversetypestypeid) | **GET** /v3/universe/types/{type_id}/ | Get type information
 [**PostUniverseIds**](UniverseApi.md#postuniverseids) | **POST** /v1/universe/ids/ | Bulk names to IDs
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 <a name="getuniverseancestries"></a>
 # **GetUniverseAncestries**
-> List<GetUniverseAncestries200Ok> GetUniverseAncestries (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
+> List<Object> GetUniverseAncestries (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get ancestries
 
@@ -67,7 +67,7 @@ namespace Example
             try
             {
                 // Get ancestries
-                List&lt;GetUniverseAncestries200Ok&gt; result = apiInstance.GetUniverseAncestries(acceptLanguage, datasource, ifNoneMatch, language);
+                List&lt;Object&gt; result = apiInstance.GetUniverseAncestries(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetUniverseAncestries200Ok>**](GetUniverseAncestries200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -170,7 +170,7 @@ No authorization required
 
 <a name="getuniversebloodlines"></a>
 # **GetUniverseBloodlines**
-> List<GetUniverseBloodlines200Ok> GetUniverseBloodlines (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
+> List<Object> GetUniverseBloodlines (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get bloodlines
 
@@ -199,7 +199,7 @@ namespace Example
             try
             {
                 // Get bloodlines
-                List&lt;GetUniverseBloodlines200Ok&gt; result = apiInstance.GetUniverseBloodlines(acceptLanguage, datasource, ifNoneMatch, language);
+                List&lt;Object&gt; result = apiInstance.GetUniverseBloodlines(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetUniverseBloodlines200Ok>**](GetUniverseBloodlines200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -501,7 +501,7 @@ No authorization required
 
 <a name="getuniversefactions"></a>
 # **GetUniverseFactions**
-> List<GetUniverseFactions200Ok> GetUniverseFactions (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
+> List<Object> GetUniverseFactions (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get factions
 
@@ -530,7 +530,7 @@ namespace Example
             try
             {
                 // Get factions
-                List&lt;GetUniverseFactions200Ok&gt; result = apiInstance.GetUniverseFactions(acceptLanguage, datasource, ifNoneMatch, language);
+                List&lt;Object&gt; result = apiInstance.GetUniverseFactions(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -553,7 +553,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetUniverseFactions200Ok>**](GetUniverseFactions200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -960,7 +960,7 @@ No authorization required
 
 <a name="getuniverseraces"></a>
 # **GetUniverseRaces**
-> List<GetUniverseRaces200Ok> GetUniverseRaces (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
+> List<Object> GetUniverseRaces (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 Get character races
 
@@ -989,7 +989,7 @@ namespace Example
             try
             {
                 // Get character races
-                List&lt;GetUniverseRaces200Ok&gt; result = apiInstance.GetUniverseRaces(acceptLanguage, datasource, ifNoneMatch, language);
+                List&lt;Object&gt; result = apiInstance.GetUniverseRaces(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1012,7 +1012,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetUniverseRaces200Ok>**](GetUniverseRaces200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -1421,7 +1421,7 @@ No authorization required
 
 Get structure information
 
-Returns information on requested structure, if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.  - --  This route is cached for up to 3600 seconds
+Returns information on requested structure if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.  - --  This route is cached for up to 3600 seconds
 
 ### Example
 ```csharp
@@ -1487,7 +1487,7 @@ Name | Type | Description  | Notes
 
 <a name="getuniversesystemjumps"></a>
 # **GetUniverseSystemJumps**
-> List<GetUniverseSystemJumps200Ok> GetUniverseSystemJumps (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetUniverseSystemJumps (string datasource = null, string ifNoneMatch = null)
 
 Get system jumps
 
@@ -1514,7 +1514,7 @@ namespace Example
             try
             {
                 // Get system jumps
-                List&lt;GetUniverseSystemJumps200Ok&gt; result = apiInstance.GetUniverseSystemJumps(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetUniverseSystemJumps(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1535,7 +1535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetUniverseSystemJumps200Ok>**](GetUniverseSystemJumps200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -1550,7 +1550,7 @@ No authorization required
 
 <a name="getuniversesystemkills"></a>
 # **GetUniverseSystemKills**
-> List<GetUniverseSystemKills200Ok> GetUniverseSystemKills (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetUniverseSystemKills (string datasource = null, string ifNoneMatch = null)
 
 Get system kills
 
@@ -1577,7 +1577,7 @@ namespace Example
             try
             {
                 // Get system kills
-                List&lt;GetUniverseSystemKills200Ok&gt; result = apiInstance.GetUniverseSystemKills(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetUniverseSystemKills(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1598,7 +1598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetUniverseSystemKills200Ok>**](GetUniverseSystemKills200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -1680,7 +1680,7 @@ No authorization required
 
 Get solar system information
 
-Get information on a solar system  - --  This route expires daily at 11:05
+Get information on a solar system.  - --  This route expires daily at 11:05
 
 ### Example
 ```csharp
@@ -1946,7 +1946,7 @@ No authorization required
 
 <a name="postuniversenames"></a>
 # **PostUniverseNames**
-> List<PostUniverseNames200Ok> PostUniverseNames (List<int?> ids, string datasource = null)
+> List<Object> PostUniverseNames (List<int?> ids, string datasource = null)
 
 Get names and categories for a set of ID's
 
@@ -1973,7 +1973,7 @@ namespace Example
             try
             {
                 // Get names and categories for a set of ID's
-                List&lt;PostUniverseNames200Ok&gt; result = apiInstance.PostUniverseNames(ids, datasource);
+                List&lt;Object&gt; result = apiInstance.PostUniverseNames(ids, datasource);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1994,7 +1994,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<PostUniverseNames200Ok>**](PostUniverseNames200Ok.md)
+**List<Object>**
 
 ### Authorization
 

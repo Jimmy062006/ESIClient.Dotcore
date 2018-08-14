@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridindustryjobs"></a>
 # **GetCharactersCharacterIdIndustryJobs**
-> List<GetCharactersCharacterIdIndustryJobs200Ok> GetCharactersCharacterIdIndustryJobs (int? characterId, string datasource = null, string ifNoneMatch = null, bool? includeCompleted = null, string token = null)
+> List<Object> GetCharactersCharacterIdIndustryJobs (int? characterId, string datasource = null, string ifNoneMatch = null, bool? includeCompleted = null, string token = null)
 
 List character industry jobs
 
@@ -49,7 +49,7 @@ namespace Example
             try
             {
                 // List character industry jobs
-                List&lt;GetCharactersCharacterIdIndustryJobs200Ok&gt; result = apiInstance.GetCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdIndustryJobs200Ok>**](GetCharactersCharacterIdIndustryJobs200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridmining"></a>
 # **GetCharactersCharacterIdMining**
-> List<GetCharactersCharacterIdMining200Ok> GetCharactersCharacterIdMining (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdMining (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Character mining ledger
 
@@ -121,7 +121,7 @@ namespace Example
             try
             {
                 // Character mining ledger
-                List&lt;GetCharactersCharacterIdMining200Ok&gt; result = apiInstance.GetCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdMining200Ok>**](GetCharactersCharacterIdMining200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationcorporationidminingextractions"></a>
 # **GetCorporationCorporationIdMiningExtractions**
-> List<GetCorporationCorporationIdMiningExtractions200Ok> GetCorporationCorporationIdMiningExtractions (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationCorporationIdMiningExtractions (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Moon extraction timers
 
@@ -193,7 +193,7 @@ namespace Example
             try
             {
                 // Moon extraction timers
-                List&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationCorporationIdMiningExtractions200Ok>**](GetCorporationCorporationIdMiningExtractions200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationcorporationidminingobservers"></a>
 # **GetCorporationCorporationIdMiningObservers**
-> List<GetCorporationCorporationIdMiningObservers200Ok> GetCorporationCorporationIdMiningObservers (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationCorporationIdMiningObservers (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Corporation mining observers
 
@@ -265,7 +265,7 @@ namespace Example
             try
             {
                 // Corporation mining observers
-                List&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationCorporationIdMiningObservers200Ok>**](GetCorporationCorporationIdMiningObservers200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationcorporationidminingobserversobserverid"></a>
 # **GetCorporationCorporationIdMiningObserversObserverId**
-> List<GetCorporationCorporationIdMiningObserversObserverId200Ok> GetCorporationCorporationIdMiningObserversObserverId (int? corporationId, long? observerId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationCorporationIdMiningObserversObserverId (int? corporationId, long? observerId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Observed corporation mining
 
@@ -338,7 +338,7 @@ namespace Example
             try
             {
                 // Observed corporation mining
-                List&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; result = apiInstance.GetCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationCorporationIdMiningObserversObserverId200Ok>**](GetCorporationCorporationIdMiningObserversObserverId200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidindustryjobs"></a>
 # **GetCorporationsCorporationIdIndustryJobs**
-> List<GetCorporationsCorporationIdIndustryJobs200Ok> GetCorporationsCorporationIdIndustryJobs (int? corporationId, string datasource = null, string ifNoneMatch = null, bool? includeCompleted = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdIndustryJobs (int? corporationId, string datasource = null, string ifNoneMatch = null, bool? includeCompleted = null, int? page = null, string token = null)
 
 List corporation industry jobs
 
@@ -412,7 +412,7 @@ namespace Example
             try
             {
                 // List corporation industry jobs
-                List&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; result = apiInstance.GetCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdIndustryJobs200Ok>**](GetCorporationsCorporationIdIndustryJobs200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 <a name="getindustryfacilities"></a>
 # **GetIndustryFacilities**
-> List<GetIndustryFacilities200Ok> GetIndustryFacilities (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetIndustryFacilities (string datasource = null, string ifNoneMatch = null)
 
 List industry facilities
 
@@ -479,7 +479,7 @@ namespace Example
             try
             {
                 // List industry facilities
-                List&lt;GetIndustryFacilities200Ok&gt; result = apiInstance.GetIndustryFacilities(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetIndustryFacilities(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetIndustryFacilities200Ok>**](GetIndustryFacilities200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -515,7 +515,7 @@ No authorization required
 
 <a name="getindustrysystems"></a>
 # **GetIndustrySystems**
-> List<GetIndustrySystems200Ok> GetIndustrySystems (string datasource = null, string ifNoneMatch = null)
+> List<Object> GetIndustrySystems (string datasource = null, string ifNoneMatch = null)
 
 List solar system cost indices
 
@@ -542,7 +542,7 @@ namespace Example
             try
             {
                 // List solar system cost indices
-                List&lt;GetIndustrySystems200Ok&gt; result = apiInstance.GetIndustrySystems(datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetIndustrySystems(datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetIndustrySystems200Ok>**](GetIndustrySystems200Ok.md)
+**List<Object>**
 
 ### Authorization
 

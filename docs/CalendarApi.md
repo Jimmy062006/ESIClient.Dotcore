@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridcalendar"></a>
 # **GetCharactersCharacterIdCalendar**
-> List<GetCharactersCharacterIdCalendar200Ok> GetCharactersCharacterIdCalendar (int? characterId, string datasource = null, int? fromEvent = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdCalendar (int? characterId, string datasource = null, int? fromEvent = null, string ifNoneMatch = null, string token = null)
 
 List calendar event summaries
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // List calendar event summaries
-                List&lt;GetCharactersCharacterIdCalendar200Ok&gt; result = apiInstance.GetCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdCalendar200Ok>**](GetCharactersCharacterIdCalendar200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridcalendareventidattendees"></a>
 # **GetCharactersCharacterIdCalendarEventIdAttendees**
-> List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok> GetCharactersCharacterIdCalendarEventIdAttendees (int? characterId, int? eventId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdCalendarEventIdAttendees (int? characterId, int? eventId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get attendees
 
@@ -189,7 +189,7 @@ namespace Example
             try
             {
                 // Get attendees
-                List&lt;GetCharactersCharacterIdCalendarEventIdAttendees200Ok&gt; result = apiInstance.GetCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok>**](GetCharactersCharacterIdCalendarEventIdAttendees200Ok.md)
+**List<Object>**
 
 ### Authorization
 

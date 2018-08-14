@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridbookmarks"></a>
 # **GetCharactersCharacterIdBookmarks**
-> List<GetCharactersCharacterIdBookmarks200Ok> GetCharactersCharacterIdBookmarks (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdBookmarks (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List bookmarks
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // List bookmarks
-                List&lt;GetCharactersCharacterIdBookmarks200Ok&gt; result = apiInstance.GetCharactersCharacterIdBookmarks(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdBookmarks(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdBookmarks200Ok>**](GetCharactersCharacterIdBookmarks200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridbookmarksfolders"></a>
 # **GetCharactersCharacterIdBookmarksFolders**
-> List<GetCharactersCharacterIdBookmarksFolders200Ok> GetCharactersCharacterIdBookmarksFolders (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdBookmarksFolders (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List bookmark folders
 
@@ -117,7 +117,7 @@ namespace Example
             try
             {
                 // List bookmark folders
-                List&lt;GetCharactersCharacterIdBookmarksFolders200Ok&gt; result = apiInstance.GetCharactersCharacterIdBookmarksFolders(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdBookmarksFolders(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdBookmarksFolders200Ok>**](GetCharactersCharacterIdBookmarksFolders200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidbookmarks"></a>
 # **GetCorporationsCorporationIdBookmarks**
-> List<GetCorporationsCorporationIdBookmarks200Ok> GetCorporationsCorporationIdBookmarks (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdBookmarks (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List corporation bookmarks
 
@@ -189,7 +189,7 @@ namespace Example
             try
             {
                 // List corporation bookmarks
-                List&lt;GetCorporationsCorporationIdBookmarks200Ok&gt; result = apiInstance.GetCorporationsCorporationIdBookmarks(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdBookmarks(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdBookmarks200Ok>**](GetCorporationsCorporationIdBookmarks200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidbookmarksfolders"></a>
 # **GetCorporationsCorporationIdBookmarksFolders**
-> List<GetCorporationsCorporationIdBookmarksFolders200Ok> GetCorporationsCorporationIdBookmarksFolders (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdBookmarksFolders (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 List corporation bookmark folders
 
@@ -261,7 +261,7 @@ namespace Example
             try
             {
                 // List corporation bookmark folders
-                List&lt;GetCorporationsCorporationIdBookmarksFolders200Ok&gt; result = apiInstance.GetCorporationsCorporationIdBookmarksFolders(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdBookmarksFolders(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdBookmarksFolders200Ok>**](GetCorporationsCorporationIdBookmarksFolders200Ok.md)
+**List<Object>**
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridkillmailsrecent"></a>
 # **GetCharactersCharacterIdKillmailsRecent**
-> List<GetCharactersCharacterIdKillmailsRecent200Ok> GetCharactersCharacterIdKillmailsRecent (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCharactersCharacterIdKillmailsRecent (int? characterId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get a character's recent kills and losses
 
@@ -44,7 +44,7 @@ namespace Example
             try
             {
                 // Get a character's recent kills and losses
-                List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; result = apiInstance.GetCharactersCharacterIdKillmailsRecent(characterId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdKillmailsRecent(characterId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdKillmailsRecent200Ok>**](GetCharactersCharacterIdKillmailsRecent200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 <a name="getcorporationscorporationidkillmailsrecent"></a>
 # **GetCorporationsCorporationIdKillmailsRecent**
-> List<GetCorporationsCorporationIdKillmailsRecent200Ok> GetCorporationsCorporationIdKillmailsRecent (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
+> List<Object> GetCorporationsCorporationIdKillmailsRecent (int? corporationId, string datasource = null, string ifNoneMatch = null, int? page = null, string token = null)
 
 Get a corporation's recent kills and losses
 
@@ -116,7 +116,7 @@ namespace Example
             try
             {
                 // Get a corporation's recent kills and losses
-                List&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; result = apiInstance.GetCorporationsCorporationIdKillmailsRecent(corporationId, datasource, ifNoneMatch, page, token);
+                List&lt;Object&gt; result = apiInstance.GetCorporationsCorporationIdKillmailsRecent(corporationId, datasource, ifNoneMatch, page, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCorporationsCorporationIdKillmailsRecent200Ok>**](GetCorporationsCorporationIdKillmailsRecent200Ok.md)
+**List<Object>**
 
 ### Authorization
 

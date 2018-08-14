@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getinsuranceprices"></a>
 # **GetInsurancePrices**
-> List<GetInsurancePrices200Ok> GetInsurancePrices (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
+> List<Object> GetInsurancePrices (string acceptLanguage = null, string datasource = null, string ifNoneMatch = null, string language = null)
 
 List insurance levels
 
@@ -38,7 +38,7 @@ namespace Example
             try
             {
                 // List insurance levels
-                List&lt;GetInsurancePrices200Ok&gt; result = apiInstance.GetInsurancePrices(acceptLanguage, datasource, ifNoneMatch, language);
+                List&lt;Object&gt; result = apiInstance.GetInsurancePrices(acceptLanguage, datasource, ifNoneMatch, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetInsurancePrices200Ok>**](GetInsurancePrices200Ok.md)
+**List<Object>**
 
 ### Authorization
 

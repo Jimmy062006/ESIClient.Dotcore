@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getcharacterscharacteridloyaltypoints"></a>
 # **GetCharactersCharacterIdLoyaltyPoints**
-> List<GetCharactersCharacterIdLoyaltyPoints200Ok> GetCharactersCharacterIdLoyaltyPoints (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdLoyaltyPoints (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get loyalty points
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Get loyalty points
-                List&lt;GetCharactersCharacterIdLoyaltyPoints200Ok&gt; result = apiInstance.GetCharactersCharacterIdLoyaltyPoints(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdLoyaltyPoints(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdLoyaltyPoints200Ok>**](GetCharactersCharacterIdLoyaltyPoints200Ok.md)
+**List<Object>**
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 <a name="getloyaltystorescorporationidoffers"></a>
 # **GetLoyaltyStoresCorporationIdOffers**
-> List<GetLoyaltyStoresCorporationIdOffers200Ok> GetLoyaltyStoresCorporationIdOffers (int? corporationId, string datasource = null, string ifNoneMatch = null)
+> List<Object> GetLoyaltyStoresCorporationIdOffers (int? corporationId, string datasource = null, string ifNoneMatch = null)
 
 List loyalty store offers
 
@@ -108,7 +108,7 @@ namespace Example
             try
             {
                 // List loyalty store offers
-                List&lt;GetLoyaltyStoresCorporationIdOffers200Ok&gt; result = apiInstance.GetLoyaltyStoresCorporationIdOffers(corporationId, datasource, ifNoneMatch);
+                List&lt;Object&gt; result = apiInstance.GetLoyaltyStoresCorporationIdOffers(corporationId, datasource, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetLoyaltyStoresCorporationIdOffers200Ok>**](GetLoyaltyStoresCorporationIdOffers200Ok.md)
+**List<Object>**
 
 ### Authorization
 

@@ -80,7 +80,7 @@ void (empty response body)
 
 <a name="getcharacterscharacteridfittings"></a>
 # **GetCharactersCharacterIdFittings**
-> List<GetCharactersCharacterIdFittings200Ok> GetCharactersCharacterIdFittings (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
+> List<Object> GetCharactersCharacterIdFittings (int? characterId, string datasource = null, string ifNoneMatch = null, string token = null)
 
 Get fittings
 
@@ -112,7 +112,7 @@ namespace Example
             try
             {
                 // Get fittings
-                List&lt;GetCharactersCharacterIdFittings200Ok&gt; result = apiInstance.GetCharactersCharacterIdFittings(characterId, datasource, ifNoneMatch, token);
+                List&lt;Object&gt; result = apiInstance.GetCharactersCharacterIdFittings(characterId, datasource, ifNoneMatch, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<GetCharactersCharacterIdFittings200Ok>**](GetCharactersCharacterIdFittings200Ok.md)
+**List<Object>**
 
 ### Authorization
 
