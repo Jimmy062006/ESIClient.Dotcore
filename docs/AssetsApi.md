@@ -4,12 +4,12 @@ All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCharactersCharacterIdAssets**](AssetsApi.md#getcharacterscharacteridassets) | **GET** /v3/characters/{character_id}/assets/ | Get character assets
-[**GetCorporationsCorporationIdAssets**](AssetsApi.md#getcorporationscorporationidassets) | **GET** /v3/corporations/{corporation_id}/assets/ | Get corporation assets
+[**GetCharactersCharacterIdAssets**](AssetsApi.md#getcharacterscharacteridassets) | **GET** /v5/characters/{character_id}/assets/ | Get character assets
+[**GetCorporationsCorporationIdAssets**](AssetsApi.md#getcorporationscorporationidassets) | **GET** /v5/corporations/{corporation_id}/assets/ | Get corporation assets
 [**PostCharactersCharacterIdAssetsLocations**](AssetsApi.md#postcharacterscharacteridassetslocations) | **POST** /v2/characters/{character_id}/assets/locations/ | Get character asset locations
 [**PostCharactersCharacterIdAssetsNames**](AssetsApi.md#postcharacterscharacteridassetsnames) | **POST** /v1/characters/{character_id}/assets/names/ | Get character asset names
 [**PostCorporationsCorporationIdAssetsLocations**](AssetsApi.md#postcorporationscorporationidassetslocations) | **POST** /v2/corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
-[**PostCorporationsCorporationIdAssetsNames**](AssetsApi.md#postcorporationscorporationidassetsnames) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get coporation asset names
+[**PostCorporationsCorporationIdAssetsNames**](AssetsApi.md#postcorporationscorporationidassetsnames) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get corporation asset names
 
 
 <a name="getcharacterscharacteridassets"></a>
@@ -370,9 +370,9 @@ Name | Type | Description  | Notes
 # **PostCorporationsCorporationIdAssetsNames**
 > List<Object> PostCorporationsCorporationIdAssetsNames (int? corporationId, List<long?> itemIds, string datasource = null, string token = null)
 
-Get coporation asset names
+Get corporation asset names
 
-Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships.  - --  Requires one of the following EVE corporation role(s): Director
+Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships  - --  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```csharp
@@ -399,7 +399,7 @@ namespace Example
 
             try
             {
-                // Get coporation asset names
+                // Get corporation asset names
                 List&lt;Object&gt; result = apiInstance.PostCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token);
                 Debug.WriteLine(result);
             }

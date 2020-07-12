@@ -82,11 +82,11 @@ Name | Type | Description  | Notes
 
 <a name="getcharacterscharacteridplanetsplanetid"></a>
 # **GetCharactersCharacterIdPlanetsPlanetId**
-> GetCharactersCharacterIdPlanetsPlanetIdOk GetCharactersCharacterIdPlanetsPlanetId (int? characterId, int? planetId, string datasource = null, string ifNoneMatch = null, string token = null)
+> GetCharactersCharacterIdPlanetsPlanetIdOk GetCharactersCharacterIdPlanetsPlanetId (int? characterId, int? planetId, string datasource = null, string token = null)
 
 Get colony layout
 
-Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met.  - --  This route is cached for up to 600 seconds
+Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met.  - -- 
 
 ### Example
 ```csharp
@@ -109,13 +109,12 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var planetId = 56;  // int? | Planet id of the target planet
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
-            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
 
             try
             {
                 // Get colony layout
-                GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.GetCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, ifNoneMatch, token);
+                GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.GetCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, token);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -134,7 +133,6 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **planetId** | **int?**| Planet id of the target planet | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
- **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
 
 ### Return type

@@ -7,6 +7,9 @@ Method | HTTP request | Description
 [**GetCharactersCharacterIdContracts**](ContractsApi.md#getcharacterscharacteridcontracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 [**GetCharactersCharacterIdContractsContractIdBids**](ContractsApi.md#getcharacterscharacteridcontractscontractidbids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 [**GetCharactersCharacterIdContractsContractIdItems**](ContractsApi.md#getcharacterscharacteridcontractscontractiditems) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
+[**GetContractsPublicBidsContractId**](ContractsApi.md#getcontractspublicbidscontractid) | **GET** /v1/contracts/public/bids/{contract_id}/ | Get public contract bids
+[**GetContractsPublicItemsContractId**](ContractsApi.md#getcontractspublicitemscontractid) | **GET** /v1/contracts/public/items/{contract_id}/ | Get public contract items
+[**GetContractsPublicRegionId**](ContractsApi.md#getcontractspublicregionid) | **GET** /v1/contracts/public/{region_id}/ | Get public contracts
 [**GetCorporationsCorporationIdContracts**](ContractsApi.md#getcorporationscorporationidcontracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get corporation contracts
 [**GetCorporationsCorporationIdContractsContractIdBids**](ContractsApi.md#getcorporationscorporationidcontractscontractidbids) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
 [**GetCorporationsCorporationIdContractsContractIdItems**](ContractsApi.md#getcorporationscorporationidcontractscontractiditems) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
@@ -220,6 +223,207 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcontractspublicbidscontractid"></a>
+# **GetContractsPublicBidsContractId**
+> List<Object> GetContractsPublicBidsContractId (int? contractId, string datasource = null, string ifNoneMatch = null, int? page = null)
+
+Get public contract bids
+
+Lists bids on a public auction contract  - --  This route is cached for up to 300 seconds
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
+
+namespace Example
+{
+    public class GetContractsPublicBidsContractIdExample
+    {
+        public void main()
+        {
+            var apiInstance = new ContractsApi();
+            var contractId = 56;  // int? | ID of a contract
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
+
+            try
+            {
+                // Get public contract bids
+                List&lt;Object&gt; result = apiInstance.GetContractsPublicBidsContractId(contractId, datasource, ifNoneMatch, page);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContractsApi.GetContractsPublicBidsContractId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contractId** | **int?**| ID of a contract | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **int?**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+**List<Object>**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcontractspublicitemscontractid"></a>
+# **GetContractsPublicItemsContractId**
+> List<Object> GetContractsPublicItemsContractId (int? contractId, string datasource = null, string ifNoneMatch = null, int? page = null)
+
+Get public contract items
+
+Lists items of a public contract  - --  This route is cached for up to 3600 seconds
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
+
+namespace Example
+{
+    public class GetContractsPublicItemsContractIdExample
+    {
+        public void main()
+        {
+            var apiInstance = new ContractsApi();
+            var contractId = 56;  // int? | ID of a contract
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
+
+            try
+            {
+                // Get public contract items
+                List&lt;Object&gt; result = apiInstance.GetContractsPublicItemsContractId(contractId, datasource, ifNoneMatch, page);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContractsApi.GetContractsPublicItemsContractId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contractId** | **int?**| ID of a contract | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **int?**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+**List<Object>**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcontractspublicregionid"></a>
+# **GetContractsPublicRegionId**
+> List<Object> GetContractsPublicRegionId (int? regionId, string datasource = null, string ifNoneMatch = null, int? page = null)
+
+Get public contracts
+
+Returns a paginated list of all public contracts in the given region  - --  This route is cached for up to 1800 seconds
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ESIClient.Dotcore.Api;
+using ESIClient.Dotcore.Client;
+using ESIClient.Dotcore.Model;
+
+namespace Example
+{
+    public class GetContractsPublicRegionIdExample
+    {
+        public void main()
+        {
+            var apiInstance = new ContractsApi();
+            var regionId = 56;  // int? | An EVE region id
+            var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
+            var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
+
+            try
+            {
+                // Get public contracts
+                List&lt;Object&gt; result = apiInstance.GetContractsPublicRegionId(regionId, datasource, ifNoneMatch, page);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContractsApi.GetContractsPublicRegionId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **int?**| An EVE region id | 
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **int?**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+**List<Object>**
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 

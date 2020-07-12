@@ -33,7 +33,7 @@ Method | HTTP request | Description
 [**GetUniverseTypes**](UniverseApi.md#getuniversetypes) | **GET** /v1/universe/types/ | Get types
 [**GetUniverseTypesTypeId**](UniverseApi.md#getuniversetypestypeid) | **GET** /v3/universe/types/{type_id}/ | Get type information
 [**PostUniverseIds**](UniverseApi.md#postuniverseids) | **POST** /v1/universe/ids/ | Bulk names to IDs
-[**PostUniverseNames**](UniverseApi.md#postuniversenames) | **POST** /v2/universe/names/ | Get names and categories for a set of ID&#39;s
+[**PostUniverseNames**](UniverseApi.md#postuniversenames) | **POST** /v3/universe/names/ | Get names and categories for a set of IDs
 
 
 <a name="getuniverseancestries"></a>
@@ -1354,7 +1354,7 @@ No authorization required
 
 <a name="getuniversestructures"></a>
 # **GetUniverseStructures**
-> List<long?> GetUniverseStructures (string datasource = null, string ifNoneMatch = null)
+> List<long?> GetUniverseStructures (string datasource = null, string filter = null, string ifNoneMatch = null)
 
 List all public structures
 
@@ -1376,12 +1376,13 @@ namespace Example
         {
             var apiInstance = new UniverseApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
+            var filter = filter_example;  // string | Only list public structures that have this service online (optional) 
             var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
 
             try
             {
                 // List all public structures
-                List&lt;long?&gt; result = apiInstance.GetUniverseStructures(datasource, ifNoneMatch);
+                List&lt;long?&gt; result = apiInstance.GetUniverseStructures(datasource, filter, ifNoneMatch);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1398,6 +1399,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **filter** | **string**| Only list public structures that have this service online | [optional] 
  **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
@@ -1883,7 +1885,7 @@ No authorization required
 
 Bulk names to IDs
 
-Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  - -- 
+Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours  - -- 
 
 ### Example
 ```csharp
@@ -1948,9 +1950,9 @@ No authorization required
 # **PostUniverseNames**
 > List<Object> PostUniverseNames (List<int?> ids, string datasource = null)
 
-Get names and categories for a set of ID's
+Get names and categories for a set of IDs
 
-Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  - -- 
+Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types, Factions  - -- 
 
 ### Example
 ```csharp
@@ -1972,7 +1974,7 @@ namespace Example
 
             try
             {
-                // Get names and categories for a set of ID's
+                // Get names and categories for a set of IDs
                 List&lt;Object&gt; result = apiInstance.PostUniverseNames(ids, datasource);
                 Debug.WriteLine(result);
             }

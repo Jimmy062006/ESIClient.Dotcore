@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**GetCharactersCharacterIdCorporationhistory**](CharacterApi.md#getcharacterscharacteridcorporationhistory) | **GET** /v1/characters/{character_id}/corporationhistory/ | Get corporation history
 [**GetCharactersCharacterIdFatigue**](CharacterApi.md#getcharacterscharacteridfatigue) | **GET** /v1/characters/{character_id}/fatigue/ | Get jump fatigue
 [**GetCharactersCharacterIdMedals**](CharacterApi.md#getcharacterscharacteridmedals) | **GET** /v1/characters/{character_id}/medals/ | Get medals
-[**GetCharactersCharacterIdNotifications**](CharacterApi.md#getcharacterscharacteridnotifications) | **GET** /v2/characters/{character_id}/notifications/ | Get character notifications
+[**GetCharactersCharacterIdNotifications**](CharacterApi.md#getcharacterscharacteridnotifications) | **GET** /v5/characters/{character_id}/notifications/ | Get character notifications
 [**GetCharactersCharacterIdNotificationsContacts**](CharacterApi.md#getcharacterscharacteridnotificationscontacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
 [**GetCharactersCharacterIdPortrait**](CharacterApi.md#getcharacterscharacteridportrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
 [**GetCharactersCharacterIdRoles**](CharacterApi.md#getcharacterscharacteridroles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 Get character's public information
 
-Public information about a character  - --  This route is cached for up to 3600 seconds
+Public information about a character  - --  This route is cached for up to 86400 seconds
 
 ### Example
 ```csharp
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 Get corporation history
 
-Get a list of all the corporations a character has been a member of  - --  This route is cached for up to 3600 seconds
+Get a list of all the corporations a character has been a member of  - --  This route is cached for up to 86400 seconds
 
 ### Example
 ```csharp
@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  - --  This route is cached for up to 600 seconds  - -- Warning: This route has an upgrade available.  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+Return character notifications  - --  This route is cached for up to 600 seconds
 
 ### Example
 ```csharp
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 
 Get character portraits
 
-Get portrait urls for a character  - --  This route is cached for up to 3600 seconds
+Get portrait urls for a character  - --  This route expires daily at 11:05  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/portrait/)
 
 ### Example
 ```csharp
@@ -924,7 +924,7 @@ Name | Type | Description  | Notes
 
 Character affiliation
 
-Bulk lookup of character IDs to corporation, alliance and faction  - --  This route is cached for up to 3600 seconds
+Bulk lookup of character IDs to corporation, alliance and faction  - --  This route is cached for up to 3600 seconds  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/affiliation/)
 
 ### Example
 ```csharp
@@ -941,7 +941,7 @@ namespace Example
         public void main()
         {
             var apiInstance = new CharacterApi();
-            var characters = ;  // List<int?> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
+            var characters = ;  // List<int?> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
 
             try
@@ -963,7 +963,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characters** | **List&lt;int?&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. | 
+ **characters** | **List&lt;int?&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
 
 ### Return type
@@ -987,7 +987,7 @@ No authorization required
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  - -- 
+Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  - --
 
 ### Example
 ```csharp

@@ -23,7 +23,7 @@ Method | HTTP request | Description
 [**GetCorporationsCorporationIdStandings**](CorporationApi.md#getcorporationscorporationidstandings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 [**GetCorporationsCorporationIdStarbases**](CorporationApi.md#getcorporationscorporationidstarbases) | **GET** /v1/corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
 [**GetCorporationsCorporationIdStarbasesStarbaseId**](CorporationApi.md#getcorporationscorporationidstarbasesstarbaseid) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
-[**GetCorporationsCorporationIdStructures**](CorporationApi.md#getcorporationscorporationidstructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
+[**GetCorporationsCorporationIdStructures**](CorporationApi.md#getcorporationscorporationidstructures) | **GET** /v3/corporations/{corporation_id}/structures/ | Get corporation structures
 [**GetCorporationsCorporationIdTitles**](CorporationApi.md#getcorporationscorporationidtitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
 [**GetCorporationsNpccorps**](CorporationApi.md#getcorporationsnpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 Get corporation icon
 
-Get the icon urls for a corporation  - --  This route is cached for up to 3600 seconds
+Get the icon urls for a corporation  - --  This route is cached for up to 3600 seconds  - -- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/icons/)
 
 ### Example
 ```csharp
@@ -1369,7 +1369,7 @@ Name | Type | Description  | Notes
 
 Get corporation structures
 
-Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  - --  This route is cached for up to 3600 seconds  - -- Requires one of the following EVE corporation role(s): StationManager
+Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  - --  This route is cached for up to 3600 seconds  - -- Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 ```csharp

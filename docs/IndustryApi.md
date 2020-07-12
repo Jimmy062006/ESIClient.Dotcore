@@ -43,7 +43,7 @@ namespace Example
             var characterId = 56;  // int? | An EVE character ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
-            var includeCompleted = true;  // bool? | Whether retrieve completed character industry jobs as well (optional) 
+            var includeCompleted = true;  // bool? | Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days (optional) 
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
 
             try
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
  **characterId** | **int?**| An EVE character ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **includeCompleted** | **bool?**| Whether retrieve completed character industry jobs as well | [optional] 
+ **includeCompleted** | **bool?**| Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days | [optional] 
  **token** | **string**| Access token to use if unable to set a header | [optional] 
 
 ### Return type
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 Moon extraction timers
 
-Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  - --  This route is cached for up to 1800 seconds  - -- Requires one of the following EVE corporation role(s): Structure_manager
+Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  - --  This route is cached for up to 1800 seconds  - -- Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 ```csharp
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  - --  This route is cached for up to 300 seconds  - -- Requires one of the following EVE corporation role(s): FactoryManager
+List industry jobs run by a corporation  - --  This route is cached for up to 300 seconds  - -- Requires one of the following EVE corporation role(s): Factory_Manager
 
 ### Example
 ```csharp
@@ -405,7 +405,7 @@ namespace Example
             var corporationId = 56;  // int? | An EVE corporation ID
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
-            var includeCompleted = true;  // bool? | Whether retrieve completed industry jobs as well (optional)  (default to false)
+            var includeCompleted = true;  // bool? | Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days (optional)  (default to false)
             var page = 56;  // int? | Which page of results to return (optional)  (default to 1)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
  **corporationId** | **int?**| An EVE corporation ID | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **includeCompleted** | **bool?**| Whether retrieve completed industry jobs as well | [optional] [default to false]
+ **includeCompleted** | **bool?**| Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days | [optional] [default to false]
  **page** | **int?**| Which page of results to return | [optional] [default to 1]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
 

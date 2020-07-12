@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 List calendar event summaries
 
-Get 50 event summaries from the calendar. If no from_event ID is given, the resource will return the next 50 chronological event summaries from now. If a from_event ID is specified, it will return the next 50 chronological event summaries from after that event.  - --  This route is cached for up to 5 seconds
+Get 50 event summaries from the calendar. If no from_event ID is given, the resource will return the next 50 chronological event summaries from now. If a from_event ID is specified, it will return the next 50 chronological event summaries from after that event  - --  This route is cached for up to 5 seconds
 
 ### Example
 ```csharp
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 Respond to an event
 
-Set your response status to an event  - -- 
+Set your response status to an event  - --  This route is cached for up to 5 seconds
 
 ### Example
 ```csharp
@@ -254,7 +254,7 @@ namespace Example
             var apiInstance = new CalendarApi();
             var characterId = 56;  // int? | An EVE character ID
             var eventId = 56;  // int? | The ID of the event requested
-            var response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
+            var response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var token = token_example;  // string | Access token to use if unable to set a header (optional) 
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **int?**| An EVE character ID | 
  **eventId** | **int?**| The ID of the event requested | 
- **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. | 
+ **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional] 
 

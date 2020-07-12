@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 List of the top factions in faction warfare
 
-Top 4 leaderboard of factions for kills and victory points separated by total, last week and yesterday.  - --  This route expires daily at 11:05
+Top 4 leaderboard of factions for kills and victory points separated by total, last week and yesterday  - --  This route expires daily at 11:05
 
 ### Example
 ```csharp
@@ -223,7 +223,7 @@ No authorization required
 
 List of the top pilots in faction warfare
 
-Top 100 leaderboard of pilots for kills and victory points separated by total, last week and yesterday.  - --  This route expires daily at 11:05
+Top 100 leaderboard of pilots for kills and victory points separated by total, last week and yesterday  - --  This route expires daily at 11:05
 
 ### Example
 ```csharp
@@ -286,7 +286,7 @@ No authorization required
 
 List of the top corporations in faction warfare
 
-Top 10 leaderboard of corporations for kills and victory points separated by total, last week and yesterday.  - --  This route expires daily at 11:05
+Top 10 leaderboard of corporations for kills and victory points separated by total, last week and yesterday  - --  This route expires daily at 11:05
 
 ### Example
 ```csharp

@@ -5,8 +5,8 @@ All URIs are relative to *https://esi.evetech.net*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DeleteCharactersCharacterIdFittingsFittingId**](FittingsApi.md#deletecharacterscharacteridfittingsfittingid) | **DELETE** /v1/characters/{character_id}/fittings/{fitting_id}/ | Delete fitting
-[**GetCharactersCharacterIdFittings**](FittingsApi.md#getcharacterscharacteridfittings) | **GET** /v1/characters/{character_id}/fittings/ | Get fittings
-[**PostCharactersCharacterIdFittings**](FittingsApi.md#postcharacterscharacteridfittings) | **POST** /v1/characters/{character_id}/fittings/ | Create fitting
+[**GetCharactersCharacterIdFittings**](FittingsApi.md#getcharacterscharacteridfittings) | **GET** /v2/characters/{character_id}/fittings/ | Get fittings
+[**PostCharactersCharacterIdFittings**](FittingsApi.md#postcharacterscharacteridfittings) | **POST** /v2/characters/{character_id}/fittings/ | Create fitting
 
 
 <a name="deletecharacterscharacteridfittingsfittingid"></a>

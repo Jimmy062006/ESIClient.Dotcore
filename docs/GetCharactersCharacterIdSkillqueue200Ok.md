@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FinishDate** | **DateTime?** | finish_date string | [optional] 
+**FinishDate** | **DateTime?** | Date on which training of the skill will complete. Omitted if the skill queue is paused. | [optional] 
 **FinishedLevel** | **int?** | finished_level integer | 
 **LevelEndSp** | **int?** | level_end_sp integer | [optional] 
 **LevelStartSp** | **int?** | Amount of SP that was in the skill when it started training it&#39;s current level. Used to calculate % of current level complete. | [optional] 

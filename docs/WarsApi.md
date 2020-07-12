@@ -34,7 +34,7 @@ namespace Example
             var apiInstance = new WarsApi();
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
-            var maxWarId = 56;  // int? | Only return wars with ID smaller than this. (optional) 
+            var maxWarId = 56;  // int? | Only return wars with ID smaller than this (optional) 
 
             try
             {
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **maxWarId** | **int?**| Only return wars with ID smaller than this. | [optional] 
+ **maxWarId** | **int?**| Only return wars with ID smaller than this | [optional] 
 
 ### Return type
 

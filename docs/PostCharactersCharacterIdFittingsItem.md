@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Flag** | **int?** | flag integer | 
+**Flag** | **string** | Fitting location for the item. Entries placed in &#39;Invalid&#39; will be discarded. If this leaves the fitting with nothing, it will cause an error. | 
 **Quantity** | **int?** | quantity integer | 
 **TypeId** | **int?** | type_id integer | 
 

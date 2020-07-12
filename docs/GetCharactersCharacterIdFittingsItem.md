@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Flag** | **int?** | flag integer | 
+**Flag** | **string** | flag string | 
 **Quantity** | **int?** | quantity integer | 
 **TypeId** | **int?** | type_id integer | 
 

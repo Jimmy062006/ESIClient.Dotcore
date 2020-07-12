@@ -588,7 +588,7 @@ namespace Example
         public void main()
         {
             var apiInstance = new MarketApi();
-            var orderType = orderType_example;  // string | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders. (default to all)
+            var orderType = orderType_example;  // string | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders (default to all)
             var regionId = 56;  // int? | Return orders in this region
             var datasource = datasource_example;  // string | The server name you would like data from (optional)  (default to tranquility)
             var ifNoneMatch = ifNoneMatch_example;  // string | ETag from a previous request. A 304 will be returned if this matches the current ETag (optional) 
@@ -614,7 +614,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderType** | **string**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders. | [default to all]
+ **orderType** | **string**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders | [default to all]
  **regionId** | **int?**| Return orders in this region | 
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **ifNoneMatch** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 

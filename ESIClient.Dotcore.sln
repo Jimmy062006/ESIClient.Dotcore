@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESIClient.Dotcore", "src\ESIClient.Dotcore\ESIClient.Dotcore.csproj", "{04A1973B-865D-4C7E-A24F-F63F456278FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESIClient.Dotcore", "src\ESIClient.Dotcore\ESIClient.Dotcore.csproj", "{87BBBBC2-0FD7-4E3F-93CF-220BCB521F68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,10 +10,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{04A1973B-865D-4C7E-A24F-F63F456278FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04A1973B-865D-4C7E-A24F-F63F456278FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04A1973B-865D-4C7E-A24F-F63F456278FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04A1973B-865D-4C7E-A24F-F63F456278FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BBBBC2-0FD7-4E3F-93CF-220BCB521F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BBBBC2-0FD7-4E3F-93CF-220BCB521F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BBBBC2-0FD7-4E3F-93CF-220BCB521F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BBBBC2-0FD7-4E3F-93CF-220BCB521F68}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
